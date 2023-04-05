@@ -35,16 +35,16 @@ var numero:Int = 2
 
 switch numero {
 case 1:
-    print("O valor da variável é 1")
+    print("O valor da variável é \(numero)")
 case 2:
-    print("O valor da variável é 2")
+    print("O valor da variável é \(numero)")
 default:
     print("Valor não encontrado")
 }
-
 */
 
-var peso:Float = 64, altura:Float = 1.80, m:Float
+/*
+var peso:Float = 64.5, altura:Float = 1.80, m:Float
 
 m = peso / (altura * altura)
 
@@ -60,22 +60,25 @@ if(m < 18.5){
     print("Obesidade grau I")
 }else if(m > 35 && m < 40){
     print("Obesidade grau II")
-}else if(m > 40){
+}else{
     print("Obesidade grau III")
 }
+
 switch m {
-case 0 ... 18.4 :
+case 0...18.4 :
     print("Magro")
-case 18.5 ... 24.9:
+case 18.5...24.9:
     print("Peso normal")
-case 25 ... 29.9:
+case 25...29.9:
     print("Sobrepeso")
-case 30 ... 34.9:
+case 30...34.9:
     print("Obesidade Grau I")
-case 35 ... 40:
+case 35...40:
     print("Obesidade Grau II")
-case 41 ... 100:
+case 40...:
     print("Obesidade Grau III")
 default:
     print("Erro")
 }
+*/
+
