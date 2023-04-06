@@ -24,10 +24,41 @@ for (chave, valor) in dicionarioEstudantesAcademy{
 }
 */
 
-let atende: [String:String] = ["A001":"Jairo", "A002":"Kauã",  "A003":"Nunes","P001":"Leonardo", "P002":"Fernanda", "P003": "Caio"]
+/*
+let atendeA = ["A001" : "Jairo", "A002" : "Eminem", "A003" : "Slash"]
+let atendeP = ["P001" : "Cristiano Ronaldo", "P002" : "Lionel Messi"]
 
-var keys:[String] = ["A001", "A002", "A003", "P001", "P002", "P003"]
+let sortedkeysA = atendeA.keys.sorted()
+let sortedkeysP = atendeP.keys.sorted()
 
-for (n,j) in keys{
-    print(keys[n])
+for keyP in sortedkeysP{
+    print("\(keyP) : \(atendeP[keyP]!)")
 }
+
+for keyA in sortedkeysA{
+    print("\(keyA) : \(atendeA[keyA]!)")
+}
+*/
+
+/*
+let atende = ["A001" : "Jairo", "A002" : "Eminem", "A003" : "Slash", "P001" : "Cristiano Ronaldo", "P002" : "Lionel Messi"]
+
+let sortedkeys = atende.keys.sorted()
+
+for key in sortedkeys{
+    
+    let letone = key.first
+    
+    if letone  == "P"{
+        //print((letone)!, "<-")
+        print("\(key) : \(atende[key]!)")
+    }
+}
+for key in sortedkeys{
+    let letone = key.first
+    if letone  == "A"{
+        //print((letone)!, "<-")
+        print("\(key) : \(atende[key]!)")
+    }
+}
+*/
