@@ -10,5 +10,5 @@ var escolha:Int = 3
 var numeroAleatorio:[Int] = []
 var i:Int = 0
 while(i < 20){
-    numeroAleatorio[i] = Int.random(in: 1...60)
+    numeroAleatorio.append(Int.random(in: 1...60))
 }
