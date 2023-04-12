@@ -11,4 +11,11 @@ var numeroAleatorio:[Int] = []
 var i:Int = 0
 while(i < 20){
     numeroAleatorio.append(Int.random(in: 1...60))
+    i+=1
+}
+var i1 = 0, i2 = i1 + 1
+while(i1<20){
+    while(i2<20){
+        if(numeroAleatorio[i1] == numeroAleatorio)
+    }
 }
