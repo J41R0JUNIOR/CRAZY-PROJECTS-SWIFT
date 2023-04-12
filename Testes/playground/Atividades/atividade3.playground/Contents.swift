@@ -135,3 +135,31 @@ else{
   print("Deu empate")
 }
 */
+
+
+
+//Desafio 3
+/*
+var tentativa:[Int] = [1,5,3,7] // 0 a 9
+var acertos:Int = 0
+var senha:[Int] = []
+var i:Int = 0
+
+
+  //randomizar os números para o vetor
+  while(i < 5){
+      senha.append(Int.random(in: 0...9))
+      i+=1
+  }
+
+  //Verificar a quantidade de acertos
+  var t = 0
+  for s in tentativa{
+    if(senha[t] == s){
+      acertos += 1
+      print(s, "- posição[\(t)]")
+    }
+    t+=1
+  }
+print(senha)
+*/
