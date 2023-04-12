@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 var megaSena:[Int] = [19,8,23,17,5,43] // 0 e 60
 var lotoMania:[Int] = [19,81,90,67,54,6,34,2,45,1,4,76,8,9,24,3,67,89,54,35] // 0 e 99
@@ -9,6 +9,7 @@ var numeroAleatorio:[Int] = []
 var i:Int = 0
 
 if escolha == 1{
+
     //randomizar os números para o vetor
     while(i <= 6){
         numeroAleatorio.append(Int.random(in: 1...60))
@@ -90,9 +91,9 @@ if escolha == 1{
         t+=1
     }
 }
-
-
 print("qtd",qtd)
+
+
 
 //Desafio 2
 /*
