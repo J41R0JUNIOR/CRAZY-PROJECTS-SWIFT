@@ -135,14 +135,11 @@ var tentativa:[Int] = [1,5,3,7] // 0 a 9
 var acertos:Int = 0
 var senha:[Int] = []
 var i:Int = 0
-
-
   //randomizar os números para o vetor
   while(i < 5){
       senha.append(Int.random(in: 0...9))
       i+=1
   }
-
   //Verificar a quantidade de acertos
   var t = 0
   for s in tentativa{
@@ -161,8 +158,6 @@ print(senha)
 let password = (senhaAleatoria())
 let tentativa:[Int] = [0,3,9,1]
 print(compararEmString(password: password, tentativa: tentativa))
-
-
 
 
 func compararEmString(password:[Int], tentativa:[Int]) -> String{
