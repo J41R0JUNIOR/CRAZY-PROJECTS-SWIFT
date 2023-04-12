@@ -1,5 +1,7 @@
 import UIKit
 
+//Desafio 1
+/*
 var megaSena:[Int] = [19,8,23,17,5,43] // 0 e 60
 var lotoMania:[Int] = [19,81,90,67,54,6,34,2,45,1,4,76,8,9,24,3,67,89,54,35] // 0 e 99
 var lotoFacil:[Int] = [3,1,24,12,18,13,23,5,22,10,8,2,26,17,14] // 1 e 25
@@ -92,7 +94,7 @@ if escolha == 1{
     }
 }
 print("qtd",qtd)
-
+*/
 
 
 //Desafio 2
@@ -152,3 +154,88 @@ var i:Int = 0
   }
 print(senha)
 */
+//Desafio 3
+
+
+/*
+let password = (senhaAleatoria())
+let tentativa:[Int] = [0,3,9,1]
+print(compararEmString(password: password, tentativa: tentativa))
+
+
+
+
+func compararEmString(password:[Int], tentativa:[Int]) -> String{
+    let stringArray1 = password.map{String($0)}
+    let stringArray2 = tentativa.map{String($0)}
+    var i = 0
+    var qtd = 0
+    if(stringArray1 == stringArray2){
+        return "Iguais"
+    }
+    while(i < 4){
+        if(stringArray1[i] == stringArray2[i]){
+            qtd+=1
+        }
+        i+=1
+    }
+    return "\(qtd) na posição correta"
+}
+
+
+
+func senhaAleatoria () ->[Int]{
+    var senha:[Int] = []
+    var i = 0
+    
+    while(i < 4){
+        senha.append(Int.random(in: 0...9))
+        i+=1
+    }
+    return senha
+}
+*/
+
+//Desafio 4
+
+/*
+//Declarando os valores a ser calculado
+var base:String = "5.5"
+var altura:String = "5.4"
+
+//printando a poha toda
+print(areaTriangulo(base: base, altura: altura))
+
+
+/*
+ FUNÇÃO PEDIDA NO DESAFIO:
+ 
+ Escreva uma função que calcule a área de um triângulo retângulo. A função deve receber dois parâmetros, representando a base e a altura do triângulo, ambos como strings opcionais. Se um dos parâmetros não for fornecido, a função deve retornar nil. Além disso, a função deve verificar se os parâmetros fornecidos são valores numéricos. Se não forem, a função deve retornar nil. Por fim, a função deve imprimir o resultado da área calculada se tudo estiver correto, ou imprimir uma mensagem de erro caso contrário.
+ */
+
+func areaTriangulo (base:String, altura:String) -> String{
+    //variável que vai guardar o valor da área do triângulo
+    var areaTriangulo:Float = 0.0
+    //analisando se consegui passar todos os parâmetros
+    if var a = Float(altura){
+        if var b = Float(base){
+            a = Float(altura)!
+            b = Float(base)!
+            //calculo da área
+            areaTriangulo = (b * a)/2
+            //retornando o valor da área do triângulo
+            return "\(areaTriangulo)"
+        }
+        //se chegar a rodar isso aqui foi pq não foi possível trazer de String (Opcional) para Float
+    }else{
+        return "Erro"
+    }
+    //vendo se tem todos os valores, senão tiver digitado todos os valores ele retorna "nil"
+    if(base == nil || altura == nil){
+        return "nil"
+    }
+    //qualquer outro caso ele retorna "nil" também
+    return "nil"
+}
+*/
+

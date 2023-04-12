@@ -97,7 +97,7 @@ while numeroAleatorio <= 100{
 
 
 
-/*
+
 var inteiro: Int = 10
 var decimal:Double = Double(inteiro)
 print(decimal)
@@ -110,7 +110,7 @@ if let numero = Int(texto){
 }else{
     print("Não foi possível converter a Sting em Int.")
 }
-*/
+
 
 
 
