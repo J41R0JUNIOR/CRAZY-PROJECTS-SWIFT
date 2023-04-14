@@ -40,6 +40,7 @@ print(modelo1)
 var modelo2 = carro2.modelo
 print(modelo2)
 */
+/*
 class Animal{
     
     var nome:String
@@ -72,3 +73,100 @@ let gato = Animal(nome: "Ellie", cor: "Breanca", forca: "1N", raca: "Siamês", v
 let animal1 = gato.nome
 let animal2 = cachorro.nome
 print("animal 1 = \(animal1)\nanimal 2 = \(animal2)")
+*/
+
+
+
+/*
+class Alunos{
+    var nome:String
+    var idade:Int
+    var comidasPrediletas:[String]
+    
+    func apresentacaoDoAluno(){
+        print("Olá meu nome é \(nome)")
+    }
+    func felizAniversario(){
+        print("Idade nova \(idade + 1)")
+    }
+    func adicionarComidaPredileta(){
+        var comidasPrediletas = "Pizza"
+        print(comidasPrediletas)
+    }
+    func imprimeIdade(){
+        print("Idade \(idade)")
+    }
+    func imprimeComidasPrediletas(){
+        var i = 0
+        print("Comidas Prediletas: ")
+        while(i < (comidasPrediletas.count)){
+            print(comidasPrediletas[i])
+            i+=1
+        }
+    }
+    init (nome:String, idade:Int, comidasPrediletas:[String]){
+        self.nome = nome
+        self.idade = idade
+        self.comidasPrediletas = comidasPrediletas
+    }
+}
+let aluno1 = Alunos(nome: "Slim", idade: 20, comidasPrediletas: ["Sushi", "Macarrão"])
+aluno1.apresentacaoDoAluno()
+aluno1.felizAniversario()
+aluno1.imprimeIdade()
+aluno1.imprimeComidasPrediletas()
+ print("\n")
+ //aluno 2
+ let aluno2 = Alunos(nome: "Drácula", idade: 500, comidasPrediletas: ["Sangue", "Alho"])
+ aluno2.apresentacaoDoAluno()
+ aluno2.felizAniversario()
+ aluno2.imprimeIdade()
+ aluno2.imprimeComidasPrediletas()
+*/
+
+
+
+/*
+class Cliente{
+    var nome:String
+    var cpf:String
+    var nconta:ContaBancaria?
+    init(nome:String, cpf:String){
+        self.nome = nome
+        self.cpf = cpf
+    }
+}
+
+class ContaBancaria{
+    var nconta:Int
+    var cliente:Cliente
+    var saldo:Float = 0.0
+    init(nconta:Int, cliente:Cliente, saldo:Float){
+        self.nconta = nconta
+        self.cliente = cliente
+        self.saldo = saldo
+    }
+    
+    func getconta(){
+        print(saldo)
+    }
+}
+
+class Transacoes{
+    var conta:ContaBancaria
+    
+    init(saldo:ContaBancaria, conta:ContaBancaria){
+        self.conta = conta
+    }
+    
+    func sacar(valor:Float){
+        conta.saldo -= valor
+    }
+    func depositar(valor:Float){
+        conta.saldo += valor
+    }
+}
+*/
+
+
+

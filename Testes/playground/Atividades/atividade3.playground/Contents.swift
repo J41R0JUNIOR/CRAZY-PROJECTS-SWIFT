@@ -193,7 +193,7 @@ func senhaAleatoria () ->[Int]{
 
 //Desafio 4
 
-/*
+
 //Declarando os valores a ser calculado
 var base:String = "5.5"
 var altura:String = "5.4"
@@ -208,29 +208,26 @@ print(areaTriangulo(base: base, altura: altura))
  Escreva uma função que calcule a área de um triângulo retângulo. A função deve receber dois parâmetros, representando a base e a altura do triângulo, ambos como strings opcionais. Se um dos parâmetros não for fornecido, a função deve retornar nil. Além disso, a função deve verificar se os parâmetros fornecidos são valores numéricos. Se não forem, a função deve retornar nil. Por fim, a função deve imprimir o resultado da área calculada se tudo estiver correto, ou imprimir uma mensagem de erro caso contrário.
  */
 
-func areaTriangulo (base:String, altura:String) -> String{
+func areaTriangulo (base:String?, altura:String?) -> String{
     //variável que vai guardar o valor da área do triângulo
     var areaTriangulo:Float = 0.0
     //analisando se consegui passar todos os parâmetros
-    if var a = Float(altura){
-        if var b = Float(base){
-            a = Float(altura)!
-            b = Float(base)!
-            //calculo da área
+    if let a = Float(altura) , if let b = Float(base){
+        
             areaTriangulo = (b * a)/2
-            //retornando o valor da área do triângulo
+          
             return "\(areaTriangulo)"
-        }
-        //se chegar a rodar isso aqui foi pq não foi possível trazer de String (Opcional) para Float
+    }
+
     }else{
         return "Erro"
     }
-    //vendo se tem todos os valores, senão tiver digitado todos os valores ele retorna "nil"
+    
     if(base == nil || altura == nil){
         return "nil"
     }
-    //qualquer outro caso ele retorna "nil" também
+    
     return "nil"
 }
-*/
+
 
