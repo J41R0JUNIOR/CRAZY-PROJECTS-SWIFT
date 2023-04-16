@@ -193,21 +193,21 @@ func senhaAleatoria () ->[Int]{
 
 //Desafio 4
 
-
+/*
 //Declarando os valores a ser calculado
 var base:String = "5.5"
 var altura:String = "5.4"
 
 //printando a poha toda
 print(areaTriangulo(base: base, altura: altura))
-
+*/
 
 /*
  FUNÇÃO PEDIDA NO DESAFIO:
  
  Escreva uma função que calcule a área de um triângulo retângulo. A função deve receber dois parâmetros, representando a base e a altura do triângulo, ambos como strings opcionais. Se um dos parâmetros não for fornecido, a função deve retornar nil. Além disso, a função deve verificar se os parâmetros fornecidos são valores numéricos. Se não forem, a função deve retornar nil. Por fim, a função deve imprimir o resultado da área calculada se tudo estiver correto, ou imprimir uma mensagem de erro caso contrário.
  */
-
+/*
 func areaTriangulo (base:String?, altura:String?) -> String{
     //variável que vai guardar o valor da área do triângulo
     var areaTriangulo:Float = 0.0
@@ -230,4 +230,4 @@ func areaTriangulo (base:String?, altura:String?) -> String{
     return "nil"
 }
 
-
+*/
