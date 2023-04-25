@@ -77,7 +77,7 @@ print("animal 1 = \(animal1)\nanimal 2 = \(animal2)")
 
 
 
-/*
+
 class Alunos{
     var nome:String
     var idade:Int
@@ -122,7 +122,7 @@ aluno1.imprimeComidasPrediletas()
  aluno2.felizAniversario()
  aluno2.imprimeIdade()
  aluno2.imprimeComidasPrediletas()
-*/
+
 
 
 

@@ -1,0 +1,22 @@
+{
+  "images" : [
+    {
+      "filename" : "OoeZ7g.jpg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "star-wars-death-star-at-at-space-wallpaper-preview.jpg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
