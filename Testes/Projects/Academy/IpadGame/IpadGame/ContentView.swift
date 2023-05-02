@@ -11,6 +11,7 @@ struct ContentView: View {
     @State var redSlider = 0.0
     @State var greenSlider = 0.0
     @State var blueSlider = 0.0
+    
     @State var cor1 = Color(red: 0, green: 0, blue: 0)
     
     @State var red:Double = 0
@@ -49,6 +50,8 @@ struct ContentView: View {
             }.buttonStyle(.borderedProminent)
             Button{
                 
+                
+                
             } label: {
                 Text("Pontuação")
             }.buttonStyle(.borderedProminent)
@@ -56,9 +59,28 @@ struct ContentView: View {
     }
 }
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
+
+extension UIColor {
+    func euclideanDistance(to color: UIColor) -> CGFloat {
+        var r1: CGFloat = 0, g1: CGFloat = 0, b1: CGFloat = 0, a1: CGFloat = 0
+        var r2: CGFloat = 0, g2: CGFloat = 0, b2: CGFloat = 0, a2: CGFloat = 0
+        
+        self.getRed(&r1, green: &g1, blue: &b1, alpha: &a1)
+        color.getRed(&r2, green: &g2, blue: &b2, alpha: &a2)
+        
+        let rDiff = r1 - r2
+        let gDiff = g1 - g2
+        let bDiff = b1 - b2
+        
+        return sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
+    }
+}
+
 
