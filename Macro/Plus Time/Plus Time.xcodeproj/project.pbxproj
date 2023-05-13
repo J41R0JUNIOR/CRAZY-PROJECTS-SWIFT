@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */; };
-		B32509752A0EAA4200D6DDF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509742A0EAA4200D6DDF4 /* ContentView.swift */; };
 		B32509772A0EAA4300D6DDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32509762A0EAA4300D6DDF4 /* Assets.xcassets */; };
 		B325097A2A0EAA4300D6DDF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32509792A0EAA4300D6DDF4 /* Preview Assets.xcassets */; };
 		B32509842A0EAA4300D6DDF4 /* Plus_TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509832A0EAA4300D6DDF4 /* Plus_TimeTests.swift */; };
@@ -16,6 +15,7 @@
 		B32509902A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */; };
 		B3D4102B2A1046A100779F14 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102A2A1046A100779F14 /* View1.swift */; };
 		B3D4102D2A1046C900779F14 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102C2A1046C900779F14 /* View2.swift */; };
+		B3D4102F2A10495D00779F14 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102E2A10495D00779F14 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		B325096F2A0EAA4200D6DDF4 /* Plus Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plus Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeApp.swift; sourceTree = "<group>"; };
-		B32509742A0EAA4200D6DDF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B32509762A0EAA4300D6DDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B32509792A0EAA4300D6DDF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B325097F2A0EAA4300D6DDF4 /* Plus TimeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Plus TimeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +47,7 @@
 		B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B3D4102A2A1046A100779F14 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
 		B3D4102C2A1046C900779F14 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		B3D4102E2A10495D00779F14 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */,
-				B32509742A0EAA4200D6DDF4 /* ContentView.swift */,
+				B3D4102E2A10495D00779F14 /* ContentView.swift */,
 				B3D4102A2A1046A100779F14 /* View1.swift */,
 				B3D4102C2A1046C900779F14 /* View2.swift */,
 				B32509762A0EAA4300D6DDF4 /* Assets.xcassets */,
@@ -263,9 +263,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B32509752A0EAA4200D6DDF4 /* ContentView.swift in Sources */,
 				B3D4102B2A1046A100779F14 /* View1.swift in Sources */,
 				B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */,
+				B3D4102F2A10495D00779F14 /* ContentView.swift in Sources */,
 				B3D4102D2A1046C900779F14 /* View2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
