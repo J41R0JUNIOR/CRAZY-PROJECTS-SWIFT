@@ -7,38 +7,34 @@
 
 import SwiftUI
  
-struct View1: View {
+struct MainView: View {
     
     
     // variavel pra abrir e fechar o modal
     @State var estadoModal1 = false
-    
-    
-    
-    @State var bell = [false]
-    @State var titulo = [" "]
-    
+    @State var title = "Nothing"
     
     var body: some View {
         ZStack {
             Color(red:98/255, green: 84/255, blue:253/255).ignoresSafeArea()
             
-            //Color(cor2).ignoresSafeArea()
             VStack{
+                //Parte superior da tela
+                
                 HStack{
                     //barra de pesquisa
                     ZStack{
                         RoundedRectangle(cornerRadius: 10).frame(width: 308, height: 36).foregroundColor(cor3)
                         HStack{
+                            //pesquisa
                             Button {
-                                print("teste")
+                                print("lupa de pesquisa")
                             
                             } label: {
                                 Image(systemName: "magnifyingglass").foregroundColor(cor2)
                                 Text("Search").foregroundColor(cor2)
                             }
 
-                            
                             Spacer()
                         }.padding()
                     }
@@ -48,18 +44,11 @@ struct View1: View {
                     Button {
                         estadoModal1.toggle()
                         
-                        numViews+=1
-                        
-                        bell.append(false)
-                        print(bell[1])
-                        
-                        TdsStructs.append(allStructures(title: "Titulo", body: "Texto", bell: View1().$bell[View1().$bell.count - 1], text: $titulo[View1().titulo.count - 1]))
-                        
                     } label: {
                         Image(systemName: "square.and.pencil").foregroundColor(cor3)
                     }
                     .sheet(isPresented: $estadoModal1) {
-                        ModalView(estadoModal1: $estadoModal1, bell: $bell[bell.count-1], text: $titulo[titulo.count-1])
+                        ModalView(estadoModal1: $estadoModal1)
                     }
                     
                 }.padding()
@@ -67,47 +56,50 @@ struct View1: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 15).foregroundColor(dark).frame(width: 385)
                     
+                    
+                    
+                    
+                    
+                    
                     //ScrollView dos horários
                     ScrollView {
-                        ForEach (0..<numViews, id: \.self){numero in
+                        ForEach (tdsStructs.indices, id: \.self){index in
+                            
                             HStack{
+                                
                                 //botao do sino
                                 Button {
                                     print("Sininho fora Modal")
-                                    print(numero)
-                                    bell[numero].toggle()
                                     
+                                    tdsStructs[index].bell.toggle()
+                                    print(tdsStructs[index].bell)
                                 } label: {
-                                    if(bell[numero] == false){
-                                        Image(systemName:
-                                                "bell.fill").font(.system(size: 20)).foregroundColor(.red)
-                                    }else{
-                                        Image(systemName:
-                                                "bell").font(.system(size: 20)).foregroundColor(.red)
-                                    }
+                                    Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    
+                                    
                                 }
+                                //Entrar na estrutura
                                 Button {
-                                    print("Text")
+                                    print("Entrar na estrutura")
                                 } label: {
+                                    //corpo da estrutura
                                     VStack{
                                         HStack{
-                                            Text(TdsStructs[numero].title).fontWeight(.bold).foregroundColor(.white).lineLimit(1)
+                                            Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.white).lineLimit(1)
                                                 .allowsTightening(false)
                                             Spacer()
                                             
                                         }
                                         HStack{
-                                            Text(TdsStructs[numero].body).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
+                                            Text(tdsStructs[index].body).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
                                                 .allowsTightening(false)
                                             Spacer()
-                                            Text("20/02 >").fontWeight(.bold).foregroundColor(cor3)
+                                            Text("00/00 >").fontWeight(.bold).foregroundColor(cor3)
                                             
                                         }
                                         Divider().background(cor3)
                                     }
                                 }
-
-                                
                             }.padding()
                             //Divider().background(Color.white)
                             
@@ -119,8 +111,8 @@ struct View1: View {
     }
 }
 
-struct View1_Previews: PreviewProvider {
+struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        View1()
+        MainView()
     }
 }

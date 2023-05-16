@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B30E68202A13FB7F00C84E4E /* ModalCriar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E681F2A13FB7F00C84E4E /* ModalCriar.swift */; };
+		B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */; };
+		B30E682D2A140B2000C84E4E /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E682C2A140B2000C84E4E /* Cores.swift */; };
 		B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */; };
 		B32509772A0EAA4300D6DDF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32509762A0EAA4300D6DDF4 /* Assets.xcassets */; };
 		B325097A2A0EAA4300D6DDF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32509792A0EAA4300D6DDF4 /* Preview Assets.xcassets */; };
@@ -14,8 +17,8 @@
 		B325098E2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098D2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift */; };
 		B32509902A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */; };
 		B36DCF762A11593B00358871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DCF752A11593B00358871 /* ContentView.swift */; };
-		B3D4102B2A1046A100779F14 /* View1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102A2A1046A100779F14 /* View1.swift */; };
-		B3D4102D2A1046C900779F14 /* View2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102C2A1046C900779F14 /* View2.swift */; };
+		B3D4102B2A1046A100779F14 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102A2A1046A100779F14 /* MainView.swift */; };
+		B3D4102D2A1046C900779F14 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102C2A1046C900779F14 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B30E681F2A13FB7F00C84E4E /* ModalCriar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalCriar.swift; sourceTree = "<group>"; };
+		B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstruturaBase.swift; sourceTree = "<group>"; };
+		B30E682C2A140B2000C84E4E /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
 		B325096F2A0EAA4200D6DDF4 /* Plus Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plus Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeApp.swift; sourceTree = "<group>"; };
 		B32509762A0EAA4300D6DDF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,8 +52,8 @@
 		B325098D2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITests.swift; sourceTree = "<group>"; };
 		B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B36DCF752A11593B00358871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		B3D4102A2A1046A100779F14 /* View1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1.swift; sourceTree = "<group>"; };
-		B3D4102C2A1046C900779F14 /* View2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View2.swift; sourceTree = "<group>"; };
+		B3D4102A2A1046A100779F14 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B3D4102C2A1046C900779F14 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30E68272A1408F800C84E4E /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				B36DCF752A11593B00358871 /* ContentView.swift */,
+				B3D4102A2A1046A100779F14 /* MainView.swift */,
+				B3D4102C2A1046C900779F14 /* CalendarView.swift */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		B30E68292A14095300C84E4E /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */,
+				B30E682C2A140B2000C84E4E /* Cores.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		B30E682B2A1409CB00C84E4E /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B30E681F2A13FB7F00C84E4E /* ModalCriar.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 		B32509662A0EAA4200D6DDF4 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +131,10 @@
 		B32509712A0EAA4200D6DDF4 /* Plus Time */ = {
 			isa = PBXGroup;
 			children = (
+				B30E682B2A1409CB00C84E4E /* views */,
+				B30E68292A14095300C84E4E /* resources */,
+				B30E68272A1408F800C84E4E /* screen */,
 				B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */,
-				B36DCF752A11593B00358871 /* ContentView.swift */,
-				B3D4102A2A1046A100779F14 /* View1.swift */,
-				B3D4102C2A1046C900779F14 /* View2.swift */,
 				B32509762A0EAA4300D6DDF4 /* Assets.xcassets */,
 				B32509782A0EAA4300D6DDF4 /* Preview Content */,
 			);
@@ -263,10 +296,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3D4102B2A1046A100779F14 /* View1.swift in Sources */,
+				B30E68202A13FB7F00C84E4E /* ModalCriar.swift in Sources */,
+				B3D4102B2A1046A100779F14 /* MainView.swift in Sources */,
 				B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */,
 				B36DCF762A11593B00358871 /* ContentView.swift in Sources */,
-				B3D4102D2A1046C900779F14 /* View2.swift in Sources */,
+				B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */,
+				B3D4102D2A1046C900779F14 /* CalendarView.swift in Sources */,
+				B30E682D2A140B2000C84E4E /* Cores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

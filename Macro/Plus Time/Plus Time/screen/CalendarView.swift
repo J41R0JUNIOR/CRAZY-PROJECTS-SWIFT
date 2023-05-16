@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct View2: View {
+struct CalendarView: View {
     var body: some View {
         ZStack {
             
@@ -19,9 +19,9 @@ struct View2: View {
     }
 }
 
-struct View2_Previews: PreviewProvider {
+struct CalendarView_Previews: PreviewProvider {
     static var previews: some View {
-        View2()
+        CalendarView()
     }
 }
 
