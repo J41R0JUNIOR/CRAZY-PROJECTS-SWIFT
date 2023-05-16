@@ -8,7 +8,7 @@
 import SwiftUI
  
 struct View1: View {
-    var numViews:Int = 10
+    var numViews:Int = 1
     
     // variavel pra abrir e fechar o modal
     @State var estadoModal = false
@@ -29,7 +29,6 @@ struct View1: View {
                             Spacer()
                         }.padding()
                     }
-                    
                     Spacer()
                     
                     //abrir modal de add eventos/tarefas
@@ -51,15 +50,20 @@ struct View1: View {
                     ScrollView {
                         ForEach (0..<numViews, id: \.self){ numero in
                             HStack{
+                                //botao do sino
                                 Button {
-                                    
-                                    print("Foi")
+                                    print("Sininho ")
+                                    print(TdsEstructs[0].bell)
+                                    TdsEstructs[0].bell.toggle()
                                 } label: {
-                                    Image(systemName:
-                                            "bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    if(TdsEstructs[0].bell == true){
+                                        Image(systemName:
+                                                "bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    }else{
+                                        Image(systemName:
+                                                "bell").font(.system(size: 20)).foregroundColor(.red)
+                                    }
                                 }
-
-                                
                                 
                                 VStack{
                                     HStack{
