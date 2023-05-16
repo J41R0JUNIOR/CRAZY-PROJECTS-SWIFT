@@ -58,7 +58,14 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-var TdsEstructs = [allStructures(title: "Teste", body: "If the user try to put more than allowed", bell: View1().$bell[0])]
+
+var TdsStructs = [allStructures(title: "Título", body: "Label", bell: View1().$bell[0], text: View1().$titulo[0])]
+
+
+
+
+
+var numViews : Int = TdsStructs.count
 
 
 
@@ -69,6 +76,7 @@ struct allStructures{
     var title:String
     var body:String
     @Binding var bell:Bool
+    @Binding var text:String
     
 }
 
@@ -76,10 +84,12 @@ struct allStructures{
 
 
 
+
 //modal de add eventos/tarefas
 struct ModalView: View{
-    @Binding var estadoModal:Bool
+    @Binding var estadoModal1:Bool
     @Binding var bell:Bool
+    @Binding var text:String
     
     var body: some View{
         ZStack{
@@ -89,9 +99,9 @@ struct ModalView: View{
                 HStack{
                     //fechar modal
                     Button {
-                        estadoModal.toggle()
+                        estadoModal1.toggle()
                     } label: {
-                        Text("Cancel").foregroundColor(cor3)
+                        Text("Done").foregroundColor(cor3)
                     }
                     Spacer()
                     //add
@@ -104,7 +114,7 @@ struct ModalView: View{
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 73)
-                    
+                    //sino
                     HStack{
                         Button {
                             print("Sininho dentro do Modal")
@@ -118,12 +128,10 @@ struct ModalView: View{
                                         "bell").font(.system(size: 20)).foregroundColor(.red)
                             }
                         }
-
-                        
                         Spacer()
 
                         VStack{
-                            Text("Título da atividade").lineLimit(1)
+                            Text(TdsStructs[TdsStructs.count-1].text).lineLimit(1)
                                 .allowsTightening(false)
                             
                         }.padding()
@@ -141,6 +149,15 @@ struct ModalView: View{
                 }
                 Spacer()
             }.padding()
+        }
+    }
+}
+
+//modal de mais info
+struct ModalViewDetalhes: View{
+    var body: some View{
+        ZStack{
+            
         }
     }
 }
