@@ -58,7 +58,7 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-var TdsEstructs = [allStructures(title: "Teste", body: "If the user try to put more than allowed", bell: false)]
+var TdsEstructs = [allStructures(title: "Teste", body: "If the user try to put more than allowed", bell: View1().$bell[0])]
 
 
 
@@ -68,12 +68,9 @@ var TdsEstructs = [allStructures(title: "Teste", body: "If the user try to put m
 struct allStructures{
     var title:String
     var body:String
-    @State var bell:Bool
+    @Binding var bell:Bool
     
 }
-
-
-
 
 
 
@@ -82,6 +79,7 @@ struct allStructures{
 //modal de add eventos/tarefas
 struct ModalView: View{
     @Binding var estadoModal:Bool
+    @Binding var bell:Bool
     
     var body: some View{
         ZStack{
@@ -110,9 +108,15 @@ struct ModalView: View{
                     HStack{
                         Button {
                             print("Sininho dentro do Modal")
+                            bell.toggle()
                         } label: {
-                            Image(systemName:
-                                    "bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                            if(bell == false){
+                                Image(systemName:
+                                        "bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                            }else{
+                                Image(systemName:
+                                        "bell").font(.system(size: 20)).foregroundColor(.red)
+                            }
                         }
 
                         

@@ -12,6 +12,7 @@ struct View1: View {
     
     // variavel pra abrir e fechar o modal
     @State var estadoModal = false
+    @State var bell = [false]
     
     var body: some View {
         ZStack {
@@ -38,7 +39,7 @@ struct View1: View {
                         Image(systemName: "square.and.pencil").foregroundColor(cor3)
                     }
                     .sheet(isPresented: $estadoModal) {
-                        ModalView(estadoModal: $estadoModal)
+                        ModalView(estadoModal: $estadoModal, bell: $bell[0])
                     }
                     
                 }.padding()
@@ -53,10 +54,12 @@ struct View1: View {
                                 //botao do sino
                                 Button {
                                     print("Sininho ")
-                                    print(TdsEstructs[0].bell)
-                                    TdsEstructs[0].bell.toggle()
+                                    
+                                    print(bell[0])
+                                    bell[0].toggle()
+                                    
                                 } label: {
-                                    if(TdsEstructs[0].bell == true){
+                                    if(bell[0] == false){
                                         Image(systemName:
                                                 "bell.fill").font(.system(size: 20)).foregroundColor(.red)
                                     }else{
