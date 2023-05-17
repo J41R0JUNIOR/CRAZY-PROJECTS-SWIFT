@@ -8,11 +8,11 @@
 import SwiftUI
  
 struct MainView: View {
-    
-    
-    // variavel pra abrir e fechar o modal
+    //variaveis
+    @State var tdsStructs:[baseStructure] = []
     @State var estadoModal1 = false
-    @State var title = "Nothing"
+    @State var index = 0
+    
     
     var body: some View {
         ZStack {
@@ -40,16 +40,18 @@ struct MainView: View {
                     }
                     Spacer()
                     
-                    //abrir modal de add eventos/tarefas
+                    //add eventos/tarefas
                     Button {
-                        estadoModal1.toggle()
+                        
+                        tdsStructs.append(baseStructure(title: "titulo", body: "corpo", bell: false, data: "data"))
+                        
+                        print(tdsStructs[index])
+                        print("add")
                         
                     } label: {
                         Image(systemName: "square.and.pencil").foregroundColor(cor3)
                     }
-                    .sheet(isPresented: $estadoModal1) {
-                        ModalView(estadoModal1: $estadoModal1)
-                    }
+                    
                     
                 }.padding()
                 //Cor de fundo da ScrollView
@@ -63,24 +65,29 @@ struct MainView: View {
                     
                     //ScrollView dos horários
                     ScrollView {
+                        
                         ForEach (tdsStructs.indices, id: \.self){index in
+                            
                             
                             HStack{
                                 
                                 //botao do sino
                                 Button {
                                     print("Sininho fora Modal")
-                                    
-                                    tdsStructs[index].bell.toggle()
-                                    print(tdsStructs[index].bell)
+                                   
                                 } label: {
                                     Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    
+                                   
+                                    
                                     
                                     
                                 }
                                 //Entrar na estrutura
                                 Button {
-                                    print("Entrar na estrutura")
+                                    print("Entrar na estrutura", index)
+                                    estadoModal1.toggle()
+                                    
                                 } label: {
                                     //corpo da estrutura
                                     VStack{
@@ -99,10 +106,15 @@ struct MainView: View {
                                         }
                                         Divider().background(cor3)
                                     }
+                                }.sheet(isPresented: $estadoModal1) {
+                                    ModalView(estadoModal1: $estadoModal1, index: index, title: $tdsStructs[index].title)
+                                    
+                                    
+                                    
+                                    
+                                    
                                 }
                             }.padding()
-                            //Divider().background(Color.white)
-                            
                         }
                     }
                 }

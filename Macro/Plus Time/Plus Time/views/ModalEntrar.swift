@@ -2,8 +2,12 @@
 
 import SwiftUI
 struct ModalView: View{
-    @Binding var estadoModal1:Bool
     
+    //variaveis
+    
+    @Binding var estadoModal1:Bool
+    var index:Int
+    @Binding var title:String
     
     var body: some View{
         ZStack{
@@ -32,15 +36,20 @@ struct ModalView: View{
                     //sino
                     HStack{
                         Button {
-                            print("Sininho dentro do Modal")
+                            print("Sininho dentro do Modal", index)
                             
                         } label: {
                             Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
                             
                         }
                         Spacer()
-
+                        
+                        
+                        //texto
                         VStack{
+                            TextField("Digite o Texto", text: $title).textFieldStyle(.roundedBorder).foregroundColor(.black)
+                            Text("\(title) [\(index)]")
+                          
                             
                             
                         }.padding()
