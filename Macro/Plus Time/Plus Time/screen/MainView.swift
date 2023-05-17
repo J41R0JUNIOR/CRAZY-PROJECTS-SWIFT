@@ -73,26 +73,14 @@ struct MainView: View {
                                 //botao do sino
                                 Button {
                                     print("Sininho fora Modal")
-                                   
+                                    tdsStructs[index].bell.toggle()
                                 } label: {
-                                    Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    if(tdsStructs[index].bell == true){
+                                        Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                                    }else{
+                                        Image(systemName:"bell").font(.system(size: 20)).foregroundColor(.red)
+                                    }
                                     
-                                   
-                                    
-                                    
-                                    
-                                }
-                                //Entrar na estrutura // entrar no modal
-                                Button{
-                                    
-                                    print("Entrar na estrutura", index)
-                                    estadoModal1.toggle()
-                                    //
-                                    i = index
-                                    
-                                    
-                                } label: {
-                                    //corpo da estrutura
                                     VStack{
                                         HStack{
                                             Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.white).lineLimit(1)
@@ -104,7 +92,26 @@ struct MainView: View {
                                             Text(tdsStructs[index].note).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
                                                 .allowsTightening(false)
                                             Spacer()
-                                            Text(tdsStructs[index].data).fontWeight(.bold).foregroundColor(cor3)
+                                            
+                                            Button{
+                                                
+                                                print("Entrar na estrutura", index)
+                                                estadoModal1.toggle()
+                                                //
+                                                i = index
+                                                
+                                                
+                                            } label: {
+                                                //corpo da estrutura
+                                                Text(tdsStructs[index].data).fontWeight(.bold).foregroundColor(cor3)
+                                                if(tdsStructs[index].data == ""){
+                                                    Text("Editar")
+                                                }
+                                                
+                                            }
+                                            .sheet(isPresented: $estadoModal1) {
+                                                ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].note, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell)
+                                            }
                                             
                                         }
                                         Divider().background(cor3)
@@ -112,10 +119,8 @@ struct MainView: View {
                                     
                                     
                                 }
-                                .sheet(isPresented: $estadoModal1) {
-                                    ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].note, data: $tdsStructs[i].data)
-                                    
-                                }
+                                //Entrar na estrutura // entrar no modal
+                                
                             }.padding()
                         }
                     }

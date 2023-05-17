@@ -10,6 +10,7 @@ struct ModalView: View{
     @Binding var title:String
     @Binding var notes:String
     @Binding var data:String
+    @Binding var bell:Bool
     
     var body: some View{
         ZStack{
@@ -34,15 +35,18 @@ struct ModalView: View{
                     }
                 }
                 ZStack{
-                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150)
+                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(.black)
                     //sino
                     HStack{
                         Button {
                             print("Sininho dentro do Modal", index)
-                            
+                            bell.toggle()
                         } label: {
-                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
-                            
+                            if(bell == true){
+                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(.red)
+                            }else{
+                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(.red)
+                            }
                         }
                         Spacer()
                         
