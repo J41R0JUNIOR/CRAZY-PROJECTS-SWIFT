@@ -43,7 +43,7 @@ struct MainView: View {
                     //add eventos/tarefas
                     Button {
                         
-                        tdsStructs.append(baseStructure(title: "titulo", note: "corpo", bell: false, data: "data"))
+                        tdsStructs.append(baseStructure(title: "", note: "", bell: false, data: ""))
                         
                         print("add evento")
                         
@@ -104,14 +104,16 @@ struct MainView: View {
                                             Text(tdsStructs[index].note).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
                                                 .allowsTightening(false)
                                             Spacer()
-                                            Text("00/00 >").fontWeight(.bold).foregroundColor(cor3)
+                                            Text(tdsStructs[index].data).fontWeight(.bold).foregroundColor(cor3)
                                             
                                         }
                                         Divider().background(cor3)
                                     }
+                                    
+                                    
                                 }
                                 .sheet(isPresented: $estadoModal1) {
-                                    ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].note)
+                                    ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].note, data: $tdsStructs[i].data)
                                     
                                 }
                             }.padding()

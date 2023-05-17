@@ -9,6 +9,7 @@ struct ModalView: View{
     var index:Int
     @Binding var title:String
     @Binding var notes:String
+    @Binding var data:String
     
     var body: some View{
         ZStack{
@@ -33,7 +34,7 @@ struct ModalView: View{
                     }
                 }
                 ZStack{
-                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 73)
+                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150)
                     //sino
                     HStack{
                         Button {
@@ -48,25 +49,20 @@ struct ModalView: View{
                         //texto
                         VStack{
                             TextField("Digite o Texto", text: $title).textFieldStyle(.roundedBorder).foregroundColor(.black)
-                            Text("\(title) [\(index)]")
+                            //Text("\(title) [\(index)]")
                           
+                            TextField("Notas", text: $notes).textFieldStyle(.roundedBorder).foregroundColor(.black)
+                            //Text("\(notes) [\(index)]")
                             
+                            TextField("Data", text: $data).textFieldStyle(.roundedBorder).foregroundColor(.black)
                             
                         }.padding()
-                        Spacer()
+                        
                         
                     }.foregroundColor(.white).padding()
+                    
                 }
-                ZStack{
-                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 73)
-                    VStack{
-                        
-                        TextField("Notas", text: $notes).textFieldStyle(.roundedBorder).foregroundColor(.black)
-                        Text("\(notes) [\(index)]")
-                        
-                        Spacer()
-                    }.padding()
-                }
+                
                 Spacer()
             }.padding()
         }
