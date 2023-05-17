@@ -8,6 +8,7 @@ struct ModalView: View{
     @Binding var estadoModal1:Bool
     var index:Int
     @Binding var title:String
+    @Binding var notes:String
     
     var body: some View{
         ZStack{
@@ -44,7 +45,6 @@ struct ModalView: View{
                         }
                         Spacer()
                         
-                        
                         //texto
                         VStack{
                             TextField("Digite o Texto", text: $title).textFieldStyle(.roundedBorder).foregroundColor(.black)
@@ -59,9 +59,11 @@ struct ModalView: View{
                 }
                 ZStack{
                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 73)
-                    HStack{
-                        Text("Notas:").lineLimit(1)
-                            .allowsTightening(false).foregroundColor(cor3)
+                    VStack{
+                        
+                        TextField("Notas", text: $notes).textFieldStyle(.roundedBorder).foregroundColor(.black)
+                        Text("\(notes) [\(index)]")
+                        
                         Spacer()
                     }.padding()
                 }

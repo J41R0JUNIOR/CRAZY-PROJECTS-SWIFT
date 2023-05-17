@@ -11,8 +11,8 @@ struct MainView: View {
     //variaveis
     @State var tdsStructs:[baseStructure] = []
     @State var estadoModal1 = false
-    @State var index = 0
     
+    @State var i:Int = 0
     
     var body: some View {
         ZStack {
@@ -43,10 +43,9 @@ struct MainView: View {
                     //add eventos/tarefas
                     Button {
                         
-                        tdsStructs.append(baseStructure(title: "titulo", body: "corpo", bell: false, data: "data"))
+                        tdsStructs.append(baseStructure(title: "titulo", note: "corpo", bell: false, data: "data"))
                         
-                        print(tdsStructs[index])
-                        print("add")
+                        print("add evento")
                         
                     } label: {
                         Image(systemName: "square.and.pencil").foregroundColor(cor3)
@@ -83,10 +82,14 @@ struct MainView: View {
                                     
                                     
                                 }
-                                //Entrar na estrutura
-                                Button {
+                                //Entrar na estrutura // entrar no modal
+                                Button{
+                                    
                                     print("Entrar na estrutura", index)
                                     estadoModal1.toggle()
+                                    //
+                                    i = index
+                                    
                                     
                                 } label: {
                                     //corpo da estrutura
@@ -98,7 +101,7 @@ struct MainView: View {
                                             
                                         }
                                         HStack{
-                                            Text(tdsStructs[index].body).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
+                                            Text(tdsStructs[index].note).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
                                                 .allowsTightening(false)
                                             Spacer()
                                             Text("00/00 >").fontWeight(.bold).foregroundColor(cor3)
@@ -106,12 +109,9 @@ struct MainView: View {
                                         }
                                         Divider().background(cor3)
                                     }
-                                }.sheet(isPresented: $estadoModal1) {
-                                    ModalView(estadoModal1: $estadoModal1, index: index, title: $tdsStructs[index].title)
-                                    
-                                    
-                                    
-                                    
+                                }
+                                .sheet(isPresented: $estadoModal1) {
+                                    ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].note)
                                     
                                 }
                             }.padding()

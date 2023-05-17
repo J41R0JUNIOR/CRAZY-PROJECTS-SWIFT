@@ -11,7 +11,7 @@ import SwiftUI
 //Estruturas criadas pelo usuário para mostrar na tela inicial
 struct baseStructure{
     var title:String
-    var body:String = "Descrição"
+    var note:String = "Descrição"
     var bell:Bool
     var data:String = "dd/mm"
 }
