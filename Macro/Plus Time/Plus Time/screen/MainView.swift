@@ -76,7 +76,7 @@ struct MainView: View {
                                     tdsStructs[index].bell.toggle()
                                 } label: {
                                     if(tdsStructs[index].bell == true){
-                                        Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(cor3)
+                                        Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(cor2)
                                     }else{
                                         Image(systemName:"bell").font(.system(size: 20)).foregroundColor(cor3)
                                     }
