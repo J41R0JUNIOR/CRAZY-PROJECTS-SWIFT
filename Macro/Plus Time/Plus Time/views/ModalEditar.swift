@@ -77,7 +77,6 @@ struct ModalView: View{
                             
                             //Text("\(notes) [\(index)]")
                             TextField("Data: dd/mm", text: $data).textFieldStyle(.roundedBorder).foregroundColor(cor1)
-                            
                         }.padding()
                         Spacer()
                         
@@ -94,11 +93,11 @@ struct ModalView: View{
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
                                     VStack{
-                                        Text(secondaryVet[vet].title2)
-                                        TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder)
-                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder)
-                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder)
-                                    }
+                                        Text(secondaryVet[vet].title2).foregroundColor(cor2)
+                                        TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                                    }.padding()
                                 }
                             }
                         }

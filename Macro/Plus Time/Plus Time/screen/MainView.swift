@@ -7,6 +7,7 @@ struct MainView: View {
     //variaveis
     @State var tdsStructs:[baseStructure] = []
     @State var estadoModal1 = false
+    @State var estadoModal2 = false
     
     @State var i:Int = 0
     
@@ -65,7 +66,9 @@ struct MainView: View {
                     
                     //ScrollView dos horários
                     ScrollView {
+                        
                         ForEach (tdsStructs.indices, id: \.self){index in
+                            
                             HStack{
                                 
                                 
@@ -80,40 +83,64 @@ struct MainView: View {
                                     }else{
                                         Image(systemName:"bell").font(.system(size: 20)).foregroundColor(cor3)
                                     }
-                                    VStack{
-                                        HStack{
-                                            Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.white).lineLimit(1)
-                                                .allowsTightening(false)
-                                            Spacer()
+                                    
                                         }
-                                        HStack{
-                                            Text(tdsStructs[index].corpo).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
-                                                .allowsTightening(false)
-                                            Spacer()
-                                            Button{
-                                                print("Entrar na estrutura", index)
-                                                estadoModal1.toggle()
-                                                i = index
-                                            } label: {
-                                                
-                                                
-                                                
-                                                //corpo da estrutura
-                                                Text(tdsStructs[index].data).fontWeight(.bold).foregroundColor(cor3)
-                                                if(tdsStructs[index].data == ""){
-                                                    Text("Editar")
+                                        
+                                VStack{
+                                    
+                                    
+                                    HStack{
+                                        
+                                        
+                                        
+                                        //entrar no modal de apresentação
+                                        Button{
+                                            print("entrar no modal de visualização", index)
+                                            estadoModal2.toggle()
+                                            i = index
+                                        } label: {
+                                            VStack{
+                                                HStack{
+                                                    Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.white).lineLimit(1)
+                                                        .allowsTightening(false)
+                                                    Spacer()
                                                 }
+                                                Text(tdsStructs[index].corpo).font(.system(size: 15)).foregroundColor(cor3).lineLimit(2)
+                                                    .allowsTightening(false)
                                             }
+                                            Spacer()
+                                                
+                                        }.sheet(isPresented: $estadoModal2) {
+                                            ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index)
+                                        }
+                                        
+                                        
+                                        
+                                        //entrar no modal de edição
+                                        Button{
+                                            print("Entrar no modal de edição", index)
+                                            estadoModal1.toggle()
+                                            i = index
+                                        } label: {
                                             
                                             
                                             
-                                            //passando parametros pro modal
-                                            .sheet(isPresented: $estadoModal1) {
-                                                ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet)
+                                            //corpo da estrutura
+                                            Text(tdsStructs[index].data).fontWeight(.bold).foregroundColor(cor3)
+                                            if(tdsStructs[index].data == ""){
+                                                Text("Editar")
                                             }
                                         }
-                                        Divider().background(cor3)
+                                        
+                                        
+                                        
+                                        //passando parametros pro modal
+                                        .sheet(isPresented: $estadoModal1) {
+                                            ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet)
+                                        }
+                                        
                                     }
+                                    Divider().background(cor3)
                                 }
                             }.padding()
                         }
