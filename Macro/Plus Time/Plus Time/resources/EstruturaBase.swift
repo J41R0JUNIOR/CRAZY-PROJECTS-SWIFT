@@ -1,17 +1,22 @@
 import Foundation
 import SwiftUI
 
-//var tdsStructs:[baseStructure] = []
-
-
-
-
 
 
 //Estruturas criadas pelo usuário para mostrar na tela inicial
 struct baseStructure{
     var title:String
-    var note:String
+    var corpo:String
     var bell:Bool
-    var data:String = "dd/mm"
+    var data:String
+    var secondaryVet:[secondStructure] = []
+    
 }
+
+//Estrutura pra por dentro da estrutura
+struct secondStructure{
+    var title2:String
+    var corpo2:String
+    var data2:String
+}
+
