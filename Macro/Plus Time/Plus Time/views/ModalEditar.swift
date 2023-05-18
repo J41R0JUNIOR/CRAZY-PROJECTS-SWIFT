@@ -38,7 +38,7 @@ struct ModalView: View{
                     
                     //add
                     Button {
-                        secondaryVet.append(secondStructure(title2: "adas", corpo2: "asdas", data2: "asdas"))
+                        secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
                     } label: {
                         Image(systemName: "square.and.pencil").foregroundColor(cor3)
                     }
@@ -66,17 +66,17 @@ struct ModalView: View{
                         
                         //texto
                         VStack{
-                            TextField("Digite o Texto", text: $title).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Digite o Título", text: $title).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                             
                             
                             
                             //Text("\(title) [\(index)]")
-                            TextField("Notas", text: $notes).textFieldStyle(.roundedBorder)
+                            TextField("Notas", text: $notes).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                             
                             
                             
                             //Text("\(notes) [\(index)]")
-                            TextField("Data: dd/mm", text: $data).textFieldStyle(.roundedBorder)
+                            TextField("Data: dd/mm", text: $data).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                             
                         }.padding()
                         Spacer()
@@ -93,7 +93,12 @@ struct ModalView: View{
                             ForEach(secondaryVet.indices, id: \.self) { vet in
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
-                                    Text(secondaryVet[vet].title2)
+                                    VStack{
+                                        Text(secondaryVet[vet].title2)
+                                        TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder)
+                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder)
+                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder)
+                                    }
                                 }
                             }
                         }
