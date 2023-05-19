@@ -21,12 +21,18 @@ struct ContentView: View {
                     MainView()
                     .tabItem {
                         Label("Home", systemImage: "house")
-                    }
+                    }.toolbar(.visible, for: .tabBar)
+                        .toolbarBackground(
+                            Color.white,
+                            for: .tabBar)
                     CalendarView()
                     .tabItem {
                         Label("Calendar", systemImage: "calendar")
-                    }
-                }.accentColor(.white)
+                    }.toolbar(.visible, for: .tabBar)
+                        .toolbarBackground(
+                            Color.white,
+                            for: .tabBar)
+                }.accentColor(cor3)
             }
         }
     }

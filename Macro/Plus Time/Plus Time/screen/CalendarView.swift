@@ -11,7 +11,7 @@ struct CalendarView: View {
     var body: some View {
         ZStack {
             
-            Color(red:98/255, green: 84/255, blue:253/255).ignoresSafeArea()
+            Rectangle().fill(cor1.gradient).ignoresSafeArea()
             HStack{
                 
             }

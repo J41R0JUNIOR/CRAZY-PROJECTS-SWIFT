@@ -18,7 +18,7 @@ struct ModalView: View{
     
     var body: some View{
         ZStack{
-            Color(red:36/255, green: 36/255, blue:36/255).ignoresSafeArea()
+            viewEscura().ignoresSafeArea()
             
             VStack{
                 HStack{
@@ -66,17 +66,18 @@ struct ModalView: View{
                         
                         //texto
                         VStack{
-                            TextField("Digite o Título", text: $title).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Digite o Título", text: $title).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                             
                             
                             
                             //Text("\(title) [\(index)]")
-                            TextField("Notas", text: $notes).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Notas", text: $notes).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                             
                             
                             
                             //Text("\(notes) [\(index)]")
-                            TextField("Data: dd/mm", text: $data).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Data: dd/mm", text: $data).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            
                         }.padding()
                         Spacer()
                         
@@ -93,6 +94,14 @@ struct ModalView: View{
                                 ZStack{
                                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
                                     VStack{
+                                        HStack{
+                                            Button {
+                                                secondaryVet.remove(at: vet)
+                                            } label: {
+                                                Image(systemName: "trash.slash.circle.fill").foregroundColor(cor2)
+                                            }
+                                            Spacer()
+                                        }
                                         Text(secondaryVet[vet].title2).foregroundColor(cor2)
                                         TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                                         TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(cor1)

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B30876AC2A15967D00937CE2 /* ModalEditar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876AB2A15967D00937CE2 /* ModalEditar.swift */; };
+		B30876AE2A16DF0500937CE2 /* viewRoxa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876AD2A16DF0500937CE2 /* viewRoxa.swift */; };
+		B30876B02A16E04800937CE2 /* viewEscura.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876AF2A16E04800937CE2 /* viewEscura.swift */; };
+		B30876B22A16FB1F00937CE2 /* viewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876B12A16FB1F00937CE2 /* viewTest.swift */; };
 		B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */; };
 		B30E682D2A140B2000C84E4E /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E682C2A140B2000C84E4E /* Cores.swift */; };
 		B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */; };
@@ -41,6 +44,9 @@
 
 /* Begin PBXFileReference section */
 		B30876AB2A15967D00937CE2 /* ModalEditar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEditar.swift; sourceTree = "<group>"; };
+		B30876AD2A16DF0500937CE2 /* viewRoxa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewRoxa.swift; sourceTree = "<group>"; };
+		B30876AF2A16E04800937CE2 /* viewEscura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewEscura.swift; sourceTree = "<group>"; };
+		B30876B12A16FB1F00937CE2 /* viewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewTest.swift; sourceTree = "<group>"; };
 		B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstruturaBase.swift; sourceTree = "<group>"; };
 		B30E682C2A140B2000C84E4E /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
 		B325096F2A0EAA4200D6DDF4 /* Plus Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plus Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +93,10 @@
 			isa = PBXGroup;
 			children = (
 				B36DCF752A11593B00358871 /* ContentView.swift */,
-				B3D4102A2A1046A100779F14 /* MainView.swift */,
 				B3D4102C2A1046C900779F14 /* CalendarView.swift */,
+				B3D4102A2A1046A100779F14 /* MainView.swift */,
+				B30876AB2A15967D00937CE2 /* ModalEditar.swift */,
+				B326B4312A144F9F004EEC3F /* ModalEntrar.swift */,
 			);
 			path = screen;
 			sourceTree = "<group>";
@@ -105,8 +113,9 @@
 		B30E682B2A1409CB00C84E4E /* views */ = {
 			isa = PBXGroup;
 			children = (
-				B326B4312A144F9F004EEC3F /* ModalEntrar.swift */,
-				B30876AB2A15967D00937CE2 /* ModalEditar.swift */,
+				B30876AD2A16DF0500937CE2 /* viewRoxa.swift */,
+				B30876AF2A16E04800937CE2 /* viewEscura.swift */,
+				B30876B12A16FB1F00937CE2 /* viewTest.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -300,8 +309,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3D4102B2A1046A100779F14 /* MainView.swift in Sources */,
+				B30876B22A16FB1F00937CE2 /* viewTest.swift in Sources */,
+				B30876B02A16E04800937CE2 /* viewEscura.swift in Sources */,
 				B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */,
 				B30876AC2A15967D00937CE2 /* ModalEditar.swift in Sources */,
+				B30876AE2A16DF0500937CE2 /* viewRoxa.swift in Sources */,
 				B36DCF762A11593B00358871 /* ContentView.swift in Sources */,
 				B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */,
 				B326B4322A144F9F004EEC3F /* ModalEntrar.swift in Sources */,
