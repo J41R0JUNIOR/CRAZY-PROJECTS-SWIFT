@@ -9,7 +9,7 @@ import SwiftUI
 
 struct viewEscura: View {
     var body: some View {
-        LinearGradient(colors: [cor1, dark2],
+        LinearGradient(colors: [roxoAcentuado, dark2],
                              startPoint: .top,
                              endPoint: .bottom)
         

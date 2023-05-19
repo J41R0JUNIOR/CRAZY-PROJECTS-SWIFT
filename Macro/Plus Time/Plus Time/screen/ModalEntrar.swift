@@ -35,7 +35,7 @@ struct ModalEntrar: View {
                         Button {
                             estadoModal2.toggle()
                         } label: {
-                            Text("Done").foregroundColor(cor3)
+                            Text("Done").foregroundColor(roxoLeve)
                         }
                         Spacer()
                         
@@ -43,11 +43,10 @@ struct ModalEntrar: View {
                         
                         //editar
                         Button {
-                            print("edit")
                             estadoModal2.toggle()
                             estadoModal1.toggle()
                         } label: {
-                            Text("Edit").foregroundColor(cor3)
+                            Text("Edit").foregroundColor(roxoLeve)
                         }
                         
                         
@@ -63,19 +62,18 @@ struct ModalEntrar: View {
                                 HStack{
                                     //sino
                                     Button {
-                                        print("Sininho dentro do Modal", index)
                                         bell.toggle()
                                     } label: {
                                         if(bell == true){
-                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(cor2)
+                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
                                         }else{
-                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(cor3)
+                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
                                         }
                                     }
                                     VStack{
-                                        Text("Title: \(title)").foregroundColor(cor3)
-                                        Text("Notes: \(notes)").foregroundColor(cor3)
-                                        Text("Date: \(data)").foregroundColor(cor3)
+                                        Text("Title: \(title)").foregroundColor(roxoLeve)
+                                        Text("Notes: \(notes)").foregroundColor(roxoLeve)
+                                        Text("Date: \(data)").foregroundColor(roxoLeve)
                                         
                                         
                                         
@@ -91,9 +89,9 @@ struct ModalEntrar: View {
                                             RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
                                             HStack{
                                                 VStack{
-                                                    Text("Título: \(secondaryVet[vet].title2)").foregroundColor(cor3)
-                                                    Text("Nota: \(secondaryVet[vet].corpo2)").foregroundColor(cor3)
-                                                    Text("Data: \(secondaryVet[vet].data2)").foregroundColor(cor3)
+                                                    Text("Título: \(secondaryVet[vet].title2)").foregroundColor(roxoLeve)
+                                                    Text("Nota: \(secondaryVet[vet].corpo2)").foregroundColor(roxoLeve)
+                                                    Text("Data: \(secondaryVet[vet].data2)").foregroundColor(roxoLeve)
                                                 }.padding()
                                                 Spacer()
                                             }

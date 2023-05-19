@@ -11,7 +11,7 @@ struct CalendarView: View {
     var body: some View {
         ZStack {
             
-            Rectangle().fill(cor1.gradient).ignoresSafeArea()
+            Rectangle().fill(roxoAcentuado.gradient).ignoresSafeArea()
             HStack{
                 
             }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct viewTest: View {
     var body: some View {
-        LinearGradient(colors: [dark, cor1],
+        LinearGradient(colors: [dark, roxoAcentuado],
                              startPoint: .top,
                              endPoint: .bottom)
     }

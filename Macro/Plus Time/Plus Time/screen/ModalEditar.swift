@@ -33,7 +33,7 @@ struct ModalView: View{
                             remover.toggle()
                         }
                     } label: {
-                        Text("Done").foregroundColor(cor3)
+                        Text("Done").foregroundColor(roxoLeve)
                     }
                     Spacer()
                     
@@ -41,14 +41,17 @@ struct ModalView: View{
                     
                     //add
                     
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                     .padding()
                     .contextMenu {
                         Button {
                             secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
+                            if(remover == true){
+                                remover.toggle()
+                            }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                         }
                         Button {
                             remover.toggle()
@@ -66,13 +69,12 @@ struct ModalView: View{
                     //sino
                     HStack{
                         Button {
-                            print("Sininho dentro do Modal", index)
                             bell.toggle()
                         } label: {
                             if(bell == true){
-                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(cor2)
+                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
                             }else{
-                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(cor3)
+                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
                             }
                         }
                         Spacer()
@@ -81,17 +83,17 @@ struct ModalView: View{
                         
                         //texto
                         VStack{
-                            TextField("Digite o Título", text: $title).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Digite o Título", text: $title).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                             
                             
                             
                             //Text("\(title) [\(index)]")
-                            TextField("Notas", text: $notes).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Notas", text: $notes).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                             
                             
                             
                             //Text("\(notes) [\(index)]")
-                            TextField("Data: dd/mm", text: $data).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                            TextField("Data: dd/mm", text: $data).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                             
                         }.padding()
                         Spacer()
@@ -114,15 +116,15 @@ struct ModalView: View{
                                                 Button {
                                                     secondaryVet.remove(at: vet)
                                                 } label: {
-                                                    Image(systemName: "trash.slash.circle.fill").font(.system(size: 25)).foregroundColor(cor2)
+                                                    Image(systemName: "trash.slash.circle.fill").font(.system(size: 25)).foregroundColor(roxo)
                                                 }
                                                 Spacer()
                                             }
                                         }
-                                        Text(secondaryVet[vet].title2).foregroundColor(cor2)
-                                        TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
-                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
-                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
+                                        Text(secondaryVet[vet].title2).foregroundColor(roxo)
+                                        TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                                     }.padding()
                                 }.padding()
                             }

@@ -26,18 +26,16 @@ struct MainView: View {
                     
                     //barra de pesquisa
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 36).foregroundColor(cor3)
+                        RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 36).foregroundColor(roxoLeve)
                         HStack{
                             
                             
                             
                             //pesquisa
                             Button {
-                                print("lupa de pesquisa")
-                            
                             } label: {
-                                Image(systemName: "magnifyingglass").foregroundColor(cor2)
-                                Text("Search").foregroundColor(cor2)
+                                Image(systemName: "magnifyingglass").foregroundColor(roxo)
+                                Text("Search").foregroundColor(roxo)
                             }
 
                             Spacer()
@@ -48,7 +46,7 @@ struct MainView: View {
                     
                     
                     //add eventos/tarefas
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                     .padding()
                     .contextMenu {
                         Button {
@@ -58,7 +56,7 @@ struct MainView: View {
                             }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                         }
                         
                         Button {
@@ -77,32 +75,33 @@ struct MainView: View {
                 
                 //Cor de fundo da ScrollView
                 if(tdsStructs.count == 0){
-                    Button {
-                        
-                        tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
-                        print("add evento")
-                        if(remover == true){
-                            remover.toggle()
+                    VStack{
+                        Spacer()
+                        Button {
+                            
+                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
+                            if(remover == true){
+                                remover.toggle()
+                            }
+                        } label: {
+                            Text("Clique aqui e adicione").foregroundColor(roxoLeve).font(.system(size: 50))
                         }
-                    } label: {
-                        Text("Clique e adicione").foregroundColor(cor3).font(.system(size: 50))
+                        
                     }
-                    
-                    
                 }
                 //ScrollView dos horários
                 ScrollView {
                     
                     ForEach (tdsStructs.indices, id: \.self){index in
                         ZStack{
-                            RoundedRectangle(cornerRadius: 15).foregroundColor(cor3)
+                            RoundedRectangle(cornerRadius: 15).foregroundColor(roxoLeve)
                                 
                             HStack{
                                 if(remover == true){
                                     Button {
                                         tdsStructs.remove(at: index)
                                     } label: {
-                                        Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(cor2)
+                                        Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxo)
                                     }
                                 }
                                 
@@ -111,9 +110,9 @@ struct MainView: View {
                                     tdsStructs[index].bell.toggle()
                                 } label: {
                                     if(tdsStructs[index].bell == true){
-                                        Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(cor2)
+                                        Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
                                     }else{
-                                        Image(systemName:"bell").font(.system(size: 20)).foregroundColor(cor1)
+                                        Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                                     }
                                 }
                                 VStack{
@@ -123,7 +122,6 @@ struct MainView: View {
                                         
                                         //entrar no modal de apresentação
                                         Button{
-                                            print("entrar no modal de visualização", index)
                                             estadoModal2.toggle()
                                             i = index
                                             if(remover == true){
@@ -133,17 +131,17 @@ struct MainView: View {
                                             VStack{
                                                 HStack{
                                                     if(tdsStructs[index].title == ""){
-                                                        Text("Add Título").fontWeight(.bold).foregroundColor(cor1)
+                                                        Text("Add Título").fontWeight(.bold).foregroundColor(roxoAcentuado)
                                                     }
-                                                    Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(cor1).lineLimit(1)
+                                                    Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(roxoAcentuado).lineLimit(1)
                                                         .allowsTightening(false)
                                                     Spacer()
                                                 }
                                                 HStack{
                                                     if(tdsStructs[index].corpo == ""){
-                                                        Text("Add Body").font(.system(size: 13)).foregroundColor(cor2)
+                                                        Text("Add Body").font(.system(size: 13)).foregroundColor(roxo)
                                                     }
-                                                    Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(cor2).lineLimit(2)
+                                                    Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(roxo).lineLimit(2)
                                                         .allowsTightening(false)
                                                     Spacer()
                                                 }
@@ -158,7 +156,6 @@ struct MainView: View {
                                         
                                         //entrar no modal de edição
                                         Button{
-                                            print("Entrar no modal de edição", index)
                                             estadoModal1.toggle()
                                             i = index
                                         } label: {
@@ -168,9 +165,9 @@ struct MainView: View {
                                             //corpo da estrutura
                                             
                                             if(tdsStructs[index].data == ""){
-                                                Text("Editar").foregroundColor(cor2)
+                                                Text("Editar").foregroundColor(roxo)
                                             }
-                                            Text(tdsStructs[index].data).font(.system(size: 15)).fontWeight(.bold).foregroundColor(cor2)
+                                            Text(tdsStructs[index].data).font(.system(size: 15)).fontWeight(.bold).foregroundColor(roxo)
                                         }
                                         
                                         
@@ -180,7 +177,7 @@ struct MainView: View {
                                             ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet)
                                         }
                                     }
-                                    Divider().background(cor3)
+                                    Divider().background(roxoLeve)
                                 }
                             }.padding()
                         }

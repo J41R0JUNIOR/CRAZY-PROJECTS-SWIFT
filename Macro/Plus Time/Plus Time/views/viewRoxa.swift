@@ -9,7 +9,7 @@ import SwiftUI
 
 struct viewRoxa: View {
     var body: some View {
-        Rectangle().fill(cor1.gradient)
+        Rectangle().fill(roxoAcentuado.gradient)
        
     }
 }

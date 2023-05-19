@@ -89,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B30876B42A17F73400937CE2 /* Specifics */ = {
+			isa = PBXGroup;
+			children = (
+				B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */,
+				B32509762A0EAA4300D6DDF4 /* Assets.xcassets */,
+			);
+			path = Specifics;
+			sourceTree = "<group>";
+		};
 		B30E68272A1408F800C84E4E /* screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,11 +152,10 @@
 		B32509712A0EAA4200D6DDF4 /* Plus Time */ = {
 			isa = PBXGroup;
 			children = (
+				B30876B42A17F73400937CE2 /* Specifics */,
 				B30E682B2A1409CB00C84E4E /* views */,
 				B30E68292A14095300C84E4E /* resources */,
 				B30E68272A1408F800C84E4E /* screen */,
-				B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */,
-				B32509762A0EAA4300D6DDF4 /* Assets.xcassets */,
 				B32509782A0EAA4300D6DDF4 /* Preview Content */,
 			);
 			path = "Plus Time";
