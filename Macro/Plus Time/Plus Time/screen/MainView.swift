@@ -48,16 +48,19 @@ struct MainView: View {
                     
                     
                     //add eventos/tarefas
-                Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
                     .padding()
                     .contextMenu {
                         Button {
                             tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
-                            print("add evento")
+                            if(remover == true){
+                                remover.toggle()
+                            }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
                             Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
                         }
+                        
                         Button {
                             remover.toggle()
                         } label: {
@@ -74,8 +77,18 @@ struct MainView: View {
                 
                 //Cor de fundo da ScrollView
                 if(tdsStructs.count == 0){
+                    Button {
+                        
+                        tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
+                        print("add evento")
+                        if(remover == true){
+                            remover.toggle()
+                        }
+                    } label: {
+                        Text("Clique e adicione").foregroundColor(cor3).font(.system(size: 50))
+                    }
                     
-                    Text("Adicione algo!").foregroundColor(cor3).font(.system(size: 50))
+                    
                 }
                 //ScrollView dos horários
                 ScrollView {
@@ -113,6 +126,9 @@ struct MainView: View {
                                             print("entrar no modal de visualização", index)
                                             estadoModal2.toggle()
                                             i = index
+                                            if(remover == true){
+                                                remover.toggle()
+                                            }
                                         } label: {
                                             VStack{
                                                 HStack{

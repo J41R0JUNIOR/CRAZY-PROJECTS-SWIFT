@@ -15,6 +15,7 @@ struct ModalView: View{
     @Binding var data:String
     @Binding var bell:Bool
     @Binding var secondaryVet:[secondStructure]
+    @State var remover = false
     
     var body: some View{
         ZStack{
@@ -28,7 +29,9 @@ struct ModalView: View{
                     //fechar modal
                     Button {
                         estadoModal1.toggle()
-                        
+                        if(remover == true){
+                            remover.toggle()
+                        }
                     } label: {
                         Text("Done").foregroundColor(cor3)
                     }
@@ -37,12 +40,24 @@ struct ModalView: View{
                     
                     
                     //add
-                    Button {
-                        secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
-                    } label: {
-                        Image(systemName: "square.and.pencil").foregroundColor(cor3)
+                    
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                    .padding()
+                    .contextMenu {
+                        Button {
+                            secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
+                        } label: {
+                            Label("Adicionar", systemImage: "square.and.pencil")
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(cor3)
+                        }
+                        Button {
+                            remover.toggle()
+                        }label: {
+                            Label("Remover", systemImage: "trash.slash")
+                        }
+                        
                     }
-                }
+                }.padding()
                 ZStack{
                     RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
                     
@@ -92,22 +107,24 @@ struct ModalView: View{
                         ScrollView{
                             ForEach(secondaryVet.indices, id: \.self) { vet in
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
+                                    RoundedRectangle(cornerRadius: 15).frame(width: 358).foregroundColor(dark2)
                                     VStack{
                                         HStack{
-                                            Button {
-                                                print("+")
-                                            } label: {
-                                                Image(systemName: "trash.slash.circle.fill").foregroundColor(cor2)
+                                            if(remover == true){
+                                                Button {
+                                                    secondaryVet.remove(at: vet)
+                                                } label: {
+                                                    Image(systemName: "trash.slash.circle.fill").font(.system(size: 25)).foregroundColor(cor2)
+                                                }
+                                                Spacer()
                                             }
-                                            Spacer()
                                         }
                                         Text(secondaryVet[vet].title2).foregroundColor(cor2)
                                         TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                                         TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                                         TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder).foregroundColor(cor1)
                                     }.padding()
-                                }
+                                }.padding()
                             }
                         }
                     }
@@ -115,7 +132,7 @@ struct ModalView: View{
                 
                 
                 Spacer()
-            }.padding()
+            }
         }
     }
 }
