@@ -96,7 +96,7 @@ struct ModalView: View{
                                     VStack{
                                         HStack{
                                             Button {
-                                                secondaryVet.remove(at: vet)
+                                                print("+")
                                             } label: {
                                                 Image(systemName: "trash.slash.circle.fill").foregroundColor(cor2)
                                             }
