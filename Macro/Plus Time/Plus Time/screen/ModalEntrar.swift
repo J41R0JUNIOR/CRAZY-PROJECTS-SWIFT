@@ -19,12 +19,12 @@ struct ModalEntrar: View {
     
     @Binding var title:String
     @Binding var notes:String
-    @Binding var data:String
+    @Binding var data:Date
     @Binding var bell:Bool
     
     var body: some View {
         ZStack{
-            viewEscura().ignoresSafeArea()
+            viewRoxa().ignoresSafeArea()
             VStack{
                 VStack{
                     HStack{
@@ -51,56 +51,75 @@ struct ModalEntrar: View {
                         
                         
                     }.padding()
-                    ZStack{
+                    
+                    Button {
+                        bell.toggle()
+                    } label: {
+                        if(bell == true){
+                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoLeve)
+                        }else{
+                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
+                        }
+                    }
                         
                         
                         
                         //Corpo do modal
                         VStack{
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 14).frame(width: 358, height: 150).foregroundColor(dark2)
-                                HStack{
-                                    //sino
-                                    Button {
-                                        bell.toggle()
-                                    } label: {
-                                        if(bell == true){
-                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
-                                        }else{
-                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
-                                        }
-                                    }
-                                    VStack{
-                                        Text("Title: \(title)").foregroundColor(roxoLeve)
-                                        Text("Notes: \(notes)").foregroundColor(roxoLeve)
-                                        Text("Date: \(data)").foregroundColor(roxoLeve)
-                                        
-                                        
-                                        
-                                    }
-                                    Spacer()
-                                }.padding()
-                            }
+                            
                             
                             VStack{
-                                ScrollView{
-                                    ForEach(secondaryVet.indices, id: \.self) { vet in
+                                
+                                    ScrollView{
                                         ZStack{
-                                            RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
+                                            
+                                            RoundedRectangle(cornerRadius: 14).frame(width: 390).foregroundColor(roxoEscuro)
                                             HStack{
+                                                //sino
+                                                
                                                 VStack{
-                                                    Text("Título: \(secondaryVet[vet].title2)").foregroundColor(roxoLeve)
-                                                    Text("Nota: \(secondaryVet[vet].corpo2)").foregroundColor(roxoLeve)
-                                                    Text("Data: \(secondaryVet[vet].data2)").foregroundColor(roxoLeve)
-                                                }.padding()
-                                                Spacer()
-                                            }
+                                                    if(title == ""){
+                                                        Text("Title").font(.system(size: 20))
+                                                    }
+                                                    Text("\(title)").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                    
+                                                    if(notes == ""){
+                                                        Text("Notes").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                    }
+                                                    Text("\(notes)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                    Spacer()
+                                                    Text("\(data.formatted())").foregroundColor(roxoLeve).font(.system(size: 15)).font(.system(size: 15))
+                                                    
+                                                    
+                                                    
+                                                }.foregroundColor(roxoLeve)
+                                                
+                                            }.padding()
+                                        }
+                                        ForEach(secondaryVet.indices, id: \.self) { vet in
+                                            ZStack{
+                                                RoundedRectangle(cornerRadius: 15).frame(width: 358).foregroundColor(dark2)
+                                                HStack{
+                                                    VStack{
+                                                        if(secondaryVet[vet].title2 == ""){
+                                                            Text("Title").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                        }
+                                                        Text("\(secondaryVet[vet].title2)").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                        if(secondaryVet[vet].corpo2 == ""){
+                                                            Text("Notes").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                        }
+                                                        Text("\(secondaryVet[vet].corpo2)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                        Text("\(secondaryVet[vet].data2)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                    }.padding()
+                                                    
+                                                }
+                                            }.padding()
                                         }
                                     }
-                                }
+                                
                             }
                         }
-                    }.padding()
+                    
                 }
                 Spacer()
             }

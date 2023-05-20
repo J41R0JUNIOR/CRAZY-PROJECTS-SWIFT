@@ -8,7 +8,7 @@ struct baseStructure{
     var title:String
     var corpo:String
     var bell:Bool
-    var data:String
+    var data:Date
     var secondaryVet:[secondStructure] = []
     
 }

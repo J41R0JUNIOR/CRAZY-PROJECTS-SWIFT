@@ -12,14 +12,18 @@ struct ModalView: View{
     var index:Int
     @Binding var title:String
     @Binding var notes:String
-    @Binding var data:String
+    @Binding var data:Date
     @Binding var bell:Bool
     @Binding var secondaryVet:[secondStructure]
     @State var remover = false
     
+    //@State private var datePicked = Date()
+    
+   
+    
     var body: some View{
         ZStack{
-            viewEscura().ignoresSafeArea()
+            viewRoxa().ignoresSafeArea()
             
             VStack{
                 HStack{
@@ -34,15 +38,14 @@ struct ModalView: View{
                         }
                     } label: {
                         Text("Done").foregroundColor(roxoLeve)
-                    }
+                    }.padding(.horizontal)
                     Spacer()
                     
                     
                     
                     //add
-                    
                     Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
-                    .padding()
+                    
                     .contextMenu {
                         Button {
                             secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
@@ -56,13 +59,20 @@ struct ModalView: View{
                         Button {
                             remover.toggle()
                         }label: {
-                            Label("Remover", systemImage: "trash.slash")
-                        }
+                            if(remover == false){
+                                Label("Remover", systemImage: "trash.slash")
+                            }else{
+                                Label("Pronto", systemImage: "return")
+                            }                        }
                         
-                    }
-                }.padding()
+                    }.padding(.horizontal)
+                }.padding(.horizontal)
                 ZStack{
-                    RoundedRectangle(cornerRadius: 15).frame(width: 358, height: 150).foregroundColor(dark2)
+                    /*
+                    LinearGradient(colors: [roxoAcentuado],
+                                         startPoint: .top,
+                                   endPoint: .bottom).cornerRadius(15).frame(width: 358, height: 150)
+                    */
                     
                     
                     
@@ -72,44 +82,56 @@ struct ModalView: View{
                             bell.toggle()
                         } label: {
                             if(bell == true){
-                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
+                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoLeve)
                             }else{
                                 Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
                             }
                         }
-                        Spacer()
                         
-                        
-                        
-                        //texto
-                        VStack{
-                            TextField("Digite o Título", text: $title).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
-                            
-                            
-                            
-                            //Text("\(title) [\(index)]")
-                            TextField("Notas", text: $notes).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
-                            
-                            
-                            
-                            //Text("\(notes) [\(index)]")
-                            TextField("Data: dd/mm", text: $data).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
-                            
-                        }.padding()
-                        Spacer()
-                        
-                        
-                        
-                        
-                    }.foregroundColor(.white).padding()
+                    }.foregroundColor(.white)
                     
-                }
+                }.padding(.horizontal)
                 
                     HStack{
                         ScrollView{
+                            VStack{
+                                
+                                TextField("Digite o Título", text: $title).frame(width: 360, alignment: .leading).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                
+                                
+                                
+                                //Text("\(title) [\(index)]")
+                                TextEditor(text: $notes)
+                                    .font(.custom("HelveticaNeue", size: 15)).font(.body)
+                                    .frame(width: 360, height: 80, alignment: .leading)
+                                    .lineLimit(1)
+                                    .allowsTightening(false).cornerRadius(5)
+                                /*
+                                TextField("Notas", text: $notes).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                */
+                                
+                                
+                                //Text("\(notes) [\(index)]")
+                                HStack{
+                                    Spacer()
+                                    
+                                    DatePicker("", selection: $data, in: Date()..., displayedComponents: .date).foregroundColor(roxoLeve)
+                                    //TextField("Data:", text: $data).frame(width: 100).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                }.padding(.horizontal)
+                            }.padding()
                             ForEach(secondaryVet.indices, id: \.self) { vet in
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 15).frame(width: 358).foregroundColor(dark2)
+                                    /*
+                                    RadialGradient(colors: [roxoAcentuado, roxoEscuro],
+                                                           center: .center,
+                                                           startRadius: 20,
+                                                           endRadius: 150).cornerRadius(15)
+                                     */
+                                    /*
+                                    LinearGradient(colors: [roxoEscuro],
+                                                         startPoint: .top,
+                                                   endPoint: .bottom).cornerRadius(15)
+                                     */
                                     VStack{
                                         HStack{
                                             if(remover == true){
@@ -121,10 +143,17 @@ struct ModalView: View{
                                                 Spacer()
                                             }
                                         }
-                                        Text(secondaryVet[vet].title2).foregroundColor(roxo)
                                         TextField("Título", text: $secondaryVet[vet].title2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
-                                        TextField("Nota", text: $secondaryVet[vet].corpo2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
-                                        TextField("Data: dd/mm", text: $secondaryVet[vet].data2).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                        
+                                        TextEditor(text: $secondaryVet[vet].corpo2)
+                                            .font(.custom("HelveticaNeue", size: 15)).font(.body)
+                                            .frame(width: 360, height: 80, alignment: .leading)
+                                            .lineLimit(1)
+                                            .allowsTightening(false).cornerRadius(5)
+                                        HStack{
+                                            Spacer()
+                                            TextField("Data: dd/mm", text: $secondaryVet[vet].data2).frame(width: 100).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                        }
                                     }.padding()
                                 }.padding()
                             }
@@ -134,7 +163,7 @@ struct ModalView: View{
                 
                 
                 Spacer()
-            }
+            }.padding()
         }
     }
 }

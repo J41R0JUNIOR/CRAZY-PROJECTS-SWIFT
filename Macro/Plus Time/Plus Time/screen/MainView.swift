@@ -5,12 +5,13 @@ struct MainView: View {
     
     
     //variaveis
-    @State var tdsStructs:[baseStructure] = []
+    
     @State var estadoModal1 = false
     @State var estadoModal2 = false
     @State var remover = false
-    
+    @State var tdsStructs:[baseStructure] = []
     @State var i:Int = 0
+    
     
     var body: some View {
         ZStack {
@@ -26,7 +27,7 @@ struct MainView: View {
                     
                     //barra de pesquisa
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 300, height: 36).foregroundColor(roxoLeve)
+                        RoundedRectangle(cornerRadius: 10).frame(width: 290, height: 36).foregroundColor(roxoLeve)
                         HStack{
                             
                             
@@ -50,7 +51,10 @@ struct MainView: View {
                     .padding()
                     .contextMenu {
                         Button {
-                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
+                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                            
+                            
+                            
                             if(remover == true){
                                 remover.toggle()
                             }
@@ -74,17 +78,20 @@ struct MainView: View {
                 
                 
                 //Cor de fundo da ScrollView
+                
                 if(tdsStructs.count == 0){
+                    
                     VStack{
+                        
                         Spacer()
                         Button {
                             
-                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: ""))
+                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                             if(remover == true){
                                 remover.toggle()
                             }
                         } label: {
-                            Text("Clique aqui e adicione").foregroundColor(roxoLeve).font(.system(size: 50))
+                            Text("Clique aqui e comece a adicionar!").foregroundColor(roxoLeve).font(.system(size: 50))
                         }
                         
                     }
@@ -95,7 +102,7 @@ struct MainView: View {
                     ForEach (tdsStructs.indices, id: \.self){index in
                         ZStack{
                             RoundedRectangle(cornerRadius: 15).foregroundColor(roxoLeve)
-                                
+                            
                             HStack{
                                 if(remover == true){
                                     Button {
@@ -160,14 +167,15 @@ struct MainView: View {
                                             i = index
                                         } label: {
                                             
-                                            
-                                            
+                                            //Text("Comming...")
+                                            Text(tdsStructs[i].data.formatted()).foregroundColor(roxoAcentuado)
                                             //corpo da estrutura
-                                            
+                                            /*
                                             if(tdsStructs[index].data == ""){
                                                 Text("Editar").foregroundColor(roxo)
                                             }
                                             Text(tdsStructs[index].data).font(.system(size: 15)).fontWeight(.bold).foregroundColor(roxo)
+                                             */
                                         }
                                         
                                         
