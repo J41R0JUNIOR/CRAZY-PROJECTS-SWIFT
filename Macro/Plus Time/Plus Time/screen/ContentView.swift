@@ -11,10 +11,6 @@ import SwiftUI
 
 
 struct ContentView: View {
-    //vetor contendo as estruturas
-    @EnvironmentObject var eventStore: EventStore
-    @State private var dateSelected: DateComponents?
-    @State private var displayEvents = false
     var body: some View {
         
         ZStack {
@@ -27,9 +23,10 @@ struct ContentView: View {
                         .toolbarBackground(
                             Color.white,
                             for: .tabBar)
-                    ScrollView{
-                        CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), eventStore: eventStore, dateSelected: $dateSelected, displayEvents: $displayEvents)
-                    }
+                    
+                    
+                    EventsCalendarView()
+                     
                     .tabItem {
                         Label("Calendar", systemImage: "calendar")
                     }.toolbar(.visible, for: .tabBar)

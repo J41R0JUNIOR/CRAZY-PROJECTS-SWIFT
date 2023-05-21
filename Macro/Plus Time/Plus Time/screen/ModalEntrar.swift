@@ -109,7 +109,8 @@ struct ModalEntrar: View {
                                                             Text("Notes").foregroundColor(roxoLeve).font(.system(size: 15))
                                                         }
                                                         Text("\(secondaryVet[vet].corpo2)").foregroundColor(roxoLeve).font(.system(size: 15))
-                                                        Text("\(secondaryVet[vet].data2)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                        
+                                                        Text("\(secondaryVet[vet].data2.formatted())").foregroundColor(roxoLeve).font(.system(size: 15)).font(.system(size: 15))
                                                     }.padding()
                                                     
                                                 }

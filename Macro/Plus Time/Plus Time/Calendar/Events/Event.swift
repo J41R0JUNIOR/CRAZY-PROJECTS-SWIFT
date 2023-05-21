@@ -42,9 +42,9 @@ struct Event: Identifiable {
     
     static var sampleEvents: [Event] {
         
-        @State var arrayOfEvents : [Event] = []
+        //@State var arrayOfEvents : [Event] = []
         
-        return arrayOfEvents
+        return []
     }
 }
 /*

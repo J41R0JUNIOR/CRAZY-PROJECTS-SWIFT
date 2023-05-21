@@ -48,7 +48,7 @@ struct ModalView: View{
                     
                     .contextMenu {
                         Button {
-                            secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: ""))
+                            secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
                             if(remover == true){
                                 remover.toggle()
                             }
@@ -115,7 +115,7 @@ struct ModalView: View{
                                 HStack{
                                     Spacer()
                                     
-                                    DatePicker("", selection: $data, in: Date()..., displayedComponents: .date).foregroundColor(roxoLeve)
+                                    DatePicker("", selection: $data, in: Date()...).foregroundColor(roxoLeve)
                                     //TextField("Data:", text: $data).frame(width: 100).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                                 }.padding(.horizontal)
                             }.padding()
@@ -152,7 +152,8 @@ struct ModalView: View{
                                             .allowsTightening(false).cornerRadius(5)
                                         HStack{
                                             Spacer()
-                                            TextField("Data: dd/mm", text: $secondaryVet[vet].data2).frame(width: 100).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                            DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date).foregroundColor(roxoLeve)
+                                            
                                         }
                                     }.padding()
                                 }.padding()

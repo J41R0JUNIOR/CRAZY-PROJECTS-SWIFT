@@ -11,10 +11,12 @@ struct EventsCalendarView: View {
     @EnvironmentObject var eventStore: EventStore
     @State private var dateSelected: DateComponents?
     @State private var displayEvents = false
+    
     var body: some View {
         NavigationStack{
             ScrollView{
                 CalendarView(interval: DateInterval(start: .distantPast, end: .distantFuture), eventStore: eventStore, dateSelected: $dateSelected, displayEvents: $displayEvents)
+                
             }
                 .navigationTitle("Calendar View")
         }

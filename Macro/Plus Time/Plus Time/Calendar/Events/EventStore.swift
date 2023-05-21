@@ -7,7 +7,9 @@
 
 import Foundation
 
+
 @MainActor
+
 class EventStore: ObservableObject {
     @Published var events = [Event]()
     @Published var preview: Bool
