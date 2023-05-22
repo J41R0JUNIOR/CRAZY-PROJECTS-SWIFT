@@ -24,7 +24,7 @@ struct ModalEntrar: View {
     
     var body: some View {
         ZStack{
-            viewRoxa().ignoresSafeArea()
+            //viewRoxa().ignoresSafeArea()
             VStack{
                 VStack{
                     HStack{
@@ -73,11 +73,12 @@ struct ModalEntrar: View {
                                     ScrollView{
                                         ZStack{
                                             
-                                            RoundedRectangle(cornerRadius: 14).frame(width: 390).foregroundColor(roxoEscuro)
+                                            RoundedRectangle(cornerRadius: 14).frame(width: 355).foregroundColor(roxoEscuro)
                                             HStack{
                                                 //sino
                                                 
                                                 VStack{
+                                                    
                                                     if(title == ""){
                                                         Text("Title").font(.system(size: 20))
                                                     }
@@ -95,7 +96,7 @@ struct ModalEntrar: View {
                                                 }.foregroundColor(roxoLeve)
                                                 
                                             }.padding()
-                                        }
+                                        }.padding()
                                         ForEach(secondaryVet.indices, id: \.self) { vet in
                                             ZStack{
                                                 RoundedRectangle(cornerRadius: 15).frame(width: 358).foregroundColor(dark2)
@@ -127,3 +128,11 @@ struct ModalEntrar: View {
         }
     }
 }
+
+struct Modal_Previews: PreviewProvider {
+    @Binding var tasks:[TaskMetaData]
+    static var previews: some View {
+        ContentView()
+    }
+}
+

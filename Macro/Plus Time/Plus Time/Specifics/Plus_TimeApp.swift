@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct Plus_TimeApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

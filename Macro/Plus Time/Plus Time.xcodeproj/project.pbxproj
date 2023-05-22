@@ -11,11 +11,6 @@
 		B30876AE2A16DF0500937CE2 /* viewRoxa.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876AD2A16DF0500937CE2 /* viewRoxa.swift */; };
 		B30876B02A16E04800937CE2 /* viewEscura.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876AF2A16E04800937CE2 /* viewEscura.swift */; };
 		B30876B22A16FB1F00937CE2 /* viewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876B12A16FB1F00937CE2 /* viewTest.swift */; };
-		B30876C32A19035A00937CE2 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876C22A19035A00937CE2 /* EventStore.swift */; };
-		B30876C52A1904DA00937CE2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876C42A1904DA00937CE2 /* Event.swift */; };
-		B30876C82A190AF600937CE2 /* EventsCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876C72A190AF600937CE2 /* EventsCalendarView.swift */; };
-		B30876CB2A190F6E00937CE2 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876CA2A190F6E00937CE2 /* Date+Extension.swift */; };
-		B30876CD2A19187000937CE2 /* DaysEventsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30876CC2A19187000937CE2 /* DaysEventsListView.swift */; };
 		B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */; };
 		B30E682D2A140B2000C84E4E /* Cores.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30E682C2A140B2000C84E4E /* Cores.swift */; };
 		B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32509722A0EAA4200D6DDF4 /* Plus_TimeApp.swift */; };
@@ -26,8 +21,12 @@
 		B32509902A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */; };
 		B326B4322A144F9F004EEC3F /* ModalEntrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326B4312A144F9F004EEC3F /* ModalEntrar.swift */; };
 		B36DCF762A11593B00358871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DCF752A11593B00358871 /* ContentView.swift */; };
+		B381C8932A1A8D9F001F958C /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B381C8922A1A8D9F001F958C /* ElegantCalendar */; };
+		B381C8952A1A967E001F958C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381C8942A1A967E001F958C /* Home.swift */; };
+		B381C8972A1A9848001F958C /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381C8962A1A9848001F958C /* CustomDatePicker.swift */; };
+		B381C89B2A1A9D9B001F958C /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381C89A2A1A9D9B001F958C /* DateValue.swift */; };
+		B381C89D2A1ABB1D001F958C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381C89C2A1ABB1D001F958C /* Task.swift */; };
 		B3D4102B2A1046A100779F14 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102A2A1046A100779F14 /* MainView.swift */; };
-		B3D4102D2A1046C900779F14 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D4102C2A1046C900779F14 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +51,6 @@
 		B30876AD2A16DF0500937CE2 /* viewRoxa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewRoxa.swift; sourceTree = "<group>"; };
 		B30876AF2A16E04800937CE2 /* viewEscura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewEscura.swift; sourceTree = "<group>"; };
 		B30876B12A16FB1F00937CE2 /* viewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewTest.swift; sourceTree = "<group>"; };
-		B30876C22A19035A00937CE2 /* EventStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStore.swift; sourceTree = "<group>"; };
-		B30876C42A1904DA00937CE2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		B30876C72A190AF600937CE2 /* EventsCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCalendarView.swift; sourceTree = "<group>"; };
-		B30876CA2A190F6E00937CE2 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
-		B30876CC2A19187000937CE2 /* DaysEventsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysEventsListView.swift; sourceTree = "<group>"; };
 		B30E68212A13FBDA00C84E4E /* EstruturaBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstruturaBase.swift; sourceTree = "<group>"; };
 		B30E682C2A140B2000C84E4E /* Cores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cores.swift; sourceTree = "<group>"; };
 		B325096F2A0EAA4200D6DDF4 /* Plus Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Plus Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,8 +64,11 @@
 		B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B326B4312A144F9F004EEC3F /* ModalEntrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEntrar.swift; sourceTree = "<group>"; };
 		B36DCF752A11593B00358871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B381C8942A1A967E001F958C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		B381C8962A1A9848001F958C /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
+		B381C89A2A1A9D9B001F958C /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		B381C89C2A1ABB1D001F958C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		B3D4102A2A1046A100779F14 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		B3D4102C2A1046C900779F14 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B381C8932A1A8D9F001F958C /* ElegantCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,43 +104,6 @@
 				B32509762A0EAA4300D6DDF4 /* Assets.xcassets */,
 			);
 			path = Specifics;
-			sourceTree = "<group>";
-		};
-		B30876B72A18637D00937CE2 /* Calendar */ = {
-			isa = PBXGroup;
-			children = (
-				B30876CE2A19796800937CE2 /* Events */,
-				B30876C92A190F4600937CE2 /* Extension */,
-				B30876C62A190AA800937CE2 /* CalendarViewTab */,
-			);
-			path = Calendar;
-			sourceTree = "<group>";
-		};
-		B30876C62A190AA800937CE2 /* CalendarViewTab */ = {
-			isa = PBXGroup;
-			children = (
-				B3D4102C2A1046C900779F14 /* CalendarView.swift */,
-				B30876C72A190AF600937CE2 /* EventsCalendarView.swift */,
-				B30876CC2A19187000937CE2 /* DaysEventsListView.swift */,
-			);
-			path = CalendarViewTab;
-			sourceTree = "<group>";
-		};
-		B30876C92A190F4600937CE2 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				B30876CA2A190F6E00937CE2 /* Date+Extension.swift */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		B30876CE2A19796800937CE2 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-				B30876C22A19035A00937CE2 /* EventStore.swift */,
-				B30876C42A1904DA00937CE2 /* Event.swift */,
-			);
-			path = Events;
 			sourceTree = "<group>";
 		};
 		B30E68272A1408F800C84E4E /* screen */ = {
@@ -198,7 +159,7 @@
 		B32509712A0EAA4200D6DDF4 /* Plus Time */ = {
 			isa = PBXGroup;
 			children = (
-				B30876B72A18637D00937CE2 /* Calendar */,
+				B381C88E2A1A8CC1001F958C /* Calendar */,
 				B30876B42A17F73400937CE2 /* Specifics */,
 				B30E682B2A1409CB00C84E4E /* views */,
 				B30E68292A14095300C84E4E /* resources */,
@@ -233,6 +194,33 @@
 			path = "Plus TimeUITests";
 			sourceTree = "<group>";
 		};
+		B381C88E2A1A8CC1001F958C /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				B381C8992A1A9D88001F958C /* Model */,
+				B381C8982A1A9D71001F958C /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		B381C8982A1A9D71001F958C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B381C8962A1A9848001F958C /* CustomDatePicker.swift */,
+				B381C8942A1A967E001F958C /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B381C8992A1A9D88001F958C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B381C89A2A1A9D9B001F958C /* DateValue.swift */,
+				B381C89C2A1ABB1D001F958C /* Task.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,6 +237,9 @@
 			dependencies = (
 			);
 			name = "Plus Time";
+			packageProductDependencies = (
+				B381C8922A1A8D9F001F958C /* ElegantCalendar */,
+			);
 			productName = "Plus Time";
 			productReference = B325096F2A0EAA4200D6DDF4 /* Plus Time.app */;
 			productType = "com.apple.product-type.application";
@@ -321,6 +312,9 @@
 				Base,
 			);
 			mainGroup = B32509662A0EAA4200D6DDF4;
+			packageReferences = (
+				B381C8912A1A8D9F001F958C /* XCRemoteSwiftPackageReference "ElegantCalendar" */,
+			);
 			productRefGroup = B32509702A0EAA4200D6DDF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -363,22 +357,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30876CD2A19187000937CE2 /* DaysEventsListView.swift in Sources */,
 				B3D4102B2A1046A100779F14 /* MainView.swift in Sources */,
 				B30876B22A16FB1F00937CE2 /* viewTest.swift in Sources */,
-				B30876C32A19035A00937CE2 /* EventStore.swift in Sources */,
+				B381C8972A1A9848001F958C /* CustomDatePicker.swift in Sources */,
 				B30876B02A16E04800937CE2 /* viewEscura.swift in Sources */,
 				B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */,
-				B30876CB2A190F6E00937CE2 /* Date+Extension.swift in Sources */,
-				B30876C82A190AF600937CE2 /* EventsCalendarView.swift in Sources */,
+				B381C8952A1A967E001F958C /* Home.swift in Sources */,
+				B381C89B2A1A9D9B001F958C /* DateValue.swift in Sources */,
 				B30876AC2A15967D00937CE2 /* ModalEditar.swift in Sources */,
+				B381C89D2A1ABB1D001F958C /* Task.swift in Sources */,
 				B30876AE2A16DF0500937CE2 /* viewRoxa.swift in Sources */,
 				B36DCF762A11593B00358871 /* ContentView.swift in Sources */,
 				B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */,
 				B326B4322A144F9F004EEC3F /* ModalEntrar.swift in Sources */,
-				B3D4102D2A1046C900779F14 /* CalendarView.swift in Sources */,
 				B30E682D2A140B2000C84E4E /* Cores.swift in Sources */,
-				B30876C52A1904DA00937CE2 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -703,6 +695,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B381C8912A1A8D9F001F958C /* XCRemoteSwiftPackageReference "ElegantCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ThasianX/ElegantCalendar";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B381C8922A1A8D9F001F958C /* ElegantCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B381C8912A1A8D9F001F958C /* XCRemoteSwiftPackageReference "ElegantCalendar" */;
+			productName = ElegantCalendar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B32509672A0EAA4200D6DDF4 /* Project object */;
 }

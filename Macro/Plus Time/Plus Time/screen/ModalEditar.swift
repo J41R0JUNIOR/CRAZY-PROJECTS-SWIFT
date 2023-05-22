@@ -148,8 +148,7 @@ struct ModalView: View{
                                         TextEditor(text: $secondaryVet[vet].corpo2)
                                             .font(.custom("HelveticaNeue", size: 15)).font(.body)
                                             .frame(width: 360, height: 80, alignment: .leading)
-                                            .lineLimit(1)
-                                            .allowsTightening(false).cornerRadius(5)
+                                            
                                         HStack{
                                             Spacer()
                                             DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date).foregroundColor(roxoLeve)

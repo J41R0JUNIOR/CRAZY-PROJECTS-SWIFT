@@ -1,6 +1,19 @@
 import SwiftUI
  
-struct MainView: View {
+
+/*
+class arraY: ObservableObject{
+    @Published var tasks:[TaskMetaData] = [ TaskMetaData(task: [
+        Task(title: "Talk to Justine"),
+        Task(title: "iPhone 13 Great Design ChangeS"),
+        Task(title: "Nothing Much Workout !!!")
+        ], taskDate: getSampleDate(offset: 1)),]
+    
+    
+}
+*/
+
+struct MainView: View{
     
     
     
@@ -12,6 +25,27 @@ struct MainView: View {
     @State var tdsStructs:[baseStructure] = []
     @State var i:Int = 0
     @State var pesquisa = ""
+    @State var toggle = false
+    
+    @Binding var tasks:[TaskMetaData]
+    
+    /* @State var tasks:[TaskMetaData] = [ TaskMetaData(task: [
+        Task(title: "Talk to Justine"),
+        Task(title: "iPhone 13 Great Design ChangeS"),
+        Task(title: "Nothing Much Workout !!!")
+        ], taskDate: getSampleDate(offset: 1)),
+     
+        //TaskMetaData(task: [Task(title: "Teste")], taskDate: Date())
+]*/
+    
+    
+    /*
+    TaskMetaData(task: [
+     Task(title: "Talk to Justine"),
+     Task(title: "iPhone 13 Great Design ChangeS"),
+     Task(title: "Nothing Much Workout !!!")
+     ], taskDate: getSampleDate(offset: 1)),
+    */
     
     var body: some View {
         ZStack {
@@ -22,8 +56,6 @@ struct MainView: View {
                 
                 //Parte superior da tela
                 HStack{
-                    
-                    
                     
                     //barra de pesquisa
                     ZStack{
@@ -50,6 +82,7 @@ struct MainView: View {
                         Button {
                             tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                             
+                            tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
                             
                             if(remover == true){
                                 remover.toggle()
@@ -83,15 +116,27 @@ struct MainView: View {
                         Button {
                             
                             tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
-                            if(remover == true){
+                            
+                             
+                             
+                            tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                            
+                             
+                             if(remover == true){
                                 remover.toggle()
                             }
+                            /*
+                            print(arrayTasks.tasks.count)
+                            print(arrayTasks.tasks[i])
+                             */
                         } label: {
                             Text("Clique aqui e comece a adicionar!").foregroundColor(roxoLeve).font(.system(size: 50))
+                            
                         }
                         
                     }
                 }
+                
                 //ScrollView dos horários
                 ScrollView {
                     if (pesquisa != ""){
@@ -283,13 +328,18 @@ struct MainView: View {
                         }
                     }
                 }
+                
+               
             }.padding()
         }
     }
 }
 
+/*
 struct MainView_Previews: PreviewProvider {
+    
     static var previews: some View {
         MainView()
     }
 }
+*/
