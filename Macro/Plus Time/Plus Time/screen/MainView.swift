@@ -290,7 +290,7 @@ struct MainView: View{
                                             } label: {
                                                 
                                                 //Text("Comming...")
-                                                Text(tdsStructs[i].data.formatted()).foregroundColor(roxoAcentuado)
+                                                Text(tdsStructs[index].data.formatted()).foregroundColor(roxoAcentuado)
                                                 //corpo da estrutura
                                                 /*
                                                  if(tdsStructs[index].data == ""){

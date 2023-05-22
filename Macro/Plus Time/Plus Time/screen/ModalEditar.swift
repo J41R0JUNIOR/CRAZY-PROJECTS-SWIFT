@@ -38,8 +38,8 @@ struct ModalView: View{
                             remover.toggle()
                         }
                         
-                        if ( tasks[indice].task[indice].title != title){
-                            tasks[indice].task[indice].title = title
+                        if (tasks[indice].task[0].title != title){
+                            tasks[indice].task[0].title = title
                         }
                         if (tasks[indice].taskDate != data){
                             tasks[indice].taskDate = data
