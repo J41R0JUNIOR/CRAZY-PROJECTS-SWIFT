@@ -22,9 +22,11 @@ struct ModalEntrar: View {
     @Binding var data:Date
     @Binding var bell:Bool
     
+    @Binding var tasks:[TaskMetaData]
+    
     var body: some View {
         ZStack{
-            //viewRoxa().ignoresSafeArea()
+            viewRoxa().ignoresSafeArea()
             VStack{
                 VStack{
                     HStack{

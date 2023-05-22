@@ -10,12 +10,7 @@ import SwiftUI
 
 
 struct ContentView: View {
-    @State var tasks:[TaskMetaData] = [TaskMetaData(task: [
-        Task(title: "Talk to Justine"),
-        Task(title: "iPhone 13 Great Design ChangeS"),
-        Task(title: "Nothing Much Workout !!!")
-        ], taskDate: getSampleDate(offset: 1))
-    ]
+    @State var tasks:[TaskMetaData] = []
     var body: some View {
         
         ZStack {
@@ -44,8 +39,6 @@ struct ContentView: View {
         }
     }
 }
-
-
 
 
 

@@ -7,9 +7,7 @@ class arraY: ObservableObject{
         Task(title: "Talk to Justine"),
         Task(title: "iPhone 13 Great Design ChangeS"),
         Task(title: "Nothing Much Workout !!!")
-        ], taskDate: getSampleDate(offset: 1)),]
-    
-    
+        ], taskDate: getSampleDate(offset: 1)),
 }
 */
 
@@ -28,24 +26,6 @@ struct MainView: View{
     @State var toggle = false
     
     @Binding var tasks:[TaskMetaData]
-    
-    /* @State var tasks:[TaskMetaData] = [ TaskMetaData(task: [
-        Task(title: "Talk to Justine"),
-        Task(title: "iPhone 13 Great Design ChangeS"),
-        Task(title: "Nothing Much Workout !!!")
-        ], taskDate: getSampleDate(offset: 1)),
-     
-        //TaskMetaData(task: [Task(title: "Teste")], taskDate: Date())
-]*/
-    
-    
-    /*
-    TaskMetaData(task: [
-     Task(title: "Talk to Justine"),
-     Task(title: "iPhone 13 Great Design ChangeS"),
-     Task(title: "Nothing Much Workout !!!")
-     ], taskDate: getSampleDate(offset: 1)),
-    */
     
     var body: some View {
         ZStack {
@@ -149,7 +129,10 @@ struct MainView: View{
                                     HStack{
                                         if(remover == true){
                                             Button {
+                                                
                                                 tdsStructs.remove(at: index2)
+                                                tasks.remove(at: index2)
+                                                 
                                             } label: {
                                                 Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxo)
                                             }
@@ -199,7 +182,7 @@ struct MainView: View{
                                                     Spacer()
                                                     
                                                 }.sheet(isPresented: $estadoModal2) {
-                                                    ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index2, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell)
+                                                    ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index2, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
                                                 }
                                                 
                                                 
@@ -225,7 +208,7 @@ struct MainView: View{
                                                 
                                                 //passando parametros pro modal
                                                 .sheet(isPresented: $estadoModal1) {
-                                                    ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet)
+                                                    ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks)
                                                 }
                                             }
                                             Divider().background(roxoLeve)
@@ -243,6 +226,9 @@ struct MainView: View{
                                     if(remover == true){
                                         Button {
                                             tdsStructs.remove(at: index)
+                                            tasks.remove(at: index)
+                                            
+                                            
                                         } label: {
                                             Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxo)
                                         }
@@ -292,7 +278,7 @@ struct MainView: View{
                                                 Spacer()
                                                 
                                             }.sheet(isPresented: $estadoModal2) {
-                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell)
+                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
                                             }
                                             
                                             
@@ -318,7 +304,7 @@ struct MainView: View{
                                             
                                             //passando parametros pro modal
                                             .sheet(isPresented: $estadoModal1) {
-                                                ModalView(estadoModal1: $estadoModal1, index: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet)
+                                                ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks)
                                             }
                                         }
                                         Divider().background(roxoLeve)
