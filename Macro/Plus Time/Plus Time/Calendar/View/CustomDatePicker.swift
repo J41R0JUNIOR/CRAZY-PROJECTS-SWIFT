@@ -19,23 +19,24 @@ struct CustomDatePicker: View {
         ZStack{
             //viewRoxa().ignoresSafeArea()
             VStack(spacing: 35){
-                
+                //dias da semana
                 let days: [String] =
                 ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]
                 
                 HStack(spacing: 20){
                     
                     VStack(alignment: .leading, spacing: 10){
-                        Text (extraDate() [0])
+                        Text (extraDate() [0]).foregroundColor(roxoEscuro)
                             .font (.caption)
                             .fontWeight (.semibold)
                         
-                        Text (extraDate() [1])
+                        Text (extraDate() [1]).foregroundColor(roxoEscuro)
                             .font (.title.bold ())
+                         
                     }
                     Spacer (minLength: 0)
                     
-                    //botao
+                    //botao para retroceder um mes
                     Button {
                         
                         withAnimation{
@@ -44,7 +45,7 @@ struct CustomDatePicker: View {
                     } label: {
                         Image (systemName: "chevron.left")
                     }
-                    
+                    //botao para avancar um mes
                     Button {
                         
                         withAnimation{
@@ -55,7 +56,7 @@ struct CustomDatePicker: View {
                     }
                     
                 }.padding()
-                
+                //foreach para escrever os dias na view
                 HStack(spacing: 0){
                     ForEach (days,id: \.self){day in
                         
@@ -63,7 +64,9 @@ struct CustomDatePicker: View {
                             .font (.callout)
                             .fontWeight (.semibold)
                             .frame (maxWidth: .infinity)
-                    }
+                            .foregroundColor(roxoLeve)
+                            
+                    }.foregroundColor(roxoLeve)
                 }
                 
                 let columns = Array (repeating: GridItem(.flexible()), count: 7)
@@ -73,19 +76,23 @@ struct CustomDatePicker: View {
                     ForEach(extractDate()){value in
                         CardView(value: value)
                             .background(
-                                Capsule().foregroundColor(roxo)
+                                Capsule().foregroundColor(roxoEscuro)
                                     .padding(.horizontal, 4)
                                     .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
                             ).onTapGesture {
+                                
                                 currentDate = value.date
                             }
                     }
                 }
                 
                 VStack(spacing:20){
+                    //título de onde vão as tasks
+                    Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxoEscuro)
                     
-                    Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25)
                     
+                    
+                    //tasks que vão ser mostradas abaixo do título
                     if let task = tasks.first(where: { task in
                         return isSameDay(date1: task.taskDate, date2: currentDate)
                     })
@@ -94,9 +101,10 @@ struct CustomDatePicker: View {
                         ForEach(task.task){ task in
                             
                             VStack(alignment: .leading, spacing: 10){
-                                Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
+                                //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
+                                Text(task.time.formatted(.dateTime)).foregroundColor(roxoLeve)
                                 
-                                Text (task.title).font(.title2.bold() )
+                                Text (task.title).font(.title2.bold()).foregroundColor(roxoLeve)
                             }
                             .padding (.vertical, 10)
                             .padding(.horizontal)
@@ -105,7 +113,8 @@ struct CustomDatePicker: View {
                         }
                         
                     }else{
-                        Text("No tasks found")
+                        //caso não encontre nenhuma task
+                        Text("No tasks found").foregroundColor(roxoLeve)
                     }
                     
                 }.padding()
@@ -119,28 +128,35 @@ struct CustomDatePicker: View {
     @ViewBuilder
     
     func CardView(value: DateValue)->some View{
-        
+        //eliminando os valores -1 do calendário
         VStack{
             if value.day != -1{
                 
                 if let task = tasks.first(where: { task in
                     
                     return isSameDay (date1: task.taskDate, date2: value.date)
+                    //parte onde mostra as tasks no calendário//
                 }){
-                    
+                    //se não for valor -1 ele mostra no calendário
                     Text("\(value.day)")
                         .font(.title3.bold())
-                        .foregroundColor (isSameDay (date1: task.taskDate, date2: currentDate) ? .white: .primary).frame(maxWidth: .infinity)
-                    Spacer ()
+                        .foregroundColor(roxoLeve)
                     
-                    Circle().foregroundColor(roxoAcentuado).frame(width: 8, height: 8)
+                        //.foregroundColor (isSameDay (date1: task.taskDate, date2: currentDate) ? roxoLeve: roxoLeve)
+                    
+                        .frame(maxWidth: .infinity)
+                    Spacer ()
+                    //aparecer um círculo abaixo do dia em que há uma task
+                    Circle().foregroundColor(roxoLeve).frame(width: 8, height: 8)
                     
                 }else{
-                    
+                    //caso não tenha uma task no dia ele não aparece o círculo logo abaixo
                     Text("\(value.day)")
                         .font(.title3.bold())
                     
-                        .foregroundColor (isSameDay (date1: value.date, date2: currentDate) ? .white: .primary).frame(maxWidth: .infinity)
+                        .foregroundColor(roxoLeve)
+                        //.foregroundColor (isSameDay (date1: value.date, date2: currentDate) ? roxoLeve: roxoLeve)
+                        .frame(maxWidth: .infinity)
                         
                     Spacer()
                      
@@ -148,14 +164,14 @@ struct CustomDatePicker: View {
             }
         }.padding(.vertical, 9).frame(height: 60, alignment: .top)
     }
-    
+    //função que ve se é o mesmo dia
     func isSameDay (date1: Date, date2: Date) ->Bool {
         
         let calendar = Calendar.current
         
         return calendar.isDate(date1, inSameDayAs: date2)
     }
-    
+    //extrai a data
     func extraDate ()->[String]{
         let formatter = DateFormatter()
         formatter.dateFormat = "YYYY MMMM"
@@ -165,7 +181,7 @@ struct CustomDatePicker: View {
         return date.components (separatedBy: " ")
     }
     
-    
+    //pega o mes atual
     func getCurrentMonth ()->Date{
         let calendar = Calendar.current
         guard let currentMonth = calendar.date(byAdding:.month, value: self.currentMonth, to: Date()) else{
@@ -173,7 +189,7 @@ struct CustomDatePicker: View {
         }
         return currentMonth
     }
-    
+    //extrai 
     func extractDate ()->[DateValue]{
         let calendar = Calendar.current
         let currentMonth = getCurrentMonth()

@@ -20,11 +20,12 @@ struct MainView: View{
     @State var estadoModal1 = false
     @State var estadoModal2 = false
     @State var remover = false
+    //vetor onde tenho as estruturas
     @State var tdsStructs:[baseStructure] = []
     @State var i:Int = 0
     @State var pesquisa = ""
     @State var toggle = false
-    
+    //vetor do calendário e suas tasks
     @Binding var tasks:[TaskMetaData]
     
     var body: some View {

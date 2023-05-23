@@ -12,7 +12,7 @@ struct Home: View {
     @Binding var tasks:[TaskMetaData]
     var body: some View {
         ZStack{
-            //viewRoxa().ignoresSafeArea()
+            viewRoxa().ignoresSafeArea()
             ScrollView( .vertical, showsIndicators: false) {
                 VStack(spacing: 20){
                     CustomDatePicker (currentDate: $currentDate, tasks: $tasks)

@@ -9,7 +9,7 @@ var blue = 0
 //cores
 let roxoAcentuado = Color(red:93/255, green: 31/255, blue:221/255)
 let roxo = Color(red:98/255, green: 84/255, blue:253/255)
-let roxoLeve = Color(red:238/255, green: 224/255, blue:255/255)
+let roxoLeve = Color(red:179/255, green: 158/255, blue:214/255)
 let cor4 = Color(red:91/255, green:41/255, blue:209/255)
 let roxoEscuro = Color(red:50/255, green:0/255, blue:108/255)
 

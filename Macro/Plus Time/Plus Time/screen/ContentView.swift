@@ -6,23 +6,28 @@
 //
 import SwiftUI
 
-
+/*
+ No espaço, o que não falta é espaço
+ 
+ */
 
 
 struct ContentView: View {
+    //vetor de tasks
     @State var tasks:[TaskMetaData] = []
     var body: some View {
         
-        ZStack {
-            HStack{
+        
+            
+            
+                //tabview
+                
                 TabView{
                     MainView(tasks: $tasks)
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }.toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(
-                            Color.white,
-                            for: .tabBar)
+                        .toolbarBackground(roxoAcentuado, for: .tabBar)
                     
                     
                     
@@ -30,13 +35,11 @@ struct ContentView: View {
                     .tabItem {
                         Label("Calendar", systemImage: "calendar")
                     }.toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(
-                            Color.white,
-                            for: .tabBar)
+                        .toolbarBackground( roxoAcentuado, for: .tabBar)
                     
                 }.accentColor(roxoLeve)
-            }
-        }
+            
+        
     }
 }
 

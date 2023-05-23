@@ -14,11 +14,13 @@ struct Task: Identifiable{
     var title: String
     var time: Date = Date()
 }
+
 struct TaskMetaData: Identifiable{
     var id = UUID() .uuidString
     var task: [Task]
     var taskDate: Date
 }
+
 func getSampleDate(offset: Int)->Date{
     let calender = Calendar.current
     let date = calender.date(byAdding: .day, value: offset, to: Date())

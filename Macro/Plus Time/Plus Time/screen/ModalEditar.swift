@@ -24,6 +24,7 @@ struct ModalView: View{
     
     var body: some View{
         ZStack{
+            //plano de fundo
             viewRoxa().ignoresSafeArea()
             
             VStack{
@@ -56,6 +57,7 @@ struct ModalView: View{
                     Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                     
                     .contextMenu {
+                        
                         Button {
                             secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
                             if(remover == true){
@@ -65,6 +67,7 @@ struct ModalView: View{
                             Label("Adicionar", systemImage: "square.and.pencil")
                             Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
                         }
+                        //aparecer botao de remover as células
                         Button {
                             remover.toggle()
                         }label: {
