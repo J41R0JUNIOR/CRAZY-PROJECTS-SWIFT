@@ -40,7 +40,7 @@ struct MainView: View{
                     
                     //barra de pesquisa
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 290, height: 36).foregroundColor(roxoLeve)
+                        RoundedRectangle(cornerRadius: 10).frame(width: 290, height: 36).foregroundColor(roxoClaro)
                         
                         HStack{
                             
@@ -57,7 +57,7 @@ struct MainView: View{
                     
                     
                     //add eventos/tarefas
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                     .padding()
                     .contextMenu {
                         Button {
@@ -70,7 +70,7 @@ struct MainView: View{
                             }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                         }
                         
                         Button {
@@ -94,38 +94,41 @@ struct MainView: View{
                     VStack{
                         
                         Spacer()
-                        Button {
-                            
-                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
-                            
-                             
-                             
-                            tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
-                            
-                             
-                             if(remover == true){
-                                remover.toggle()
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 14).frame(height: 80).foregroundColor(roxoClaro)
+                            Button {
+                                
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                
+                                
+                                
+                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                
+                                
+                                if(remover == true){
+                                    remover.toggle()
+                                }
+                                /*
+                                 print(arrayTasks.tasks.count)
+                                 print(arrayTasks.tasks[i])
+                                 */
+                            } label: {
+                                Text("Clique aqui e comece a adicionar!").foregroundColor(roxoAcentuado).font(.body)
+                                
                             }
-                            /*
-                            print(arrayTasks.tasks.count)
-                            print(arrayTasks.tasks[i])
-                             */
-                        } label: {
-                            Text("Clique aqui e comece a adicionar!").foregroundColor(roxoLeve).font(.system(size: 50))
-                            
                         }
-                        
                     }
                 }
                 
                 //ScrollView dos horários
+                
                 ScrollView {
                     if (pesquisa != ""){
                         ForEach (tdsStructs.indices, id: \.self){index2 in
                             if(tdsStructs[index2].title == pesquisa){
                                 //Text("achou")
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 15).foregroundColor(roxoLeve)
+                                    RoundedRectangle(cornerRadius: 15).foregroundColor(roxoClaro)
                                     
                                     HStack{
                                         if(remover == true){
@@ -135,7 +138,7 @@ struct MainView: View{
                                                 tasks.remove(at: index2)
                                                  
                                             } label: {
-                                                Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxo)
+                                                Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxoAcentuado)
                                             }
                                         }
                                         
@@ -144,7 +147,7 @@ struct MainView: View{
                                             tdsStructs[index2].bell.toggle()
                                         } label: {
                                             if(tdsStructs[index2].bell == true){
-                                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
+                                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                                             }else{
                                                 Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                                             }
@@ -175,7 +178,7 @@ struct MainView: View{
                                                             if(tdsStructs[index2].corpo == ""){
                                                                 Text("Add Body").font(.system(size: 13)).foregroundColor(roxoEscuro)
                                                             }
-                                                            Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(roxo).lineLimit(2)
+                                                            Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(roxoAcentuado).lineLimit(2)
                                                                 .allowsTightening(false)
                                                             Spacer()
                                                         }
@@ -221,7 +224,7 @@ struct MainView: View{
                     }else{
                         ForEach (tdsStructs.indices, id: \.self){index in
                             ZStack{
-                                RoundedRectangle(cornerRadius: 15).foregroundColor(roxoLeve)
+                                RoundedRectangle(cornerRadius: 15).foregroundColor(roxoClaro)
                                 
                                 HStack{
                                     if(remover == true){
@@ -231,7 +234,7 @@ struct MainView: View{
                                             
                                             
                                         } label: {
-                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxo)
+                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxoAcentuado)
                                         }
                                     }
                                     
@@ -240,7 +243,7 @@ struct MainView: View{
                                         tdsStructs[index].bell.toggle()
                                     } label: {
                                         if(tdsStructs[index].bell == true){
-                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
+                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                                         }else{
                                             Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                                         }
@@ -271,7 +274,7 @@ struct MainView: View{
                                                         if(tdsStructs[index].corpo == ""){
                                                             Text("Add Body").font(.system(size: 13)).foregroundColor(roxoAcentuado)
                                                         }
-                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(roxo).lineLimit(2)
+                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(roxoAcentuado).lineLimit(2)
                                                             .allowsTightening(false)
                                                         Spacer()
                                                     }
@@ -315,7 +318,6 @@ struct MainView: View{
                         }
                     }
                 }
-                
                
             }.padding()
         }
@@ -330,3 +332,5 @@ struct MainView_Previews: PreviewProvider {
     }
 }
 */
+
+

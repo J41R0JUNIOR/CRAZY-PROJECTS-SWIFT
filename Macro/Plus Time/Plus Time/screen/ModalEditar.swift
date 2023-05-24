@@ -64,14 +64,14 @@ struct ModalView: View{
                         */
                         
                     } label: {
-                        Text("Done").foregroundColor(roxoLeve)
+                        Text("Done").foregroundColor(roxoClaro)
                     }.padding(.horizontal)
                     Spacer()
                     
                     
                     
                     //add
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                     
                     .contextMenu {
                         
@@ -82,7 +82,7 @@ struct ModalView: View{
                             }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoLeve)
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                         }
                         //aparecer botao de remover as células
                         Button {
@@ -96,6 +96,11 @@ struct ModalView: View{
                         
                     }.padding(.horizontal)
                 }.padding(.horizontal)
+                TextField("Digite o Título", text: $title)
+                    .frame(width: 360, alignment: .leading)
+                    .disableAutocorrection(true)
+                    .textFieldStyle(.roundedBorder)
+
                 ZStack{
                     
                     
@@ -107,9 +112,9 @@ struct ModalView: View{
                             bell.toggle()
                         } label: {
                             if(bell == true){
-                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
                             }else{
-                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
                             }
                         }
                         
@@ -118,10 +123,11 @@ struct ModalView: View{
                 }.padding(.horizontal)
                 
                     HStack{
+                        
                         ScrollView{
                             VStack{
                                 
-                                TextField("Digite o Título", text: $title).frame(width: 360, alignment: .leading).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
+                                    
                                 
                                 
                                 
@@ -135,7 +141,7 @@ struct ModalView: View{
                                 HStack{
                                     Spacer()
                                     
-                                    DatePicker("", selection: $data, in: Date()...).foregroundColor(roxoLeve)
+                                    DatePicker("", selection: $data, in: Date()...).foregroundColor(roxoClaro)
                                     //TextField("Data:", text: $data).frame(width: 100).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                                 }.padding(.horizontal)
                             }.padding()
@@ -146,7 +152,7 @@ struct ModalView: View{
                                             if(remover == true){
                                                 Button {
                                                     
-                                               
+                                                    
                                                     secondaryVet.remove(at: vet)
                                                 } label: {
                                                     Image(systemName: "trash.slash.circle.fill").font(.system(size: 25)).foregroundColor(roxo)
@@ -161,16 +167,17 @@ struct ModalView: View{
                                         TextEditor(text: $secondaryVet[vet].corpo2)
                                             .font(.custom("HelveticaNeue", size: 15)).font(.body)
                                             .frame(width: 360, height: 80, alignment: .leading)
-                                            
+                                        
                                         HStack{
                                             Spacer()
-                                            DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date).foregroundColor(roxoLeve)
+                                            DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date).foregroundColor(roxoClaro)
                                             
                                         }
                                     }.padding()
                                 }.padding()
                             }
                         }
+                        
                     }
                 
                 

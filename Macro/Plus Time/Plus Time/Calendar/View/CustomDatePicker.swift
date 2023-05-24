@@ -64,9 +64,9 @@ struct CustomDatePicker: View {
                             .font (.callout)
                             .fontWeight (.semibold)
                             .frame (maxWidth: .infinity)
-                            .foregroundColor(roxoLeve)
+                            .foregroundColor(roxoClaro)
                             
-                    }.foregroundColor(roxoLeve)
+                    }.foregroundColor(roxoClaro)
                 }
                 
                 let columns = Array (repeating: GridItem(.flexible()), count: 7)
@@ -96,9 +96,9 @@ struct CustomDatePicker: View {
                         VStack(alignment: .leading, spacing: 10){
                             //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
                             if(isSameDay(date1: tasks[t].taskDate, date2: currentDate)){
-                                Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoLeve)
+                                Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoClaro)
                                 
-                                Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoLeve)
+                                Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoClaro)
                             }
                         }
                         .padding (.vertical, 10)
@@ -131,13 +131,14 @@ struct CustomDatePicker: View {
                      */
                     if tasks.count == 0{
                             //caso não encontre nenhuma task
-                            Text("No tasks found").foregroundColor(roxoLeve) 
+                            Text("No tasks found").foregroundColor(roxoClaro) 
                     }
+                    
                     if tasks.count != 0{
                         if(isSameDay(date1: tasks[0].taskDate, date2: currentDate)){
                             
                         }else{
-                            Text("No tasks found").foregroundColor(roxoLeve)
+                            Text("No tasks found").foregroundColor(roxoClaro)
                         }
                     }
                     
@@ -164,21 +165,21 @@ struct CustomDatePicker: View {
                     //se não for valor -1 ele mostra no calendário
                     Text("\(value.day)")
                         .font(.title3.bold())
-                        .foregroundColor(roxoLeve)
+                        .foregroundColor(roxoClaro)
                     
                         //.foregroundColor (isSameDay (date1: task.taskDate, date2: currentDate) ? roxoLeve: roxoLeve)
                     
                         .frame(maxWidth: .infinity)
                     Spacer ()
                     //aparecer um círculo abaixo do dia em que há uma task
-                    Circle().foregroundColor(roxoLeve).frame(width: 8, height: 8)
+                    Circle().foregroundColor(roxoClaro).frame(width: 8, height: 8)
                     
                 }else{
                     //caso não tenha uma task no dia ele não aparece o círculo logo abaixo
                     Text("\(value.day)")
                         .font(.title3.bold())
                     
-                        .foregroundColor(roxoLeve)
+                        .foregroundColor(roxoClaro)
                         //.foregroundColor (isSameDay (date1: value.date, date2: currentDate) ? roxoLeve: roxoLeve)
                         .frame(maxWidth: .infinity)
                         

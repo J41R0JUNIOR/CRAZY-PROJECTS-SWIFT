@@ -37,7 +37,7 @@ struct ContentView: View {
                     }.toolbar(.visible, for: .tabBar)
                         .toolbarBackground( roxoAcentuado, for: .tabBar)
                     
-                }.accentColor(roxoLeve)
+                }.accentColor(roxoClaro)
             
         
     }

@@ -37,7 +37,7 @@ struct ModalEntrar: View {
                         Button {
                             estadoModal2.toggle()
                         } label: {
-                            Text("Done").foregroundColor(roxoLeve)
+                            Text("Done").foregroundColor(roxoClaro)
                         }
                         Spacer()
                         
@@ -48,7 +48,7 @@ struct ModalEntrar: View {
                             estadoModal2.toggle()
                             estadoModal1.toggle()
                         } label: {
-                            Text("Edit").foregroundColor(roxoLeve)
+                            Text("Edit").foregroundColor(roxoClaro)
                         }
                         
                         
@@ -58,9 +58,9 @@ struct ModalEntrar: View {
                         bell.toggle()
                     } label: {
                         if(bell == true){
-                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoLeve)
+                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
                         }else{
-                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoLeve)
+                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
                         }
                     }
                         
@@ -84,18 +84,18 @@ struct ModalEntrar: View {
                                                     if(title == ""){
                                                         Text("Title").font(.system(size: 20))
                                                     }
-                                                    Text("\(title)").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                    Text("\(title)").font(.system(size: 20)).foregroundColor(roxoClaro)
                                                     
                                                     if(notes == ""){
-                                                        Text("Notes").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                        Text("Notes").foregroundColor(roxoClaro).font(.system(size: 15))
                                                     }
-                                                    Text("\(notes)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                    Text("\(notes)").foregroundColor(roxoClaro).font(.system(size: 15))
                                                     Spacer()
-                                                    Text("\(data.formatted())").foregroundColor(roxoLeve).font(.system(size: 15)).font(.system(size: 15))
+                                                    Text("\(data.formatted())").foregroundColor(roxoClaro).font(.system(size: 15)).font(.system(size: 15))
                                                     
                                                     
                                                     
-                                                }.foregroundColor(roxoLeve)
+                                                }.foregroundColor(roxoClaro)
                                                 
                                             }.padding()
                                         }.padding()
@@ -105,15 +105,15 @@ struct ModalEntrar: View {
                                                 HStack{
                                                     VStack{
                                                         if(secondaryVet[vet].title2 == ""){
-                                                            Text("Title").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                            Text("Title").font(.system(size: 20)).foregroundColor(roxoClaro)
                                                         }
-                                                        Text("\(secondaryVet[vet].title2)").font(.system(size: 20)).foregroundColor(roxoLeve)
+                                                        Text("\(secondaryVet[vet].title2)").font(.system(size: 20)).foregroundColor(roxoClaro)
                                                         if(secondaryVet[vet].corpo2 == ""){
-                                                            Text("Notes").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                            Text("Notes").foregroundColor(roxoClaro).font(.system(size: 15))
                                                         }
-                                                        Text("\(secondaryVet[vet].corpo2)").foregroundColor(roxoLeve).font(.system(size: 15))
+                                                        Text("\(secondaryVet[vet].corpo2)").foregroundColor(roxoClaro).font(.system(size: 15))
                                                         
-                                                        Text("\(secondaryVet[vet].data2.formatted())").foregroundColor(roxoLeve).font(.system(size: 15)).font(.system(size: 15))
+                                                        Text("\(secondaryVet[vet].data2.formatted())").foregroundColor(roxoClaro).font(.system(size: 15)).font(.system(size: 15))
                                                     }.padding()
                                                     
                                                 }
