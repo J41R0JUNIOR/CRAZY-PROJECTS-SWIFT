@@ -28,7 +28,7 @@ struct ModalView: View{
     var body: some View{
         ZStack{
             //plano de fundo
-            viewRoxa().ignoresSafeArea()
+            //viewRoxa().ignoresSafeArea()
             
             VStack{
                 HStack{
@@ -64,14 +64,14 @@ struct ModalView: View{
                         */
                         
                     } label: {
-                        Text("Done").foregroundColor(roxoClaro)
+                        Text("Done").foregroundColor(roxoAcentuado)
                     }.padding(.horizontal)
                     Spacer()
                     
                     
                     
                     //add
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                     
                     .contextMenu {
                         
@@ -82,7 +82,7 @@ struct ModalView: View{
                             }
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                         }
                         //aparecer botao de remover as células
                         Button {
@@ -96,15 +96,8 @@ struct ModalView: View{
                         
                     }.padding(.horizontal)
                 }.padding(.horizontal)
-                TextField("Digite o Título", text: $title)
-                    .frame(width: 360, alignment: .leading)
-                    .disableAutocorrection(true)
-                    .textFieldStyle(.roundedBorder)
-
-                ZStack{
-                    
-                    
-                    
+                
+                
                     
                     //sino
                     HStack{
@@ -112,18 +105,74 @@ struct ModalView: View{
                             bell.toggle()
                         } label: {
                             if(bell == true){
-                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
+                                Image(systemName:"bell.fill")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(roxoAcentuado)
                             }else{
-                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
+                                Image(systemName:"bell")
+                                    .font(.system(size: 20))
+                                    .foregroundColor(roxoAcentuado)
                             }
                         }
                         
                     }.foregroundColor(.white)
                     
-                }.padding(.horizontal)
-                
                     HStack{
+                        Form{
+                            Section(header: Text("Primary")){
+                                
+                                TextField("Digite o Título", text: $title)
+                                    .disableAutocorrection(true)
+                                    .textFieldStyle(.plain)
+                                    .foregroundColor(roxoAcentuado)
+                                    .font(.system(size: 20))
+                                if(notes == ""){
+                                    Text("Digite a Atividade Abaixo")
+                                }
+                                TextEditor(text: $notes)
+                                    .font(.custom("HelveticaNeue", size: 15)).font(.body)
+                                    .lineLimit(1).disableAutocorrection(true)
+                                    .allowsTightening(false).cornerRadius(5)
+                                
+                                DatePicker("", selection: $data, in: Date()...)
+                                    .foregroundColor(roxoClaro)
+                                
+                            }
+                            Section(header: Text("Added")){
+                                
+                                ForEach(secondaryVet.indices, id: \.self) { vet in
+                                    
+                                    TextField("Título", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
+                                        .textFieldStyle(.plain)
+                                        .foregroundColor(roxoAcentuado)
+                                    if(secondaryVet[vet].corpo2 == ""){
+                                        Text("Digite a Atividade Abaixo")
+                                    }
+                                    
+                                    TextEditor(text: $secondaryVet[vet].corpo2)
+                                        .font(.custom("HelveticaNeue", size: 15))
+                                        .font(.body)
+                                        
+                                    DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date)
+                                        .foregroundColor(roxoClaro)
+                                    
+                                    if(remover == true){
+                                        Button {
+                                            secondaryVet.remove(at: vet)
+                                        } label: {
+                                            Image(systemName: "trash.slash.circle.fill")
+                                                .font(.system(size: 25))
+                                                .foregroundColor(roxo)
+                                        }
+                                       
+                                    }
+                                    
+                                    
+                                }
+                            }
+                        }
                         
+                        /*
                         ScrollView{
                             VStack{
                                 
@@ -132,16 +181,12 @@ struct ModalView: View{
                                 
                                 
                                 //Text("\(title) [\(index)]")
-                                TextEditor(text: $notes)
-                                    .font(.custom("HelveticaNeue", size: 15)).font(.body)
-                                    .frame(width: 360, height: 80, alignment: .leading)
-                                    .lineLimit(1).disableAutocorrection(true)
-                                    .allowsTightening(false).cornerRadius(5)
+                                
                                 
                                 HStack{
                                     Spacer()
                                     
-                                    DatePicker("", selection: $data, in: Date()...).foregroundColor(roxoClaro)
+                                    
                                     //TextField("Data:", text: $data).frame(width: 100).disableAutocorrection(true).textFieldStyle(.roundedBorder).foregroundColor(roxoAcentuado)
                                 }.padding(.horizontal)
                             }.padding()
@@ -177,15 +222,23 @@ struct ModalView: View{
                                 }.padding()
                             }
                         }
-                        
+                        */
                     }
                 
                 
                 
                 Spacer()
-            }.padding()
+            }.padding(.vertical)
         }
     }
 }
 
+
+
+struct ContentView_Previews2: PreviewProvider {
+    
+    static var previews: some View {
+        ContentView()
+    }
+}
 

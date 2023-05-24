@@ -26,7 +26,7 @@ struct ModalEntrar: View {
     
     var body: some View {
         ZStack{
-            viewRoxa().ignoresSafeArea()
+            //viewRoxa().ignoresSafeArea()
             VStack{
                 VStack{
                     HStack{
@@ -37,7 +37,7 @@ struct ModalEntrar: View {
                         Button {
                             estadoModal2.toggle()
                         } label: {
-                            Text("Done").foregroundColor(roxoClaro)
+                            Text("Done").foregroundColor(roxoAcentuado)
                         }
                         Spacer()
                         
@@ -48,7 +48,7 @@ struct ModalEntrar: View {
                             estadoModal2.toggle()
                             estadoModal1.toggle()
                         } label: {
-                            Text("Edit").foregroundColor(roxoClaro)
+                            Text("Edit").foregroundColor(roxoAcentuado)
                         }
                         
                         
@@ -58,9 +58,9 @@ struct ModalEntrar: View {
                         bell.toggle()
                     } label: {
                         if(bell == true){
-                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
+                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                         }else{
-                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
+                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
                         }
                     }
                         
@@ -71,8 +71,60 @@ struct ModalEntrar: View {
                             
                             
                             VStack{
-                                
-                                    ScrollView{
+                                Form{
+                                    Section{
+                                        if(title == ""){
+                                            Text("Title").font(.system(size: 20))
+                                                .foregroundColor(roxoAcentuado)
+                                                .bold()
+                                        }
+                                        Text("\(title)").font(.system(size: 20))
+                                            .foregroundColor(roxoAcentuado)
+                                        
+                                        if(notes == ""){
+                                            Text("Notes")
+                                                .foregroundColor(roxoAcentuado)
+                                                .font(.system(size: 15))
+                                        }
+                                        Text("\(notes)")
+                                            .foregroundColor(roxoAcentuado)
+                                            .font(.system(size: 15))
+                                        
+                                        Text("\(data.formatted())")
+                                            .foregroundColor(roxoAcentuado)
+                                            .font(.system(size: 15))
+                                            .font(.system(size: 15))
+                                    }
+                                    Section{
+                                        ForEach(secondaryVet.indices, id: \.self) { vet in
+                                            
+                                            if(secondaryVet[vet].title2 == ""){
+                                                Text("Title")
+                                                    .font(.system(size: 20))
+                                                    .foregroundColor(roxoAcentuado)
+                                                    .bold()
+                                            }
+                                            Text("\(secondaryVet[vet].title2)")
+                                                .font(.system(size: 20))
+                                                .foregroundColor(roxoAcentuado)
+                                            
+                                            if(secondaryVet[vet].corpo2 == ""){
+                                                Text("Notes")
+                                                    .foregroundColor(roxoAcentuado)
+                                                    .font(.system(size: 15))
+                                            }
+                                            Text("\(secondaryVet[vet].corpo2)")
+                                                .foregroundColor(roxoAcentuado)
+                                                .font(.system(size: 15))
+                                            
+                                            Text("\(secondaryVet[vet].data2.formatted())")
+                                                .foregroundColor(roxoAcentuado)
+                                                .font(.system(size: 15))
+                                                .font(.system(size: 15))
+                                        }
+                                    }
+                                }
+                                    /*ScrollView{
                                         ZStack{
                                             
                                             RoundedRectangle(cornerRadius: 14).frame(width: 355).foregroundColor(roxoEscuro)
@@ -119,7 +171,7 @@ struct ModalEntrar: View {
                                                 }
                                             }.padding()
                                         }
-                                    }
+                                    }*/
                                 
                             }
                         }

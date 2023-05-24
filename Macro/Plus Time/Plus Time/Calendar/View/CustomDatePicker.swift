@@ -19,32 +19,39 @@ struct CustomDatePicker: View {
         ZStack{
             //viewRoxa().ignoresSafeArea()
             VStack(spacing: 35){
+                
+                
+                
                 //dias da semana
                 let days: [String] =
                 ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ]
                 
+                
+                
+                //
                 HStack(spacing: 20){
-                    
                     VStack(alignment: .leading, spacing: 10){
                         Text (extraDate() [0]).foregroundColor(roxoEscuro)
                             .font (.caption)
                             .fontWeight (.semibold)
                         
                         Text (extraDate() [1]).foregroundColor(roxoEscuro)
-                            .font (.title.bold ())
-                         
-                    }
+                            .font (.title.bold ())                    }
                     Spacer (minLength: 0)
+                    
+                    
                     
                     //botao para retroceder um mes
                     Button {
-                        
                         withAnimation{
                             currentMonth -= 1
                         }
                     } label: {
                         Image (systemName: "chevron.left")
                     }
+                    
+                    
+                    
                     //botao para avancar um mes
                     Button {
                         
@@ -54,8 +61,10 @@ struct CustomDatePicker: View {
                     } label: {
                         Image (systemName: "chevron.right")
                     }
-                    
                 }.padding()
+                
+                
+                
                 //foreach para escrever os dias na view
                 HStack(spacing: 0){
                     ForEach (days,id: \.self){day in
@@ -99,6 +108,7 @@ struct CustomDatePicker: View {
                                 Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoClaro)
                                 
                                 Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoClaro)
+                                
                             }
                         }
                         .padding (.vertical, 10)
@@ -129,19 +139,21 @@ struct CustomDatePicker: View {
                         
                     }
                      */
+                    
+                    
+                    /*
                     if tasks.count == 0{
                             //caso não encontre nenhuma task
                             Text("No tasks found").foregroundColor(roxoClaro) 
                     }
                     
-                    if tasks.count != 0{
-                        if(isSameDay(date1: tasks[0].taskDate, date2: currentDate)){
-                            
-                        }else{
-                            Text("No tasks found").foregroundColor(roxoClaro)
-                        }
-                    }
                     
+                    if(isSameDay(date1: tasks[0].taskDate, date2: currentDate)){
+                        
+                    }else{
+                        Text("No tasks found").foregroundColor(roxoClaro)
+                    }
+                    */
                 }.padding()
                 
             }.onChange (of: currentMonth) { newValue in
