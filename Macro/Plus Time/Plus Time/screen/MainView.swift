@@ -27,7 +27,7 @@ struct MainView: View{
     @State var toggle = false
     //vetor do calendário e suas tasks
     @Binding var tasks:[TaskMetaData]
-    
+    @State var j:Int = 0
     var body: some View {
         ZStack {
             viewRoxa().ignoresSafeArea()
@@ -59,7 +59,7 @@ struct MainView: View{
                     //add eventos/tarefas
                     Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                     .padding()
-                    .contextMenu {
+                    .contextMenu{
                         Button {
                             tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                             
@@ -68,11 +68,15 @@ struct MainView: View{
                             if(remover == true){
                                 remover.toggle()
                             }
+                            j = tdsStructs.count-1
+                            i = j
+                            print(j)
+                            estadoModal1.toggle()
+                            
                         } label: {
                             Label("Adicionar", systemImage: "square.and.pencil")
                             Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                         }
-                        
                         Button {
                             remover.toggle()
                         } label: {
@@ -112,6 +116,7 @@ struct MainView: View{
                                  print(arrayTasks.tasks.count)
                                  print(arrayTasks.tasks[i])
                                  */
+                                estadoModal1.toggle()
                             } label: {
                                 Text("Clique aqui e comece a adicionar!").foregroundColor(roxoAcentuado).font(.body)
                                 
@@ -123,6 +128,7 @@ struct MainView: View{
                 //ScrollView dos horários
                 
                 ScrollView {
+                    
                     if (pesquisa != ""){
                         ForEach (tdsStructs.indices, id: \.self){index2 in
                             if(tdsStructs[index2].title == pesquisa){
@@ -138,7 +144,7 @@ struct MainView: View{
                                                 tasks.remove(at: index2)
                                                  
                                             } label: {
-                                                Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxoAcentuado)
+                                                Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
                                             }
                                         }
                                         
@@ -222,6 +228,7 @@ struct MainView: View{
                             }
                         }
                     }else{
+                        
                         ForEach (tdsStructs.indices, id: \.self){index in
                             ZStack{
                                 RoundedRectangle(cornerRadius: 15).foregroundColor(roxoClaro)
@@ -234,7 +241,7 @@ struct MainView: View{
                                             
                                             
                                         } label: {
-                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(roxoAcentuado)
+                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
                                         }
                                     }
                                     
@@ -280,7 +287,13 @@ struct MainView: View{
                                                     }
                                                 }
                                                 Spacer()
-                                                
+                                               //
+                                                //
+                                                //
+                                                //
+                                                //
+                                                //
+                                                //
                                             }.sheet(isPresented: $estadoModal2) {
                                                 ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
                                             }
@@ -317,6 +330,7 @@ struct MainView: View{
                             }
                         }
                     }
+                     
                 }
                
             }.padding()
@@ -333,4 +347,11 @@ struct MainView_Previews: PreviewProvider {
 }
 */
 
+
+struct ContentView_Previews3: PreviewProvider {
+    
+    static var previews: some View {
+        ContentView()
+    }
+}
 
