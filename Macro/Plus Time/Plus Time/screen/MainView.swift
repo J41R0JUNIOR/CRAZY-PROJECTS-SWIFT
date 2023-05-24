@@ -173,7 +173,7 @@ struct MainView: View{
                                                         }
                                                         HStack{
                                                             if(tdsStructs[index2].corpo == ""){
-                                                                Text("Add Body").font(.system(size: 13)).foregroundColor(roxo)
+                                                                Text("Add Body").font(.system(size: 13)).foregroundColor(roxoEscuro)
                                                             }
                                                             Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(roxo).lineLimit(2)
                                                                 .allowsTightening(false)
@@ -212,7 +212,7 @@ struct MainView: View{
                                                     ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks)
                                                 }
                                             }
-                                            Divider().background(roxoLeve)
+                                            //Divider().background(roxoLeve)
                                         }
                                     }.padding()
                                 }
@@ -269,7 +269,7 @@ struct MainView: View{
                                                     }
                                                     HStack{
                                                         if(tdsStructs[index].corpo == ""){
-                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(roxo)
+                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(roxoAcentuado)
                                                         }
                                                         Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(roxo).lineLimit(2)
                                                             .allowsTightening(false)
@@ -308,7 +308,7 @@ struct MainView: View{
                                                 ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks)
                                             }
                                         }
-                                        Divider().background(roxoLeve)
+                                        //Divider().background(roxoLeve)
                                     }
                                 }.padding()
                             }

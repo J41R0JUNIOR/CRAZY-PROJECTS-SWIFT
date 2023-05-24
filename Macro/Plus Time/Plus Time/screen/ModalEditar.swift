@@ -17,6 +17,9 @@ struct ModalView: View{
     @Binding var secondaryVet:[secondStructure]
     @State var remover = false
     @Binding var tasks:[TaskMetaData]
+    @State var i:Int = 0
+    @State var j:Int = 0
+    
     
     //@State private var datePicked = Date()
     
@@ -45,6 +48,20 @@ struct ModalView: View{
                         if (tasks[indice].taskDate != data){
                             tasks[indice].taskDate = data
                         }
+                        
+                        print(tasks[indice].task[i].title)
+                        /*
+                        while (i < tasks.count){
+                            
+                            if(tasks[indice].taskDate == tasks[i].taskDate && indice != i){
+                                print("achoo que peguei um tuelho")
+                                tasks[i].task.append(Task(title: tasks[indice].task[0].title))
+                            }
+                           // if(tasks)
+                            i+=1
+                        }
+                            
+                        */
                         
                     } label: {
                         Text("Done").foregroundColor(roxoLeve)

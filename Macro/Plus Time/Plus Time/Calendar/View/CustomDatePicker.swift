@@ -90,14 +90,35 @@ struct CustomDatePicker: View {
                     //título de onde vão as tasks
                     Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxoEscuro)
                     
+                    ///
+                    if tasks.first(where: { task in
+                        return isSameDay(date1: task.taskDate, date2: currentDate)
+                    }) != nil
+                    {
+                        ForEach(tasks.indices, id: \.self){ t in
+                            
+                            VStack(alignment: .leading, spacing: 10){
+                                //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
+                                if(isSameDay(date1: tasks[t].taskDate, date2: currentDate)){
+                                    Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoLeve)
+                                    
+                                    Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoLeve)
+                                }
+                            }
+                            .padding (.vertical, 10)
+                            .padding(.horizontal)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(roxo)
+                        }
+                        
+                    }
                     
-                    
+                    /*
                     //tasks que vão ser mostradas abaixo do título
                     if let task = tasks.first(where: { task in
                         return isSameDay(date1: task.taskDate, date2: currentDate)
                     })
                     {
-                        
                         ForEach(task.task){ task in
                             
                             VStack(alignment: .leading, spacing: 10){
@@ -112,7 +133,9 @@ struct CustomDatePicker: View {
                             .foregroundColor(roxo)
                         }
                         
-                    }else{
+                    }
+                     */
+                    else{
                         //caso não encontre nenhuma task
                         Text("No tasks found").foregroundColor(roxoLeve)
                     }
@@ -132,11 +155,11 @@ struct CustomDatePicker: View {
         VStack{
             if value.day != -1{
                 
-                if let task = tasks.first(where: { task in
+                if tasks.first(where: { task in
                     
                     return isSameDay (date1: task.taskDate, date2: value.date)
                     //parte onde mostra as tasks no calendário//
-                }){
+                }) != nil{
                     //se não for valor -1 ele mostra no calendário
                     Text("\(value.day)")
                         .font(.title3.bold())
@@ -232,3 +255,4 @@ extension Date{
         }
     }
 }
+
