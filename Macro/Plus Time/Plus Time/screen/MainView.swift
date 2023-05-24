@@ -37,69 +37,78 @@ struct MainView: View{
                 
                 //Parte superior da tela
                 HStack{
-                    
-                    //barra de pesquisa
-                    ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 290, height: 36).foregroundColor(roxoClaro)
-                        
-                        HStack{
-                            
-                            
-                            TextField("Search", text: $pesquisa)
-                            //pesquisa
-                            
-
-                            Spacer()
-                        }.padding()
-                    }
                     Spacer()
                     
                     
                     
                     //add eventos/tarefas
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
-                    .padding()
-                    .contextMenu{
-                        Button {
-                            tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                    if remover == false{
+                        Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                        .padding()
+                        
+                        .contextMenu{
                             
-                            tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
-                            
-                            if(remover == true){
-                                remover.toggle()
+                            Button {
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                
+                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                
+                                if(remover == true){
+                                    remover.toggle()
+                                }
+                                j = tdsStructs.count-1
+                                i = j
+                                print(j)
+                                estadoModal1.toggle()
+                                
+                            } label: {
+                                Label("Adicionar", systemImage: "square.and.pencil")
+                                Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
                             }
-                            j = tdsStructs.count-1
-                            i = j
-                            print(j)
-                            estadoModal1.toggle()
-                            
-                        } label: {
-                            Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                            Button {
+                                remover.toggle()
+                            } label: {
+                                if(remover == false){
+                                    Label("Remover", systemImage: "trash.slash")
+                                }else{
+                                    Label("Pronto", systemImage: "return")
+                                }
+                            }
                         }
+                    }else{
                         Button {
                             remover.toggle()
                         } label: {
-                            if(remover == false){
-                                Label("Remover", systemImage: "trash.slash")
-                            }else{
-                                Label("Pronto", systemImage: "return")
-                            }
+                            Image(systemName: "checkmark.circle")
+                                .font(.system(size: 20))
+                                .foregroundColor(roxoClaro)
                         }
+
                     }
                 }
                 
                 
                 
-                //Cor de fundo da ScrollView
-                
-                if(tdsStructs.count == 0){
-                    
-                    VStack{
+                //barra de pesquisa
+                ZStack{
+                    RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoClaro)
+                    HStack{
+                        TextField("Search", text: $pesquisa).foregroundColor(roxoEscuro)
                         
+                        
+                        
+                        //pesquisa                        Spacer()
+                    }.padding()
+                }
+                
+                
+                
+                //Cor de fundo da ScrollView
+                if(tdsStructs.count == 0){
+                    VStack{
                         Spacer()
                         ZStack{
-                            RoundedRectangle(cornerRadius: 14).frame(height: 80).foregroundColor(roxoClaro)
+                            RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoClaro)
                             Button {
                                 
                                 tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))

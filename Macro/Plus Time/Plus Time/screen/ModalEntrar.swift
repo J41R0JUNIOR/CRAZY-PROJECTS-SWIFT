@@ -75,11 +75,11 @@ struct ModalEntrar: View {
                                     Section{
                                         if(title == ""){
                                             Text("Title").font(.system(size: 20))
-                                                .foregroundColor(roxoAcentuado)
+                                                .foregroundColor(roxoEscuro)
                                                 .bold()
                                         }
                                         Text("\(title)").font(.system(size: 20))
-                                            .foregroundColor(roxoAcentuado)
+                                            .foregroundColor(roxoEscuro)
                                         
                                         if(notes == ""){
                                             Text("Notes")
@@ -101,12 +101,13 @@ struct ModalEntrar: View {
                                             if(secondaryVet[vet].title2 == ""){
                                                 Text("Title")
                                                     .font(.system(size: 20))
-                                                    .foregroundColor(roxoAcentuado)
+                                                    .foregroundColor(roxoEscuro)
                                                     .bold()
                                             }
                                             Text("\(secondaryVet[vet].title2)")
                                                 .font(.system(size: 20))
-                                                .foregroundColor(roxoAcentuado)
+                                                .foregroundColor(roxoEscuro)
+                                                .bold()
                                             
                                             if(secondaryVet[vet].corpo2 == ""){
                                                 Text("Notes")
