@@ -91,26 +91,20 @@ struct CustomDatePicker: View {
                     Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxoEscuro)
                     
                     ///
-                    if tasks.first(where: { task in
-                        return isSameDay(date1: task.taskDate, date2: currentDate)
-                    }) != nil
-                    {
-                        ForEach(tasks.indices, id: \.self){ t in
-                            
-                            VStack(alignment: .leading, spacing: 10){
-                                //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
-                                if(isSameDay(date1: tasks[t].taskDate, date2: currentDate)){
-                                    Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoLeve)
-                                    
-                                    Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoLeve)
-                                }
-                            }
-                            .padding (.vertical, 10)
-                            .padding(.horizontal)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .foregroundColor(roxo)
-                        }
+                    ForEach(tasks.indices, id: \.self){ t in
                         
+                        VStack(alignment: .leading, spacing: 10){
+                            //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
+                            if(isSameDay(date1: tasks[t].taskDate, date2: currentDate)){
+                                Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoLeve)
+                                
+                                Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoLeve)
+                            }
+                        }
+                        .padding (.vertical, 10)
+                        .padding(.horizontal)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(roxo)
                     }
                     
                     /*
@@ -135,9 +129,16 @@ struct CustomDatePicker: View {
                         
                     }
                      */
-                    else{
-                        //caso não encontre nenhuma task
-                        Text("No tasks found").foregroundColor(roxoLeve)
+                    if tasks.count == 0{
+                            //caso não encontre nenhuma task
+                            Text("No tasks found").foregroundColor(roxoLeve) 
+                    }
+                    if tasks.count != 0{
+                        if(isSameDay(date1: tasks[0].taskDate, date2: currentDate)){
+                            
+                        }else{
+                            Text("No tasks found").foregroundColor(roxoLeve)
+                        }
                     }
                     
                 }.padding()
