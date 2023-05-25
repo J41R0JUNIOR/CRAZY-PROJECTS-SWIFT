@@ -32,11 +32,11 @@ struct CustomDatePicker: View {
                 HStack(spacing: 20){
                     VStack(alignment: .leading, spacing: 10){
                         
-                        Text (extraDate() [0]).foregroundColor(roxoEscuro)
+                        Text (extraDate() [0]).foregroundColor(roxoAcentuado)
                             .font (.caption)
                             .fontWeight (.semibold)
                         
-                        Text (extraDate() [1]).foregroundColor(roxoEscuro)
+                        Text (extraDate() [1]).foregroundColor(roxo)
                             .font (.title.bold ())                    }
                     Spacer (minLength: 0)
                     
@@ -74,7 +74,7 @@ struct CustomDatePicker: View {
                             .font (.callout)
                             .fontWeight (.semibold)
                             .frame (maxWidth: .infinity)
-                            .foregroundColor(roxoClaro)
+                            .foregroundColor(roxoAcentuado)
                             
                     }.foregroundColor(roxoClaro)
                 }
@@ -82,12 +82,18 @@ struct CustomDatePicker: View {
                 let columns = Array (repeating: GridItem(.flexible()), count: 7)
                 
                 LazyVGrid(columns: columns, spacing: 15){
-                    
+                    ///
+                    ///
+                    ///
+                    ///
+                    ///
+                    ///
+                    ///
+                    ///
                     ForEach(extractDate()){value in
-                        CardView(value: value)
-                            .background(
-                                Capsule().foregroundColor(roxoEscuro)
-                                    .padding(.horizontal, 4)
+                        CardView(value: value)                            .background(
+                                Capsule().foregroundColor(roxoAcentuado)
+                                    .padding(.horizontal, 1).padding(.vertical, 6)
                                     .opacity(isSameDay(date1: value.date, date2: currentDate) ? 1 : 0)
                             ).onTapGesture {
                                 
@@ -101,7 +107,7 @@ struct CustomDatePicker: View {
                     
                     
                     //título de onde vão as tasks
-                    Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxoEscuro)
+                    Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxo)
                     
                     ///
                     ///
@@ -117,10 +123,12 @@ struct CustomDatePicker: View {
                                     .bold()
                                 */
                                 if(tasks[t].task[0].title == ""){
-                                    Text("Título ainda não adicionado").foregroundColor(roxoClaro)
+                                    Text("Título ainda não adicionado")
+                                        .foregroundColor(roxoAcentuado)
                                         .bold()
                                 }
-                                Text (" \(tasks[t].task[0].title)").font(.title2.bold()).foregroundColor(roxoClaro)
+                                Text (" \(tasks[t].task[0].title)").font(.title2.bold())
+                                    .foregroundColor(roxoAcentuado)
                                 
                             }
                         }
@@ -205,7 +213,7 @@ struct CustomDatePicker: View {
                     Text("\(value.day)")
                         .font(.title3.bold())
                     
-                        .foregroundColor(roxoClaro)
+                        .foregroundColor(.primary)
                         //.foregroundColor (isSameDay (date1: value.date, date2: currentDate) ? roxoLeve: roxoLeve)
                         .frame(maxWidth: .infinity)
                         

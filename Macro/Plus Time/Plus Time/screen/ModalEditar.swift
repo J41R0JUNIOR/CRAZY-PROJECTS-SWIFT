@@ -64,37 +64,50 @@ struct ModalView: View{
                         */
                         
                     } label: {
-                        Text("Done").foregroundColor(roxoAcentuado)
+                        Text("Done").foregroundColor(roxo)
                     }.padding(.horizontal)
                     Spacer()
                     
                     
                     
                     //add
-                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoAcentuado)
-                    
-                    .contextMenu {
+                    if(remover == false){
+                        Image(systemName: "square.and.pencil").font(.system(size: 20))
+                            .foregroundColor(roxo)
                         
-                        Button {
-                            secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
-                            if(remover == true){
-                                remover.toggle()
-                            }
-                        } label: {
-                            Label("Adicionar", systemImage: "square.and.pencil")
-                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoAcentuado)
-                        }
-                        //aparecer botao de remover as células
+                            .contextMenu {
+                                
+                                Button {
+                                    secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
+                                    if(remover == true){
+                                        remover.toggle()
+                                    }
+                                } label: {
+                                    Label("Add", systemImage: "square.and.pencil")
+                                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
+                                }
+                                //aparecer botao de remover as células
+                                Button {
+                                    remover.toggle()
+                                }label: {
+                                    if(remover == false){
+                                        Label("Remove", systemImage: "trash.slash")
+                                    }else{
+                                        Label("Done", systemImage: "return")
+                                    }                        }
+                                
+                            }.padding(.horizontal)
+                    }else{
                         Button {
                             remover.toggle()
-                        }label: {
-                            if(remover == false){
-                                Label("Remover", systemImage: "trash.slash")
-                            }else{
-                                Label("Pronto", systemImage: "return")
-                            }                        }
+                        } label: {
+                            Image(systemName: "checkmark.circle")
+                                .font(.system(size: 20))
+                                .foregroundColor(roxo)
+                        }
+                    }
                         
-                    }.padding(.horizontal)
+                        
                 }.padding(.horizontal)
                 
                 
@@ -107,11 +120,11 @@ struct ModalView: View{
                             if(bell == true){
                                 Image(systemName:"bell.fill")
                                     .font(.system(size: 20))
-                                    .foregroundColor(roxoAcentuado)
+                                    .foregroundColor(roxo)
                             }else{
                                 Image(systemName:"bell")
                                     .font(.system(size: 20))
-                                    .foregroundColor(roxoAcentuado)
+                                    .foregroundColor(roxo)
                             }
                         }
                         
@@ -121,13 +134,13 @@ struct ModalView: View{
                         Form{
                             Section(header: Text("Primary")){
                                 
-                                TextField("Digite o Título", text: $title)
+                                TextField("Add Title", text: $title)
                                     .disableAutocorrection(true)
                                     .textFieldStyle(.plain)
-                                    .foregroundColor(roxoAcentuado)
+                                    .foregroundColor(roxo)
                                     .font(.system(size: 20))
                                 if(notes == ""){
-                                    Text("Digite a Atividade Abaixo")
+                                    Text("Type the activity below")
                                 }
                                 TextEditor(text: $notes)
                                     .font(.custom("HelveticaNeue", size: 15)).font(.body)
@@ -135,26 +148,12 @@ struct ModalView: View{
                                     .allowsTightening(false).cornerRadius(5)
                                 
                                 DatePicker("", selection: $data, in: Date()...)
-                                    .foregroundColor(roxoClaro)
+                                    .foregroundColor(.white)
                                 
                             }
                             Section(header: Text("Added")){
                                 
                                 ForEach(secondaryVet.indices, id: \.self) { vet in
-                                    
-                                    TextField("Título", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
-                                        .textFieldStyle(.plain)
-                                        .foregroundColor(roxoAcentuado)
-                                    if(secondaryVet[vet].corpo2 == ""){
-                                        Text("Digite a Atividade Abaixo")
-                                    }
-                                    
-                                    TextEditor(text: $secondaryVet[vet].corpo2)
-                                        .font(.custom("HelveticaNeue", size: 15))
-                                        .font(.body)
-                                        
-                                    DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date)
-                                        .foregroundColor(roxoClaro)
                                     
                                     if(remover == true){
                                         Button {
@@ -162,10 +161,25 @@ struct ModalView: View{
                                         } label: {
                                             Image(systemName: "trash.slash.circle.fill")
                                                 .font(.system(size: 25))
-                                                .foregroundColor(roxo)
+                                                .foregroundColor(.red)
                                         }
-                                       
+                                        
                                     }
+                                    
+                                    TextField("Add Title", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
+                                        .textFieldStyle(.plain)
+                                        .foregroundColor(roxo)
+                                    if(secondaryVet[vet].corpo2 == ""){
+                                        Text("Type the activity below")
+                                    }
+                                    
+                                    TextEditor(text: $secondaryVet[vet].corpo2)
+                                        .font(.custom("HelveticaNeue", size: 15))
+                                        .font(.body)
+                                        
+                                    DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date)
+                                        .foregroundColor(.white)
+                                    
                                     
                                     
                                 }

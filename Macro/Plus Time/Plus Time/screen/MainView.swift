@@ -30,7 +30,10 @@ struct MainView: View{
     @State var j:Int = 0
     var body: some View {
         ZStack {
-            viewRoxa().ignoresSafeArea()
+            
+            //viewRoxa().ignoresSafeArea()
+            
+            
             VStack{
                 
                 
@@ -40,7 +43,7 @@ struct MainView: View{
                     Spacer()
                     //add eventos/tarefas
                     if remover == false{
-                        Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                        Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
                         .padding()
                         
                         .contextMenu{
@@ -60,7 +63,9 @@ struct MainView: View{
                                 
                             } label: {
                                 Label("Adicionar", systemImage: "square.and.pencil")
-                                Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
+                                Image(systemName: "square.and.pencil")
+                                    .font(.system(size: 20))
+                                
                             }
                             Button {
                                 remover.toggle()
@@ -78,7 +83,7 @@ struct MainView: View{
                         } label: {
                             Image(systemName: "checkmark.circle")
                                 .font(.system(size: 20))
-                                .foregroundColor(roxoClaro)
+                                .foregroundColor(roxo)
                         }
 
                     }
@@ -95,55 +100,36 @@ struct MainView: View{
                 //ScrollView dos horários
                 
                 ScrollView {
-                    
+                    HStack{
+                        Text("Plus time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado)
+                        Spacer()
+                    }
                     //barra de pesquisa
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoClaro)
+                        RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoAcentuado)
                         HStack{
-                            TextField("Search", text: $pesquisa).foregroundColor(roxoEscuro)
+                            if(pesquisa == ""){
+                                Image(systemName: "magnifyingglass").foregroundColor(roxoClaro)
+                            }
+                            TextField("Search", text: $pesquisa)
+                                .textFieldStyle(.roundedBorder)
+                                
+                                .foregroundColor(.white)
                             
                             
                             
-                            //pesquisa                        Spacer()
+                            //pesquisa 
                         }.padding()
                     }
                     
                     Spacer()
-                    if(tdsStructs.count == 0){
-                        VStack{
-                            Divider()
-                            ZStack{
-                                RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoClaro)
-                                Button {
-                                    
-                                    tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
-                                    
-                                    
-                                    
-                                    tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
-                                    
-                                    
-                                    if(remover == true){
-                                        remover.toggle()
-                                    }
-                                    /*
-                                     print(arrayTasks.tasks.count)
-                                     print(arrayTasks.tasks[i])
-                                     */
-                                    estadoModal1.toggle()
-                                } label: {
-                                    Text("Clique aqui e comece a adicionar!").foregroundColor(roxoAcentuado).font(.body)
-                                    
-                                }
-                            }
-                        }
-                    }
+                    
                     if (pesquisa != ""){
                         ForEach (tdsStructs.indices, id: \.self){index2 in
                             if(tdsStructs[index2].title == pesquisa){
                                 //Text("achou")
                                 ZStack{
-                                    RoundedRectangle(cornerRadius: 15).foregroundColor(roxoClaro)
+                                    RoundedRectangle(cornerRadius: 15).foregroundColor(roxoEscuro)
                                     
                                     HStack{
                                         if(remover == true){
@@ -162,9 +148,9 @@ struct MainView: View{
                                             tdsStructs[index2].bell.toggle()
                                         } label: {
                                             if(tdsStructs[index2].bell == true){
-                                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                                                Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
                                             }else{
-                                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                                                Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
                                             }
                                         }
                                         VStack{
@@ -183,17 +169,17 @@ struct MainView: View{
                                                     VStack{
                                                         HStack{
                                                             if(tdsStructs[index2].title == ""){
-                                                                Text("Add Título").fontWeight(.bold).foregroundColor(roxoAcentuado)
+                                                                Text("Add Título").fontWeight(.bold).foregroundColor(.primary)
                                                             }
-                                                            Text(tdsStructs[index2].title).fontWeight(.bold).foregroundColor(roxoAcentuado).lineLimit(1)
+                                                            Text(tdsStructs[index2].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                                 .allowsTightening(false)
                                                             Spacer()
                                                         }
                                                         HStack{
                                                             if(tdsStructs[index2].corpo == ""){
-                                                                Text("Add Body").font(.system(size: 13)).foregroundColor(roxoEscuro)
+                                                                Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
                                                             }
-                                                            Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(roxoAcentuado).lineLimit(2)
+                                                            Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
                                                                 .allowsTightening(false)
                                                             Spacer()
                                                         }
@@ -213,7 +199,7 @@ struct MainView: View{
                                                 } label: {
                                                     
                                                     //Text("Comming...")
-                                                    Text(tdsStructs[i].data.formatted()).foregroundColor(roxoAcentuado)
+                                                    Text(tdsStructs[i].data.formatted()).foregroundColor(.primary)
                                                     //corpo da estrutura
                                                     /*
                                                      if(tdsStructs[index].data == ""){
@@ -240,7 +226,7 @@ struct MainView: View{
                         
                         ForEach (tdsStructs.indices, id: \.self){index in
                             ZStack{
-                                RoundedRectangle(cornerRadius: 15).foregroundColor(roxoClaro)
+                                RoundedRectangle(cornerRadius: 15).foregroundColor(roxoEscuro)
                                 
                                 HStack{
                                     if(remover == true){
@@ -259,9 +245,9 @@ struct MainView: View{
                                         tdsStructs[index].bell.toggle()
                                     } label: {
                                         if(tdsStructs[index].bell == true){
-                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
                                         }else{
-                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
                                         }
                                     }
                                     VStack{
@@ -280,17 +266,17 @@ struct MainView: View{
                                                 VStack{
                                                     HStack{
                                                         if(tdsStructs[index].title == ""){
-                                                            Text("Add Título").fontWeight(.bold).foregroundColor(roxoAcentuado)
+                                                            Text("Add Título").fontWeight(.bold).foregroundColor(.primary)
                                                         }
-                                                        Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(roxoAcentuado).lineLimit(1)
+                                                        Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                             .allowsTightening(false)
                                                         Spacer()
                                                     }
                                                     HStack{
                                                         if(tdsStructs[index].corpo == ""){
-                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(roxoAcentuado)
+                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
                                                         }
-                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(roxoAcentuado).lineLimit(2)
+                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
                                                             .allowsTightening(false)
                                                         Spacer()
                                                     }
@@ -316,7 +302,7 @@ struct MainView: View{
                                             } label: {
                                                 
                                                 //Text("Comming...")
-                                                Text(tdsStructs[index].data.formatted()).foregroundColor(roxoAcentuado)
+                                                Text(tdsStructs[index].data.formatted()).foregroundColor(.primary)
                                                 //corpo da estrutura
                                                 /*
                                                  if(tdsStructs[index].data == ""){
@@ -341,7 +327,35 @@ struct MainView: View{
                     }
                      
                 }
-               
+                if(tdsStructs.count == 0){
+                    VStack{
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoEscuro)
+                            Button {
+                                
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                
+                                
+                                
+                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                
+                                
+                                if(remover == true){
+                                    remover.toggle()
+                                }
+                                /*
+                                 print(arrayTasks.tasks.count)
+                                 print(arrayTasks.tasks[i])
+                                 */
+                                estadoModal1.toggle()
+                            } label: {
+                                Text("Clique aqui e comece a adicionar!").foregroundColor(.white).font(.body)
+                                
+                            }
+                        }
+                    }
+                }
             }.padding()
         }
     }

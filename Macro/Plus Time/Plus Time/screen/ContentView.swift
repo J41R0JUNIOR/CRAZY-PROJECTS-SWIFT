@@ -15,6 +15,7 @@ import SwiftUI
 struct ContentView: View {
     //vetor de tasks
     @State var tasks:[TaskMetaData] = []
+    //@AppStorage("Tasks") var tasks:[TaskMetaData] = []
     var body: some View {
         
         
@@ -27,7 +28,7 @@ struct ContentView: View {
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }.toolbar(.visible, for: .tabBar)
-                        .toolbarBackground(roxoAcentuado, for: .tabBar)
+                        .toolbarBackground(.automatic, for: .tabBar)
                     
                     
                     
@@ -35,9 +36,9 @@ struct ContentView: View {
                     .tabItem {
                         Label("Calendar", systemImage: "calendar")
                     }.toolbar(.visible, for: .tabBar)
-                        .toolbarBackground( roxoAcentuado, for: .tabBar)
+                        //.toolbarBackground( Color(.white), for: .tabBar)
                     
-                }.accentColor(roxoClaro)
+                }.accentColor(cinzaClaro)
             
         
     }

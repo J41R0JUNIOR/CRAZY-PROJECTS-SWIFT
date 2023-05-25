@@ -37,7 +37,7 @@ struct ModalEntrar: View {
                         Button {
                             estadoModal2.toggle()
                         } label: {
-                            Text("Done").foregroundColor(roxoAcentuado)
+                            Text("Done").foregroundColor(roxo)
                         }
                         Spacer()
                         
@@ -48,7 +48,7 @@ struct ModalEntrar: View {
                             estadoModal2.toggle()
                             estadoModal1.toggle()
                         } label: {
-                            Text("Edit").foregroundColor(roxoAcentuado)
+                            Text("Edit").foregroundColor(roxo)
                         }
                         
                         
@@ -58,9 +58,9 @@ struct ModalEntrar: View {
                         bell.toggle()
                     } label: {
                         if(bell == true){
-                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxo)
                         }else{
-                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoAcentuado)
+                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxo)
                         }
                     }
                         
@@ -77,24 +77,24 @@ struct ModalEntrar: View {
                                         
                                         if(title == ""){
                                             Text("Title").font(.system(size: 20))
-                                                .foregroundColor(roxoEscuro)
+                                                .foregroundColor(roxo)
                                                 .bold()
                                         }
                                         Text("\(title)").font(.system(size: 20))
-                                            .foregroundColor(roxoEscuro)
+                                            .foregroundColor(roxo)
                                             .bold()
                                         
                                         if(notes == ""){
                                             Text("Notes")
-                                                .foregroundColor(roxoAcentuado)
+                                                .foregroundColor(.white)
                                                 .font(.system(size: 15))
                                         }
                                         Text("\(notes)")
-                                            .foregroundColor(roxoAcentuado)
+                                            .foregroundColor(.white)
                                             .font(.system(size: 15))
                                         
                                         Text("\(data.formatted())")
-                                            .foregroundColor(roxoAcentuado)
+                                            .foregroundColor(.white)
                                             .font(.system(size: 15))
                                             .font(.system(size: 15))
                                     }
