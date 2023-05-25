@@ -241,4 +241,3 @@ struct ContentView_Previews2: PreviewProvider {
         ContentView()
     }
 }
-

@@ -72,7 +72,9 @@ struct ModalEntrar: View {
                             
                             VStack{
                                 Form{
+                                    
                                     Section{
+                                        
                                         if(title == ""){
                                             Text("Title").font(.system(size: 20))
                                                 .foregroundColor(roxoEscuro)
@@ -80,6 +82,7 @@ struct ModalEntrar: View {
                                         }
                                         Text("\(title)").font(.system(size: 20))
                                             .foregroundColor(roxoEscuro)
+                                            .bold()
                                         
                                         if(notes == ""){
                                             Text("Notes")

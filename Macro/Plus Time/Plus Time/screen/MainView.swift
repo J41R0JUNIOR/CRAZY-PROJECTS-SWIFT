@@ -38,9 +38,6 @@ struct MainView: View{
                 //Parte superior da tela
                 HStack{
                     Spacer()
-                    
-                    
-                    
                     //add eventos/tarefas
                     if remover == false{
                         Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxoClaro)
@@ -89,55 +86,58 @@ struct MainView: View{
                 
                 
                 
-                //barra de pesquisa
-                ZStack{
-                    RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoClaro)
-                    HStack{
-                        TextField("Search", text: $pesquisa).foregroundColor(roxoEscuro)
-                        
-                        
-                        
-                        //pesquisa                        Spacer()
-                    }.padding()
-                }
                 
                 
                 
                 //Cor de fundo da ScrollView
-                if(tdsStructs.count == 0){
-                    VStack{
-                        Spacer()
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoClaro)
-                            Button {
-                                
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
-                                
-                                
-                                
-                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
-                                
-                                
-                                if(remover == true){
-                                    remover.toggle()
-                                }
-                                /*
-                                 print(arrayTasks.tasks.count)
-                                 print(arrayTasks.tasks[i])
-                                 */
-                                estadoModal1.toggle()
-                            } label: {
-                                Text("Clique aqui e comece a adicionar!").foregroundColor(roxoAcentuado).font(.body)
-                                
-                            }
-                        }
-                    }
-                }
+               
                 
                 //ScrollView dos horários
                 
                 ScrollView {
                     
+                    //barra de pesquisa
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoClaro)
+                        HStack{
+                            TextField("Search", text: $pesquisa).foregroundColor(roxoEscuro)
+                            
+                            
+                            
+                            //pesquisa                        Spacer()
+                        }.padding()
+                    }
+                    
+                    Spacer()
+                    if(tdsStructs.count == 0){
+                        VStack{
+                            Divider()
+                            ZStack{
+                                RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoClaro)
+                                Button {
+                                    
+                                    tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                    
+                                    
+                                    
+                                    tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                    
+                                    
+                                    if(remover == true){
+                                        remover.toggle()
+                                    }
+                                    /*
+                                     print(arrayTasks.tasks.count)
+                                     print(arrayTasks.tasks[i])
+                                     */
+                                    estadoModal1.toggle()
+                                } label: {
+                                    Text("Clique aqui e comece a adicionar!").foregroundColor(roxoAcentuado).font(.body)
+                                    
+                                }
+                            }
+                        }
+                    }
                     if (pesquisa != ""){
                         ForEach (tdsStructs.indices, id: \.self){index2 in
                             if(tdsStructs[index2].title == pesquisa){

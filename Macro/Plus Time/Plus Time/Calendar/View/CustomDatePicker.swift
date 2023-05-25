@@ -31,6 +31,7 @@ struct CustomDatePicker: View {
                 //
                 HStack(spacing: 20){
                     VStack(alignment: .leading, spacing: 10){
+                        
                         Text (extraDate() [0]).foregroundColor(roxoEscuro)
                             .font (.caption)
                             .fontWeight (.semibold)
@@ -96,18 +97,30 @@ struct CustomDatePicker: View {
                 }
                 
                 VStack(spacing:20){
+                    
+                    
+                    
                     //título de onde vão as tasks
                     Text("Tasks").frame(maxWidth: .infinity, alignment: .leading).font(.title2.bold()).padding(.vertical, 25).foregroundColor(roxoEscuro)
                     
+                    ///
+                    ///
                     ///
                     ForEach(tasks.indices, id: \.self){ t in
                         
                         VStack(alignment: .leading, spacing: 10){
                             //Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
                             if(isSameDay(date1: tasks[t].taskDate, date2: currentDate)){
-                                Text(tasks[t].taskDate.formatted(.dateTime)).foregroundColor(roxoClaro)
-                                
-                                Text (tasks[t].task[0].title).font(.title2.bold()).foregroundColor(roxoClaro)
+                                /*
+                                Text(tasks[t].taskDate.formatted(.dateTime))
+                                    .foregroundColor(roxoClaro)
+                                    .bold()
+                                */
+                                if(tasks[t].task[0].title == ""){
+                                    Text("Título ainda não adicionado").foregroundColor(roxoClaro)
+                                        .bold()
+                                }
+                                Text (" \(tasks[t].task[0].title)").font(.title2.bold()).foregroundColor(roxoClaro)
                                 
                             }
                         }
@@ -154,6 +167,7 @@ struct CustomDatePicker: View {
                         Text("No tasks found").foregroundColor(roxoClaro)
                     }
                     */
+                    
                 }.padding()
                 
             }.onChange (of: currentMonth) { newValue in
@@ -270,3 +284,11 @@ extension Date{
     }
 }
 
+
+
+struct ContentView_Previews4: PreviewProvider {
+    
+    static var previews: some View {
+        ContentView()
+    }
+}
