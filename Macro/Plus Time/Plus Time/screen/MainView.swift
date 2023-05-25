@@ -43,11 +43,10 @@ struct MainView: View{
                     Spacer()
                     //add eventos/tarefas
                     if remover == false{
-                        Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
-                        .padding()
                         
-                        .contextMenu{
-                            
+                        
+                        
+                        Menu(content: {
                             Button {
                                 tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                                 
@@ -76,7 +75,11 @@ struct MainView: View{
                                     Label("Pronto", systemImage: "return")
                                 }
                             }
-                        }
+                        }, label: {
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
+                        })
+                        
+                        
                     }else{
                         Button {
                             remover.toggle()

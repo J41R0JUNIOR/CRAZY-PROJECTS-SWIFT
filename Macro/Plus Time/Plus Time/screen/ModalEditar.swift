@@ -72,31 +72,34 @@ struct ModalView: View{
                     
                     //add
                     if(remover == false){
-                        Image(systemName: "square.and.pencil").font(.system(size: 20))
-                            .foregroundColor(roxo)
                         
-                            .contextMenu {
-                                
-                                Button {
-                                    secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
-                                    if(remover == true){
-                                        remover.toggle()
-                                    }
-                                } label: {
-                                    Label("Add", systemImage: "square.and.pencil")
-                                    Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
-                                }
-                                //aparecer botao de remover as células
-                                Button {
+                        
+                        Menu(content: {
+                            Button {
+                                secondaryVet.append(secondStructure(title2: "", corpo2: "", data2: Date()))
+                                if(remover == true){
                                     remover.toggle()
-                                }label: {
-                                    if(remover == false){
-                                        Label("Remove", systemImage: "trash.slash")
-                                    }else{
-                                        Label("Done", systemImage: "return")
-                                    }                        }
+                                }
+                            } label: {
+                                Label("Add", systemImage: "square.and.pencil")
+                                Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
+                            }
+                            //aparecer botao de remover as células
+                            Button {
+                                remover.toggle()
+                            }label: {
+                                if(remover == false){
+                                    Label("Remove", systemImage: "trash.slash")
+                                }else{
+                                    Label("Done", systemImage: "return")
+                                }
                                 
-                            }.padding(.horizontal)
+                            }
+                        }, label: {
+                            Image(systemName: "square.and.pencil").font(.system(size: 20))
+                                .foregroundColor(roxo)
+                        })
+                           
                     }else{
                         Button {
                             remover.toggle()

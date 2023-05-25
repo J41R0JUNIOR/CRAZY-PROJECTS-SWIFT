@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomDatePicker: View {
     @Binding var currentDate: Date
-    
+    var dataAtual : Date = Date()
     @State var currentMonth: Int = 0
     
     @Binding var tasks:[TaskMetaData]
