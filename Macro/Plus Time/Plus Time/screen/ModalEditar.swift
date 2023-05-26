@@ -172,13 +172,14 @@ struct ModalView: View{
                                     TextField("Add Title", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
                                         .textFieldStyle(.plain)
                                         .foregroundColor(roxo)
+                                        .disableAutocorrection(true)
                                     if(secondaryVet[vet].corpo2 == ""){
                                         Text("Type the activity below")
                                     }
                                     
                                     TextEditor(text: $secondaryVet[vet].corpo2)
                                         .font(.custom("HelveticaNeue", size: 15))
-                                        .font(.body)
+                                        .font(.body).disableAutocorrection(true)
                                         
                                     DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date)
                                         .foregroundColor(.white)

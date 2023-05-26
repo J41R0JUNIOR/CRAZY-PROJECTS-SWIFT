@@ -104,25 +104,25 @@ struct ModalEntrar: View {
                                             if(secondaryVet[vet].title2 == ""){
                                                 Text("Title")
                                                     .font(.system(size: 20))
-                                                    .foregroundColor(roxoEscuro)
+                                                    .foregroundColor(roxo)
                                                     .bold()
                                             }
                                             Text("\(secondaryVet[vet].title2)")
                                                 .font(.system(size: 20))
-                                                .foregroundColor(roxoEscuro)
+                                                .foregroundColor(roxo)
                                                 .bold()
                                             
                                             if(secondaryVet[vet].corpo2 == ""){
                                                 Text("Notes")
-                                                    .foregroundColor(roxoAcentuado)
+                                                    .foregroundColor(.white)
                                                     .font(.system(size: 15))
                                             }
                                             Text("\(secondaryVet[vet].corpo2)")
-                                                .foregroundColor(roxoAcentuado)
+                                                .foregroundColor(.white)
                                                 .font(.system(size: 15))
                                             
                                             Text("\(secondaryVet[vet].data2.formatted())")
-                                                .foregroundColor(roxoAcentuado)
+                                                .foregroundColor(.white)
                                                 .font(.system(size: 15))
                                                 .font(.system(size: 15))
                                         }
