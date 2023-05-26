@@ -28,6 +28,7 @@ struct MainView: View{
     //vetor do calendário e suas tasks
     @Binding var tasks:[TaskMetaData]
     @State var j:Int = 0
+    @FocusState var searchFocus:Bool
     var body: some View {
         ZStack {
             
@@ -84,7 +85,7 @@ struct MainView: View{
                         Button {
                             remover.toggle()
                         } label: {
-                            Image(systemName: "checkmark.circle")
+                            Text("Save")
                                 .font(.system(size: 20))
                                 .foregroundColor(roxo)
                         }
@@ -109,17 +110,37 @@ struct MainView: View{
                     }
                     //barra de pesquisa
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).frame(width: 350, height: 36).foregroundColor(roxoAcentuado)
+                        RoundedRectangle(cornerRadius: 10).frame(width: 385, height: 40).foregroundColor(roxoAcentuado)
                         HStack{
                             if(pesquisa == ""){
-                                Image(systemName: "magnifyingglass").foregroundColor(roxoClaro)
+                                if(searchFocus == false){
+                                    Button {
+                                        searchFocus = true
+                                        pesquisa = ""
+                                    } label:{
+                                        Image(systemName: "magnifyingglass").foregroundColor(roxoClaro)
+                                    }
+                                }
                             }
                             TextField("Search", text: $pesquisa)
                                 .textFieldStyle(.roundedBorder)
-                                
+                                .focused($searchFocus)
                                 .foregroundColor(.white)
+                                .disableAutocorrection(true)
                             
-                            
+                            if(searchFocus == true){
+                                Button {
+                                    searchFocus = false
+                                    pesquisa = ""
+                                } label: {
+                                    if(pesquisa == ""){
+                                        Image(systemName: "chevron.down.circle")
+                                    }else{
+                                        Image(systemName: "xmark.circle")
+                                    }
+                                }
+
+                            }
                             
                             //pesquisa 
                         }.padding()

@@ -19,8 +19,10 @@ struct ModalView: View{
     @Binding var tasks:[TaskMetaData]
     @State var i:Int = 0
     @State var j:Int = 0
-    
-    
+    @FocusState private var t1Focused: Bool
+    @FocusState private var n1Focused: Bool
+    @FocusState private var t2Focused: Bool
+    @FocusState private var n2Focused: Bool
     //@State private var datePicked = Date()
     
    
@@ -104,7 +106,7 @@ struct ModalView: View{
                         Button {
                             remover.toggle()
                         } label: {
-                            Image(systemName: "checkmark.circle")
+                            Text("Save")
                                 .font(.system(size: 20))
                                 .foregroundColor(roxo)
                         }
@@ -136,19 +138,46 @@ struct ModalView: View{
                     HStack{
                         Form{
                             Section(header: Text("Primary")){
-                                
-                                TextField("Add Title", text: $title)
-                                    .disableAutocorrection(true)
-                                    .textFieldStyle(.plain)
-                                    .foregroundColor(roxo)
-                                    .font(.system(size: 20))
+                                HStack{
+                                    TextField("Add Title", text: $title)
+                                        .disableAutocorrection(true)
+                                        .textFieldStyle(.plain)
+                                        .foregroundColor(roxo)
+                                        .font(.system(size: 20))
+                                        .focused($t1Focused)
+                                    
+                                    if (t1Focused == true){
+                                        if(title != ""){
+                                            Button {
+                                                t1Focused = false
+                                            } label: {
+                                                Image(systemName: "xmark.circle").font(.system(size: 15))
+                                            }
+
+                                        }
+                                    }
+                                }
                                 if(notes == ""){
                                     Text("Type the activity below")
                                 }
-                                TextEditor(text: $notes)
-                                    .font(.custom("HelveticaNeue", size: 15)).font(.body)
-                                    .lineLimit(1).disableAutocorrection(true)
-                                    .allowsTightening(false).cornerRadius(5)
+                                HStack{
+                                    TextEditor(text: $notes)
+                                        .font(.custom("HelveticaNeue", size: 15)).font(.body)
+                                        .lineLimit(1)
+                                        .disableAutocorrection(true)
+                                        .allowsTightening(false).cornerRadius(5)
+                                        .focused($n1Focused)
+                                    
+                                    if(n1Focused == true){
+                                        if(notes != ""){
+                                            Button {
+                                                n1Focused = false
+                                            } label: {
+                                                Image(systemName: "xmark.circle").font(.system(size: 15))
+                                            }
+                                        }
+                                    }
+                                }
                                 
                                 DatePicker("", selection: $data, in: Date()...)
                                     .foregroundColor(.white)
@@ -168,20 +197,43 @@ struct ModalView: View{
                                         }
                                         
                                     }
-                                    
-                                    TextField("Add Title", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
-                                        .textFieldStyle(.plain)
-                                        .foregroundColor(roxo)
-                                        .disableAutocorrection(true)
+                                    HStack{
+                                        TextField("Add Title", text: $secondaryVet[vet].title2 ).font(.custom("Title", size: 20))
+                                            .textFieldStyle(.plain)
+                                            .foregroundColor(roxo)
+                                            .disableAutocorrection(true)
+                                            .focused($t2Focused)
+                                        
+                                        if(t2Focused == true){
+                                            if(secondaryVet[vet].title2 != ""){
+                                                Button {
+                                                    t2Focused = false
+                                                } label: {
+                                                    Image(systemName: "chevron.down.circle").font(.system(size: 15))
+                                                }
+                                            }
+                                        }
+                                    }
                                     if(secondaryVet[vet].corpo2 == ""){
                                         Text("Type the activity below")
                                     }
-                                    
-                                    TextEditor(text: $secondaryVet[vet].corpo2)
-                                        .font(.custom("HelveticaNeue", size: 15))
-                                        .font(.body).disableAutocorrection(true)
+                                    HStack{
+                                        TextEditor(text: $secondaryVet[vet].corpo2)
+                                            .font(.custom("HelveticaNeue", size: 15))
+                                            .font(.body).disableAutocorrection(true)
+                                            .focused($n2Focused)
                                         
-                                    DatePicker("", selection: $secondaryVet[vet].data2, in: Date()..., displayedComponents: .date)
+                                        if(n2Focused == true){
+                                            if(secondaryVet[vet].corpo2 != ""){
+                                                Button {
+                                                    n2Focused = false
+                                                } label: {
+                                                    Image(systemName: "chevron.down.circle").font(.system(size: 15))
+                                                }
+                                            }
+                                        }
+                                    }
+                                    DatePicker("", selection: $secondaryVet[vet].data2, in: Date()...)
                                         .foregroundColor(.white)
                                     
                                     

@@ -18,9 +18,6 @@ struct ContentView: View {
     //@AppStorage("Tasks") var tasks:[TaskMetaData] = []
     var body: some View {
         
-        
-            
-            
                 //tabview
                 
                 TabView{

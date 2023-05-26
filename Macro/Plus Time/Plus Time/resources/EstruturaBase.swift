@@ -18,5 +18,6 @@ struct secondStructure{
     var title2:String
     var corpo2:String
     var data2:Date
+    
 }
 
