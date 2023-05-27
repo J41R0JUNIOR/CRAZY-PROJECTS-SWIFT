@@ -23,6 +23,7 @@ struct ModalView: View{
     @FocusState private var n1Focused: Bool
     @FocusState private var t2Focused: Bool
     @FocusState private var n2Focused: Bool
+    @Binding var allSecVet:String
     //@State private var datePicked = Date()
     
    
@@ -52,18 +53,13 @@ struct ModalView: View{
                         }
                         
                         print(tasks[indice].task[i].title)
-                        /*
-                        while (i < tasks.count){
-                            
-                            if(tasks[indice].taskDate == tasks[i].taskDate && indice != i){
-                                print("achoo que peguei um tuelho")
-                                tasks[i].task.append(Task(title: tasks[indice].task[0].title))
-                            }
-                           // if(tasks)
-                            i+=1
+                        
+                        for n in secondaryVet.indices{
+                            allSecVet += secondaryVet[n].title2 + "\n"
+                            allSecVet += secondaryVet[n].corpo2 + "\n"
+                            allSecVet += secondaryVet[n].data2.formatted() + "\n\n"
                         }
-                            
-                        */
+                        print(allSecVet)
                         
                     } label: {
                         Text("Done").foregroundColor(roxo)
@@ -145,35 +141,41 @@ struct ModalView: View{
                                         .foregroundColor(roxo)
                                         .font(.system(size: 20))
                                         .focused($t1Focused)
+                                        
                                     
                                     if (t1Focused == true){
                                         if(title != ""){
                                             Button {
                                                 t1Focused = false
                                             } label: {
-                                                Image(systemName: "xmark.circle").font(.system(size: 15))
+                                                Image(systemName: "chevron.down.circle").font(.system(size: 15))
                                             }
 
                                         }
                                     }
                                 }
-                                if(notes == ""){
-                                    Text("Type the activity below")
-                                }
+                                
                                 HStack{
-                                    TextEditor(text: $notes)
-                                        .font(.custom("HelveticaNeue", size: 15)).font(.body)
-                                        .lineLimit(1)
-                                        .disableAutocorrection(true)
-                                        .allowsTightening(false).cornerRadius(5)
-                                        .focused($n1Focused)
-                                    
+                                    ZStack{
+                                        if(notes == ""){
+                                            if(n1Focused == false){
+                                                Text("Type the activity").foregroundColor(.gray)
+                                            }
+                                        }
+                                        TextEditor(text: $notes)
+                                            .font(.custom("HelveticaNeue", size: 15)).font(.body)
+                                            .lineLimit(1)
+                                            .disableAutocorrection(true)
+                                            .allowsTightening(false).cornerRadius(5)
+                                            .focused($n1Focused)
+                                            .navigationTitle("Activity")
+                                    }
                                     if(n1Focused == true){
                                         if(notes != ""){
                                             Button {
                                                 n1Focused = false
                                             } label: {
-                                                Image(systemName: "xmark.circle").font(.system(size: 15))
+                                                Image(systemName: "chevron.down.circle").font(.system(size: 15))
                                             }
                                         }
                                     }
@@ -218,6 +220,7 @@ struct ModalView: View{
                                         Text("Type the activity below")
                                     }
                                     HStack{
+                                        
                                         TextEditor(text: $secondaryVet[vet].corpo2)
                                             .font(.custom("HelveticaNeue", size: 15))
                                             .font(.body).disableAutocorrection(true)

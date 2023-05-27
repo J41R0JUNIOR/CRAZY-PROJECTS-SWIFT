@@ -10,7 +10,7 @@ struct baseStructure{
     var bell:Bool
     var data:Date
     var secondaryVet:[secondStructure] = []
-    
+    var allSecVet:String
 }
 
 //Estrutura pra por dentro da estrutura
