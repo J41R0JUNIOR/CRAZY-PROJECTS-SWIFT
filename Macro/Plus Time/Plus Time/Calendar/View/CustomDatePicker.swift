@@ -123,7 +123,7 @@ struct CustomDatePicker: View {
                                     .bold()
                                 */
                                 if(tasks[t].task[0].title == ""){
-                                    Text("Título ainda não adicionado")
+                                    Text("Title not added yet")
                                         .foregroundColor(roxoAcentuado)
                                         .bold()
                                 }

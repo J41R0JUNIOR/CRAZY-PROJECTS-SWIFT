@@ -64,7 +64,7 @@ struct MainView: View{
                                 estadoModal1.toggle()
                                 
                             } label: {
-                                Label("Adicionar", systemImage: "square.and.pencil")
+                                Label("Add", systemImage: "square.and.pencil")
                                 Image(systemName: "square.and.pencil")
                                     .font(.system(size: 20))
                                 
@@ -73,9 +73,9 @@ struct MainView: View{
                                 remover.toggle()
                             } label: {
                                 if(remover == false){
-                                    Label("Remover", systemImage: "trash.slash")
+                                    Label("Remove", systemImage: "trash.slash")
                                 }else{
-                                    Label("Pronto", systemImage: "return")
+                                    Label("Done", systemImage: "return")
                                 }
                             }
                         }, label: {
@@ -207,7 +207,7 @@ struct MainView: View{
                                                     VStack{
                                                         HStack{
                                                             if(tdsStructs[index2].title == ""){
-                                                                Text("Add Título").fontWeight(.bold).foregroundColor(.primary)
+                                                                Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
                                                             }
                                                             Text(tdsStructs[index2].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                                 .allowsTightening(false)
@@ -308,7 +308,7 @@ struct MainView: View{
                                                     VStack{
                                                         HStack{
                                                             if(tdsStructs[index3].title == ""){
-                                                                Text("Add Título").fontWeight(.bold).foregroundColor(.primary)
+                                                                Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
                                                             }
                                                             Text(tdsStructs[index3].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                                 .allowsTightening(false)
@@ -419,7 +419,7 @@ struct MainView: View{
                                                 VStack{
                                                     HStack{
                                                         if(tdsStructs[index].title == ""){
-                                                            Text("Add Título").fontWeight(.bold).foregroundColor(.primary)
+                                                            Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
                                                         }
                                                         Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                             .allowsTightening(false)
@@ -505,7 +505,7 @@ struct MainView: View{
                                  */
                                 estadoModal1.toggle()
                             } label: {
-                                Text("Clique aqui e comece a adicionar!").foregroundColor(.white).font(.body)
+                                Text("Click here and start to add").foregroundColor(.white).font(.body)
                                 
                             }
                         }
