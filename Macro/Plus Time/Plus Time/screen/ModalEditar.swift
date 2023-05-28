@@ -23,7 +23,7 @@ struct ModalView: View{
     @FocusState private var n1Focused: Bool
     @FocusState private var t2Focused: Bool
     @FocusState private var n2Focused: Bool
-    @Binding var allSecVet:String
+    @Binding var allSecVet:[String]
     //@State private var datePicked = Date()
     
    
@@ -53,14 +53,8 @@ struct ModalView: View{
                         }
                         
                         print(tasks[indice].task[i].title)
-                        
-                        for n in secondaryVet.indices{
-                            allSecVet += secondaryVet[n].title2 + "\n"
-                            allSecVet += secondaryVet[n].corpo2 + "\n"
-                            allSecVet += secondaryVet[n].data2.formatted() + "\n\n"
-                        }
-                        print(allSecVet)
-                        
+                       
+                                                
                     } label: {
                         Text("Done").foregroundColor(roxo)
                     }.padding(.horizontal)
@@ -157,9 +151,13 @@ struct ModalView: View{
                                 
                                 HStack{
                                     ZStack{
+                                        
                                         if(notes == ""){
                                             if(n1Focused == false){
-                                                Text("Type the activity").foregroundColor(.gray)
+                                                HStack{
+                                                    Text("Type the activity").foregroundColor(.gray)
+                                                    Spacer()
+                                                }
                                             }
                                         }
                                         TextEditor(text: $notes)
@@ -217,7 +215,10 @@ struct ModalView: View{
                                         }
                                     }
                                     if(secondaryVet[vet].corpo2 == ""){
-                                        Text("Type the activity below")
+                                        HStack{
+                                            Text("Type the activity below").foregroundColor(.gray)
+                                            Spacer()
+                                        }
                                     }
                                     HStack{
                                         

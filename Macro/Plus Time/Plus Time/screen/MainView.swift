@@ -30,6 +30,7 @@ struct MainView: View{
     @State var j:Int = 0
     @FocusState var searchFocus:Bool
     @State var filtro = false
+    
     var body: some View {
         ZStack {
             
@@ -50,7 +51,7 @@ struct MainView: View{
                         
                         Menu(content: {
                             Button {
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), allSecVet: "\n"))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                                 
                                 tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
                                 
@@ -251,7 +252,13 @@ struct MainView: View{
                                         }
                                     }.padding()
                                     .contextMenu {
-                                        ShareLink(item: "\(tdsStructs[index2].title) \n \(tdsStructs[index2].corpo) \n \(tdsStructs[index2].data.formatted()) \n \(tdsStructs[index2].allSecVet)")
+                                        Button {
+                                            tdsStructs.remove(at: index2)
+                                        } label: {
+                                            Label("Remove", systemImage: "trash.slash.circle")
+                                            
+                                        }
+                                        ShareLink(item: "\(tdsStructs[index2].title) \n \(tdsStructs[index2].corpo) \n \(tdsStructs[index2].data.formatted()) \n ")
                                     }
                                 }
                             }
@@ -353,7 +360,13 @@ struct MainView: View{
                                         }
                                     }.padding()
                                     .contextMenu {
-                                        ShareLink(item: "\(tdsStructs[index3].title) \n \(tdsStructs[index3].corpo) \n \(tdsStructs[index3].data.formatted()) \n \(tdsStructs[index3].allSecVet)")
+                                        Button {
+                                            tdsStructs.remove(at: index3)
+                                        } label: {
+                                            Label("Remove", systemImage: "trash.slash.circle")
+                                            
+                                        }
+                                        ShareLink(item: "\(tdsStructs[index3].title) \n \(tdsStructs[index3].corpo) \n \(tdsStructs[index3].data.formatted()) \n ")
                                     }
                                 }
                             }
@@ -452,7 +465,16 @@ struct MainView: View{
                                     }
                                 }.padding()
                                     .contextMenu {
-                                        ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].allSecVet)")
+                                        Button {
+                                            tdsStructs.remove(at: index)
+                                        } label: {
+                                            Label("Remove", systemImage: "trash.slash.circle")
+                                            
+                                        }
+
+                                        ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].secondaryVet)")
+                                        
+                                    
                                     }
                             }
                             
@@ -467,7 +489,7 @@ struct MainView: View{
                             RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoEscuro)
                             Button {
                                 
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), allSecVet: "\n"))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
                                 
                                 
                                 
