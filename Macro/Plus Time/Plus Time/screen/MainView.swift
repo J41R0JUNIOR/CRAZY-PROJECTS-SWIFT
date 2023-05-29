@@ -254,6 +254,8 @@ struct MainView: View{
                                     .contextMenu {
                                         Button {
                                             tdsStructs.remove(at: index2)
+                                            tasks.remove(at: index2)
+                                            
                                         } label: {
                                             Label("Remove", systemImage: "trash.slash.circle")
                                             
@@ -362,6 +364,7 @@ struct MainView: View{
                                     .contextMenu {
                                         Button {
                                             tdsStructs.remove(at: index3)
+                                            tasks.remove(at: index3)
                                         } label: {
                                             Label("Remove", systemImage: "trash.slash.circle")
                                             
@@ -467,6 +470,7 @@ struct MainView: View{
                                     .contextMenu {
                                         Button {
                                             tdsStructs.remove(at: index)
+                                            tasks.remove(at: index)
                                         } label: {
                                             Label("Remove", systemImage: "trash.slash.circle")
                                             
