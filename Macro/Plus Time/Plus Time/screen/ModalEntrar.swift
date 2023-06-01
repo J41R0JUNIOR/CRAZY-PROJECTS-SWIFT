@@ -36,21 +36,18 @@ struct ModalEntrar: View {
                         //fechar o modal
                         Button {
                             estadoModal2.toggle()
+                            estadoModal1.toggle()
                         } label: {
                             Text("Done").foregroundColor(roxo)
                         }
                         Spacer()
-                        
-                        
-                        
-                        //editar
                         Button {
                             estadoModal2.toggle()
-                            estadoModal1.toggle()
                         } label: {
                             Text("Edit").foregroundColor(roxo)
                         }
                         
+                        //editar
                         
                     }.padding()
                     

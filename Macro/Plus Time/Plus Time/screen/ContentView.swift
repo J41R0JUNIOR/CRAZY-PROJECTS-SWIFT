@@ -16,7 +16,35 @@ struct ContentView: View {
     //vetor de tasks
     @State var tasks:[TaskMetaData] = []
     //@AppStorage("Tasks") var tasks:[TaskMetaData] = []
+    
+    @Environment (\ .managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var plusTimeCD:FetchedResults<PlusTimeCD>
     var body: some View {
+        
+       
+        /*
+        VStack{
+            
+            List(plusTimeCD) { plusTime in
+                Text(plusTime.title ?? "Unknown")
+                
+
+            }
+            Button {
+                let plusTimeCd = PlusTimeCD(context: moc)
+                plusTimeCd.title = "Teste"
+                
+                try? moc.save()
+            } label: {
+                Rectangle()
+            }
+        }.padding()
+        
+        */
+        
+        
+        
+        
         
                 //tabview
                 
@@ -46,7 +74,22 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     
     static var previews: some View {
+        
         ContentView()
     }
 }
 
+
+/*
+    .swipeActions{
+        Button {
+            tdsStructs.remove(at: index)
+            tasks.remove(at: index)
+        } label: {
+            Label("Remove", systemImage: "trash")
+        }
+        .tint(.red)
+        ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].secondaryVet)")
+            .tint(.orange)
+    }
+*/

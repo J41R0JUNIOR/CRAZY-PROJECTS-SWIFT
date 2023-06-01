@@ -1,16 +1,6 @@
 import SwiftUI
  
-
 /*
-class arraY: ObservableObject{
-    @Published var tasks:[TaskMetaData] = [ TaskMetaData(task: [
-        Task(title: "Talk to Justine"),
-        Task(title: "iPhone 13 Great Design ChangeS"),
-        Task(title: "Nothing Much Workout !!!")
-        ], taskDate: getSampleDate(offset: 1)),
-}
-*/
-
 struct MainView: View{
     
     
@@ -245,7 +235,7 @@ struct MainView: View{
                                                 
                                                 //passando parametros pro modal
                                                 .sheet(isPresented: $estadoModal1) {
-                                                    ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet)
+                                                    ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
                                                 }
                                             }
                                             //Divider().background(roxoLeve)
@@ -355,7 +345,7 @@ struct MainView: View{
                                                 
                                                 //passando parametros pro modal
                                                 .sheet(isPresented: $estadoModal1) {
-                                                    ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet)
+                                                    ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
                                                 }
                                             }
                                             //Divider().background(roxoLeve)
@@ -371,6 +361,8 @@ struct MainView: View{
                                         }
                                         ShareLink(item: "\(tdsStructs[index3].title) \n \(tdsStructs[index3].corpo) \n \(tdsStructs[index3].data.formatted()) \n ")
                                     }
+                                    
+                                    
                                 }
                             }
                         }
@@ -461,12 +453,21 @@ struct MainView: View{
                                             
                                             //passando parametros pro modal
                                             .sheet(isPresented: $estadoModal1) {
-                                                ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet)
+                                                ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
                                             }
                                         }
                                         //Divider().background(roxoLeve)
                                     }
                                 }.padding()
+                                    .swipeActions{
+                                        Button {
+                                            print("Teste")
+                                        } label: {
+                                            Label("Delete", systemImage: "trash")
+                                        }
+
+                                    }
+                                
                                     .contextMenu {
                                         Button {
                                             tdsStructs.remove(at: index)
@@ -510,7 +511,6 @@ struct MainView: View{
                                 estadoModal1.toggle()
                             } label: {
                                 Text("Click here and start to add").foregroundColor(.white).font(.body)
-                                
                             }
                         }
                     }
@@ -519,14 +519,287 @@ struct MainView: View{
         }
     }
 }
+*/
 
-/*
-struct MainView_Previews: PreviewProvider {
+struct MainView: View{
     
-    static var previews: some View {
-        MainView()
+    
+    
+    //variaveis
+    
+    @State var estadoModal1 = false
+    @State var estadoModal2 = false
+    @State var remover = false
+    //vetor onde tenho as estruturas
+    @State var tdsStructs:[baseStructure] = []
+    @State var i:Int = 0
+    @State var pesquisa = ""
+    @State var toggle = false
+    //vetor do calendário e suas tasks
+    @Binding var tasks:[TaskMetaData]
+    @State var j:Int = 0
+    @FocusState var searchFocus:Bool
+    @State var filtro = false
+
+    
+    var body: some View {
+        ZStack {
+            
+            //viewRoxa().ignoresSafeArea()
+            
+            
+            VStack{
+                
+                
+                
+                //Parte superior da tela
+                HStack{
+                    Spacer()
+                    //add eventos/tarefas
+                    if remover == false{
+                        
+                        
+                        
+                        Menu(content: {
+                            Button {
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                
+                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                
+                                if(remover == true){
+                                    remover.toggle()
+                                }
+                                j = tdsStructs.count-1
+                                i = j
+                                print(j)
+                                estadoModal1.toggle()
+                                
+                            } label: {
+                                Label("Add", systemImage: "square.and.pencil")
+                                Image(systemName: "square.and.pencil")
+                                    .font(.system(size: 20))
+                                
+                            }
+                            Button {
+                                remover.toggle()
+                            } label: {
+                                if(remover == false){
+                                    Label("Remove", systemImage: "trash.slash")
+                                }else{
+                                    Label("Done", systemImage: "return")
+                                }
+                            }
+                        }, label: {
+                            Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
+                        })
+                        
+                        
+                    }else{
+                        Button {
+                            remover.toggle()
+                        } label: {
+                            Text("Save")
+                                .font(.system(size: 20))
+                                .foregroundColor(roxo)
+                        }
+
+                    }
+                }
+                
+                
+                
+                
+                
+                
+                //Cor de fundo da ScrollView
+               
+                
+                //ScrollView dos horários
+                HStack{
+                    Text("Plus time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado)
+                    Spacer()
+                }
+                //barra de pesquisa
+                HStack{
+                    
+                    ZStack{
+                        
+                        RoundedRectangle(cornerRadius: 10).frame(width: searchFocus == true ?  370 : 320, height: 40).foregroundColor(roxoAcentuado)
+                        
+                        HStack{
+                            
+                            TextField("Search", text: $pesquisa)
+                                .textFieldStyle(.roundedBorder)
+                                .focused($searchFocus)
+                                .foregroundColor(.white)
+                                .disableAutocorrection(true)
+                                .frame(width: searchFocus == true ? 330 : 310)
+                            
+                            if(searchFocus == true){
+                                Button {
+                                    searchFocus = false
+                                    pesquisa = ""
+                                    
+                                } label: {
+                                    if(pesquisa == ""){
+                                        Image(systemName: "chevron.down.circle")
+                                    }else{
+                                        Image(systemName: "xmark.circle")
+                                    }
+                                }
+                                
+                            }
+                            
+                            
+                            
+                        }.padding()
+                    }
+                    Button {
+                        searchFocus = true
+                        pesquisa = ""
+                    } label:{
+                        if (searchFocus == false){
+                            ZStack{
+                                Circle().foregroundColor(roxoAcentuado).frame(width: 35)
+                                Image(systemName: "magnifyingglass").foregroundColor(roxoClaro)
+                            }
+                        }
+                    }
+                }
+                //filtro
+                HStack{
+                    Spacer()
+                    Button {
+                        filtro.toggle()
+                    } label: {
+                        if(filtro == false){
+                            Image(systemName: "line.3.horizontal.decrease.circle")
+                        }else{
+                            Image(systemName: "line.3.horizontal.decrease.circle.fill")
+                        }
+                    }
+                }
+                Spacer()
+                
+                List {
+                    
+                    //ForEach
+                     ForEach (tdsStructs.indices, id: \.self){index in
+                          
+                                HStack{
+                                    if(remover == true){
+                                        Button {
+                                            tdsStructs.remove(at: index)
+                                            tasks.remove(at: index)
+                                            
+                                            
+                                        } label: {
+                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
+                                        }
+                                    }
+                                    /*
+                                    //botao do sino
+                                    Button {
+                                        
+                                        tdsStructs[index].bell.toggle()
+                                    } label: {
+                                        if(tdsStructs[index].bell == true){
+                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
+                                        }else{
+                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
+                                        }
+                                    }
+                                     */
+                                    
+                                    
+                                    VStack{
+                                        HStack{
+                                            
+                                            
+                                            
+                                            //entrar no modal de apresentação
+                                            Button{
+                                                estadoModal2.toggle()
+                                                i = index
+                                                if(remover == true){
+                                                    remover.toggle()
+                                                }
+                                            } label: {
+                                                VStack{
+                                                    HStack{
+                                                        if(tdsStructs[index].title == ""){
+                                                            Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
+                                                        }
+                                                        Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
+                                                            .allowsTightening(false)
+                                                        Spacer()
+                                                    }
+                                                    HStack{
+                                                        if(tdsStructs[index].corpo == ""){
+                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
+                                                        }
+                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
+                                                            .allowsTightening(false)
+                                                        Spacer()
+                                                    }
+                                                }
+                                                Spacer()
+                                               
+                                            }.sheet(isPresented: $estadoModal2) {
+                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
+                                            }
+                                            
+                                            
+                                            
+                                            //entrar no modal de edição
+                                            Button{
+                                                estadoModal1.toggle()
+                                                i = index
+                                            } label: {
+                                                
+                                                //Text("Comming...")
+                                                Text(tdsStructs[index].data.formatted()).foregroundColor(.primary)
+                                                //corpo da estrutura
+                                                
+                                            }
+                                            
+                                            
+                                            
+                                            //passando parametros pro modal
+                                            .sheet(isPresented: $estadoModal1) {
+                                                ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
+                                            }
+                                        }
+                                        //Divider().background(roxoLeve)
+                                    }
+                                }
+                            
+                             .swipeActions{
+                                 Button {
+                                     tdsStructs.remove(at: index)
+                                     tasks.remove(at: index)
+                                 } label: {
+                                     Label("Remove", systemImage: "trash")
+                                 }
+                                 .tint(.red)
+                                 ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].secondaryVet)")
+                                     .tint(.orange)
+                             }
+                            
+                            
+                        }
+                    
+                     
+                }.frame(width: 430)
+                
+            }
+        }
     }
 }
+
+
+/*
+ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted())")
 */
 
 
@@ -537,6 +810,3 @@ struct ContentView_Previews3: PreviewProvider {
     }
 }
 
-/*
-ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted())")
-*/

@@ -26,7 +26,7 @@ struct ModalView: View{
     @Binding var allSecVet:[String]
     //@State private var datePicked = Date()
     
-   
+    @Binding var tdsStructs:[baseStructure]
     
     var body: some View{
         ZStack{
@@ -54,9 +54,10 @@ struct ModalView: View{
                         
                         print(tasks[indice].task[i].title)
                        
-                                                
                     } label: {
                         Text("Done").foregroundColor(roxo)
+                        
+                        
                     }.padding(.horizontal)
                     Spacer()
                     

@@ -11,6 +11,8 @@ struct baseStructure{
     var data:Date
     var secondaryVet:[secondStructure] = []
     var allSecVet:[String] = []
+    @Environment (\ .managedObjectContext) var moc
+    @FetchRequest(sortDescriptors: []) var plusTimeCD:FetchedResults<PlusTimeCD>
 }
 
 //Estrutura pra por dentro da estrutura

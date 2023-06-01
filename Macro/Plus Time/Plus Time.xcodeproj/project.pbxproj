@@ -20,6 +20,9 @@
 		B325098E2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098D2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift */; };
 		B32509902A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */; };
 		B326B4322A144F9F004EEC3F /* ModalEntrar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B326B4312A144F9F004EEC3F /* ModalEntrar.swift */; };
+		B32C70942A255F5100127496 /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B32C70922A255F5100127496 /* Bookworm.xcdatamodeld */; };
+		B32C70962A25606600127496 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C70952A25606600127496 /* DataController.swift */; };
+		B32C70982A25617600127496 /* BookwormApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32C70972A25617600127496 /* BookwormApp.swift */; };
 		B36DCF762A11593B00358871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36DCF752A11593B00358871 /* ContentView.swift */; };
 		B381C8932A1A8D9F001F958C /* ElegantCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = B381C8922A1A8D9F001F958C /* ElegantCalendar */; };
 		B381C8952A1A967E001F958C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = B381C8942A1A967E001F958C /* Home.swift */; };
@@ -63,6 +66,9 @@
 		B325098D2A0EAA4300D6DDF4 /* Plus_TimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITests.swift; sourceTree = "<group>"; };
 		B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plus_TimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B326B4312A144F9F004EEC3F /* ModalEntrar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalEntrar.swift; sourceTree = "<group>"; };
+		B32C70932A255F5100127496 /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
+		B32C70952A25606600127496 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		B32C70972A25617600127496 /* BookwormApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookwormApp.swift; sourceTree = "<group>"; };
 		B36DCF752A11593B00358871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B381C8942A1A967E001F958C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		B381C8962A1A9848001F958C /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
@@ -159,6 +165,7 @@
 		B32509712A0EAA4200D6DDF4 /* Plus Time */ = {
 			isa = PBXGroup;
 			children = (
+				B32C70912A255F1900127496 /* Core Data */,
 				B381C88E2A1A8CC1001F958C /* Calendar */,
 				B30876B42A17F73400937CE2 /* Specifics */,
 				B30E682B2A1409CB00C84E4E /* views */,
@@ -192,6 +199,16 @@
 				B325098F2A0EAA4300D6DDF4 /* Plus_TimeUITestsLaunchTests.swift */,
 			);
 			path = "Plus TimeUITests";
+			sourceTree = "<group>";
+		};
+		B32C70912A255F1900127496 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B32C70922A255F5100127496 /* Bookworm.xcdatamodeld */,
+				B32C70952A25606600127496 /* DataController.swift */,
+				B32C70972A25617600127496 /* BookwormApp.swift */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		B381C88E2A1A8CC1001F958C /* Calendar */ = {
@@ -361,14 +378,17 @@
 				B30876B22A16FB1F00937CE2 /* viewTest.swift in Sources */,
 				B381C8972A1A9848001F958C /* CustomDatePicker.swift in Sources */,
 				B30876B02A16E04800937CE2 /* viewEscura.swift in Sources */,
+				B32C70942A255F5100127496 /* Bookworm.xcdatamodeld in Sources */,
 				B32509732A0EAA4200D6DDF4 /* Plus_TimeApp.swift in Sources */,
 				B381C8952A1A967E001F958C /* Home.swift in Sources */,
 				B381C89B2A1A9D9B001F958C /* DateValue.swift in Sources */,
 				B30876AC2A15967D00937CE2 /* ModalEditar.swift in Sources */,
 				B381C89D2A1ABB1D001F958C /* Task.swift in Sources */,
 				B30876AE2A16DF0500937CE2 /* viewRoxa.swift in Sources */,
+				B32C70982A25617600127496 /* BookwormApp.swift in Sources */,
 				B36DCF762A11593B00358871 /* ContentView.swift in Sources */,
 				B30E68222A13FBDA00C84E4E /* EstruturaBase.swift in Sources */,
+				B32C70962A25606600127496 /* DataController.swift in Sources */,
 				B326B4322A144F9F004EEC3F /* ModalEntrar.swift in Sources */,
 				B30E682D2A140B2000C84E4E /* Cores.swift in Sources */,
 			);
@@ -714,6 +734,19 @@
 			productName = ElegantCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		B32C70922A255F5100127496 /* Bookworm.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B32C70932A255F5100127496 /* Bookworm.xcdatamodel */,
+			);
+			currentVersion = B32C70932A255F5100127496 /* Bookworm.xcdatamodel */;
+			path = Bookworm.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B32509672A0EAA4200D6DDF4 /* Project object */;
 }
