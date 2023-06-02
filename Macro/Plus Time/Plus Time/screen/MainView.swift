@@ -545,21 +545,13 @@ struct MainView: View{
     var body: some View {
         ZStack {
             
-            //viewRoxa().ignoresSafeArea()
-            
-            
             VStack{
-                
-                
-                
                 //Parte superior da tela
                 HStack{
+                    
                     Spacer()
                     //add eventos/tarefas
                     if remover == false{
-                        
-                        
-                        
                         Menu(content: {
                             Button {
                                 tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
@@ -592,8 +584,6 @@ struct MainView: View{
                         }, label: {
                             Image(systemName: "square.and.pencil").font(.system(size: 20)).foregroundColor(roxo)
                         })
-                        
-                        
                     }else{
                         Button {
                             remover.toggle()
@@ -604,19 +594,13 @@ struct MainView: View{
                         }
 
                     }
-                }
+                }.padding(.horizontal)
                 
-                
-                
-                
-                
-                
-                //Cor de fundo da ScrollView
-               
-                
-                //ScrollView dos horários
+                //nome Plus Time
                 HStack{
-                    Text("Plus time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado)
+                    
+                    Text("Plus Time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado)
+                    
                     Spacer()
                 }
                 //barra de pesquisa
@@ -624,7 +608,9 @@ struct MainView: View{
                     
                     ZStack{
                         
-                        RoundedRectangle(cornerRadius: 10).frame(width: searchFocus == true ?  370 : 320, height: 40).foregroundColor(roxoAcentuado)
+                        RoundedRectangle(cornerRadius: 10).frame(width: searchFocus == true ?  330 : 325, height: 40).foregroundColor(roxoAcentuado)
+                        
+                        
                         
                         HStack{
                             
@@ -633,7 +619,7 @@ struct MainView: View{
                                 .focused($searchFocus)
                                 .foregroundColor(.white)
                                 .disableAutocorrection(true)
-                                .frame(width: searchFocus == true ? 330 : 310)
+                                .frame(width: searchFocus == true ? 290 : 318)
                             
                             if(searchFocus == true){
                                 Button {
@@ -647,70 +633,39 @@ struct MainView: View{
                                         Image(systemName: "xmark.circle")
                                     }
                                 }
-                                
                             }
-                            
-                            
-                            
                         }.padding()
                     }
                     Button {
-                        searchFocus = true
-                        pesquisa = ""
-                    } label:{
-                        if (searchFocus == false){
-                            ZStack{
-                                Circle().foregroundColor(roxoAcentuado).frame(width: 35)
-                                Image(systemName: "magnifyingglass").foregroundColor(roxoClaro)
-                            }
-                        }
-                    }
-                }
-                //filtro
-                HStack{
-                    Spacer()
-                    Button {
                         filtro.toggle()
                     } label: {
-                        if(filtro == false){
-                            Image(systemName: "line.3.horizontal.decrease.circle")
-                        }else{
-                            Image(systemName: "line.3.horizontal.decrease.circle.fill")
-                        }
+                        Image(systemName: "line.3.horizontal.decrease.circle").foregroundColor(roxo)
                     }
+                }
+                
+                HStack{
+                    Spacer()
+                    
                 }
                 Spacer()
                 
+                //lista de objetos
                 List {
-                    
-                    //ForEach
-                     ForEach (tdsStructs.indices, id: \.self){index in
-                          
+                    if (pesquisa != ""){
+                            ForEach (tdsStructs.indices, id: \.self){index1 in
+                                if(tdsStructs[index1].title == pesquisa){
+                                
                                 HStack{
                                     if(remover == true){
                                         Button {
-                                            tdsStructs.remove(at: index)
-                                            tasks.remove(at: index)
+                                            tdsStructs.remove(at: index1)
+                                            tasks.remove(at: index1)
                                             
                                             
                                         } label: {
                                             Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
                                         }
                                     }
-                                    /*
-                                    //botao do sino
-                                    Button {
-                                        
-                                        tdsStructs[index].bell.toggle()
-                                    } label: {
-                                        if(tdsStructs[index].bell == true){
-                                            Image(systemName:"bell.fill").font(.system(size: 20)).foregroundColor(roxoClaro)
-                                        }else{
-                                            Image(systemName:"bell").font(.system(size: 20)).foregroundColor(roxoClaro)
-                                        }
-                                    }
-                                     */
-                                    
                                     
                                     VStack{
                                         HStack{
@@ -720,33 +675,33 @@ struct MainView: View{
                                             //entrar no modal de apresentação
                                             Button{
                                                 estadoModal2.toggle()
-                                                i = index
+                                                i = index1
                                                 if(remover == true){
                                                     remover.toggle()
                                                 }
                                             } label: {
                                                 VStack{
                                                     HStack{
-                                                        if(tdsStructs[index].title == ""){
+                                                        if(tdsStructs[index1].title == ""){
                                                             Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
                                                         }
-                                                        Text(tdsStructs[index].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
+                                                        Text(tdsStructs[index1].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
                                                             .allowsTightening(false)
                                                         Spacer()
                                                     }
                                                     HStack{
-                                                        if(tdsStructs[index].corpo == ""){
+                                                        if(tdsStructs[index1].corpo == ""){
                                                             Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
                                                         }
-                                                        Text(tdsStructs[index].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
+                                                        Text(tdsStructs[index1].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
                                                             .allowsTightening(false)
                                                         Spacer()
                                                     }
                                                 }
                                                 Spacer()
-                                               
+                                                
                                             }.sheet(isPresented: $estadoModal2) {
-                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
+                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index1, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
                                             }
                                             
                                             
@@ -754,11 +709,11 @@ struct MainView: View{
                                             //entrar no modal de edição
                                             Button{
                                                 estadoModal1.toggle()
-                                                i = index
+                                                i = index1
                                             } label: {
                                                 
                                                 //Text("Comming...")
-                                                Text(tdsStructs[index].data.formatted()).foregroundColor(.primary)
+                                                Text(tdsStructs[index1].data.formatted()).foregroundColor(.primary)
                                                 //corpo da estrutura
                                                 
                                             }
@@ -773,34 +728,243 @@ struct MainView: View{
                                         //Divider().background(roxoLeve)
                                     }
                                 }
+                                
+                                .swipeActions{
+                                    Button {
+                                        tdsStructs.remove(at: index1)
+                                        tasks.remove(at: index1)
+                                    } label: {
+                                        Label("Remove", systemImage: "trash")
+                                    }
+                                    .tint(.red)
+                                    ShareLink(item: "\(tdsStructs[index1].title) \n \(tdsStructs[index1].corpo) \n \(tdsStructs[index1].data.formatted()) \n \(tdsStructs[index1].secondaryVet)")
+                                        .tint(.orange)
+                                }
+                                
+                                
+                            }
+                        }
+                    }
+                    else if(filtro == true){
+                        ForEach (tdsStructs.indices, id: \.self){index2 in
+                            if(tdsStructs[index2].bell == true){
+                                HStack{
+                                    if(remover == true){
+                                        Button {
+                                            tdsStructs.remove(at: index2)
+                                            tasks.remove(at: index2)
+                                            
+                                            
+                                        } label: {
+                                            Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
+                                        }
+                                    }
+                                    
+                                    VStack{
+                                        HStack{
+                                            
+                                            
+                                            
+                                            //entrar no modal de apresentação
+                                            Button{
+                                                estadoModal2.toggle()
+                                                i = index2
+                                                if(remover == true){
+                                                    remover.toggle()
+                                                }
+                                            } label: {
+                                                VStack{
+                                                    HStack{
+                                                        if(tdsStructs[index2].title == ""){
+                                                            Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
+                                                        }
+                                                        Text(tdsStructs[index2].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
+                                                            .allowsTightening(false)
+                                                        Spacer()
+                                                    }
+                                                    HStack{
+                                                        if(tdsStructs[index2].corpo == ""){
+                                                            Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
+                                                        }
+                                                        Text(tdsStructs[index2].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
+                                                            .allowsTightening(false)
+                                                        Spacer()
+                                                    }
+                                                }
+                                                Spacer()
+                                                
+                                            }.sheet(isPresented: $estadoModal2) {
+                                                ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index2, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
+                                            }
+                                            
+                                            
+                                            
+                                            //entrar no modal de edição
+                                            Button{
+                                                estadoModal1.toggle()
+                                                i = index2
+                                            } label: {
+                                                
+                                                //Text("Comming...")
+                                                Text(tdsStructs[index2].data.formatted()).foregroundColor(.primary)
+                                                //corpo da estrutura
+                                                
+                                            }
+                                            
+                                            
+                                            
+                                            //passando parametros pro modal
+                                            .sheet(isPresented: $estadoModal1) {
+                                                ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
+                                            }
+                                        }
+                                        //Divider().background(roxoLeve)
+                                    }
+                                }
+                                
+                                .swipeActions{
+                                    Button {
+                                        tdsStructs.remove(at: index2)
+                                        tasks.remove(at: index2)
+                                    } label: {
+                                        Label("Remove", systemImage: "trash")
+                                    }
+                                    .tint(.red)
+                                    ShareLink(item: "\(tdsStructs[index2].title) \n \(tdsStructs[index2].corpo) \n \(tdsStructs[index2].data.formatted()) \n \(tdsStructs[index2].secondaryVet)")
+                                        .tint(.orange)
+                                }
+                            }
+                        }
+                    }
+                    else{
+                        ForEach (tdsStructs.indices, id: \.self){index3 in
                             
-                             .swipeActions{
-                                 Button {
-                                     tdsStructs.remove(at: index)
-                                     tasks.remove(at: index)
-                                 } label: {
-                                     Label("Remove", systemImage: "trash")
-                                 }
-                                 .tint(.red)
-                                 ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].secondaryVet)")
-                                     .tint(.orange)
-                             }
+                            HStack{
+                                if(remover == true){
+                                    Button {
+                                        tdsStructs.remove(at: index3)
+                                        tasks.remove(at: index3)
+                                        
+                                        
+                                    } label: {
+                                        Image(systemName: "trash.slash.circle.fill").font(.system(size:25)).foregroundColor(.red)
+                                    }
+                                }
+                                
+                                VStack{
+                                    HStack{
+                                        
+                                        
+                                        
+                                        //entrar no modal de apresentação
+                                        Button{
+                                            estadoModal2.toggle()
+                                            i = index3
+                                            if(remover == true){
+                                                remover.toggle()
+                                            }
+                                        } label: {
+                                            VStack{
+                                                HStack{
+                                                    if(tdsStructs[index3].title == ""){
+                                                        Text("Add Title").fontWeight(.bold).foregroundColor(.primary)
+                                                    }
+                                                    Text(tdsStructs[index3].title).fontWeight(.bold).foregroundColor(.primary).lineLimit(1)
+                                                        .allowsTightening(false)
+                                                    Spacer()
+                                                }
+                                                HStack{
+                                                    if(tdsStructs[index3].corpo == ""){
+                                                        Text("Add Body").font(.system(size: 13)).foregroundColor(.secondary)
+                                                    }
+                                                    Text(tdsStructs[index3].corpo).font(.system(size: 13)).foregroundColor(.secondary).lineLimit(2)
+                                                        .allowsTightening(false)
+                                                    Spacer()
+                                                }
+                                            }
+                                            Spacer()
+                                            
+                                        }.sheet(isPresented: $estadoModal2) {
+                                            ModalEntrar(estadoModal2: $estadoModal2, estadoModal1: $estadoModal1, index: index3, secondaryVet: $tdsStructs[i].secondaryVet, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, tasks: $tasks)
+                                        }
+                                        
+                                        
+                                        
+                                        //entrar no modal de edição
+                                        Button{
+                                            estadoModal1.toggle()
+                                            i = index3
+                                        } label: {
+                                            
+                                            //Text("Comming...")
+                                            Text(tdsStructs[index3].data.formatted()).foregroundColor(.primary)
+                                            //corpo da estrutura
+                                            
+                                        }
+                                        
+                                        
+                                        
+                                        //passando parametros pro modal
+                                        .sheet(isPresented: $estadoModal1) {
+                                            ModalView(estadoModal1: $estadoModal1, indice: i, title: $tdsStructs[i].title, notes: $tdsStructs[i].corpo, data: $tdsStructs[i].data, bell: $tdsStructs[i].bell, secondaryVet: $tdsStructs[i].secondaryVet, tasks: $tasks, allSecVet: $tdsStructs[i].allSecVet, tdsStructs: $tdsStructs)
+                                        }
+                                    }
+                                    //Divider().background(roxoLeve)
+                                }
+                            }
+                            
+                            .swipeActions{
+                                Button {
+                                    tdsStructs.remove(at: index3)
+                                    tasks.remove(at: index3)
+                                } label: {
+                                    Label("Remove", systemImage: "trash")
+                                }
+                                .tint(.red)
+                                ShareLink(item: "\(tdsStructs[index3].title) \n \(tdsStructs[index3].corpo) \n \(tdsStructs[index3].data.formatted()) \n \(tdsStructs[index3].secondaryVet)")
+                                    .tint(.orange)
+                            }
                             
                             
                         }
-                    
+                    }
                      
-                }.frame(width: 430)
+                }.frame(width: 400)
                 
+                //caso ainda nao tenha nada
+                if(tdsStructs.count == 0){
+                    VStack{
+                        
+                        ZStack{
+                            RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoEscuro)
+                            Button {
+                                
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                
+                                
+                                
+                                tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
+                                
+                                
+                                if(remover == true){
+                                    remover.toggle()
+                                }
+                                /*
+                                 print(arrayTasks.tasks.count)
+                                 print(arrayTasks.tasks[i])
+                                 */
+                                estadoModal1.toggle()
+                            } label: {
+                                Text("Click here and start to add").foregroundColor(.white).font(.body)
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
-
-/*
-ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted())")
-*/
 
 
 struct ContentView_Previews3: PreviewProvider {
@@ -809,4 +973,3 @@ struct ContentView_Previews3: PreviewProvider {
         ContentView()
     }
 }
-
