@@ -526,21 +526,25 @@ struct MainView: View{
     
     
     //variaveis
-    
     @State var estadoModal1 = false
     @State var estadoModal2 = false
     @State var remover = false
+    
     //vetor onde tenho as estruturas
     @State var tdsStructs:[baseStructure] = []
     @State var i:Int = 0
     @State var pesquisa = ""
     @State var toggle = false
+    
     //vetor do calendário e suas tasks
     @Binding var tasks:[TaskMetaData]
     @State var j:Int = 0
     @FocusState var searchFocus:Bool
     @State var filtro = false
-
+    
+    //Core Data
+    @Environment (\.managedObjectContext) var managedObjContext
+    @Environment (\.dismiss) var dismiss
     
     var body: some View {
         ZStack {
@@ -554,10 +558,13 @@ struct MainView: View{
                     if remover == false{
                         Menu(content: {
                             Button {
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), idCD: UUID()))
                                 
                                 tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
                                 
+                                DataController().addTasks(id: tdsStructs[i].idCD, title: tdsStructs[i].title, body: tdsStructs[i].corpo, data: tdsStructs[i].data, bell: tdsStructs[i].bell, context: managedObjContext)
+                                
+                               
                                 if(remover == true){
                                     remover.toggle()
                                 }
@@ -930,6 +937,7 @@ struct MainView: View{
                     }
                      
                 }.frame(width: 400)
+                    .listStyle(.plain)
                 
                 //caso ainda nao tenha nada
                 if(tdsStructs.count == 0){
@@ -939,7 +947,7 @@ struct MainView: View{
                             RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoEscuro)
                             Button {
                                 
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), idCD: UUID()))
                                 
                                 
                                 

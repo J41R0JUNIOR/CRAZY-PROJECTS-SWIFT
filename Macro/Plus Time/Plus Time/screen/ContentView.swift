@@ -16,9 +16,10 @@ struct ContentView: View {
     //vetor de tasks
     @State var tasks:[TaskMetaData] = []
     //@AppStorage("Tasks") var tasks:[TaskMetaData] = []
-    
     @Environment (\ .managedObjectContext) var moc
     @FetchRequest(sortDescriptors: []) var plusTimeCD:FetchedResults<PlusTimeCD>
+    
+    @State private var showingAddView = false
     var body: some View {
         
        

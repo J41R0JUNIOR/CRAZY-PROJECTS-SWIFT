@@ -7,8 +7,11 @@
 
 import Foundation
 import CoreData
+import SwiftUI
 
 class DataController: ObservableObject {
+    
+    
     let container = NSPersistentContainer(name: "Bookworm" )
 
     init() {
@@ -26,9 +29,9 @@ class DataController: ObservableObject {
             print("Data not saved!!!")
         }
     }
-    func addTasks(title: String, body: String, data: Date, bell: Bool, context: NSManagedObjectContext){
+    func addTasks(id: UUID, title: String, body: String, data: Date, bell: Bool, context: NSManagedObjectContext){
         let task = PlusTimeCD(context: context)
-        task.id = UUID()
+        task.id = id
         task.bell = bell
         task.title = title
         task.body = body
@@ -36,9 +39,11 @@ class DataController: ObservableObject {
 
         save(context:context)
     }
-    func edit(task: PlusTimeCD ){
-        
+    func edit(id: UUID, task: PlusTimeCD, title: String, body: String, data: Date, bell: Bool, context: NSManagedObjectContext){
+        task.bell = bell
+        task.title = title
+        task.body = body
+        task.data = Date()
+        task.id = id
     }
 }
-
-

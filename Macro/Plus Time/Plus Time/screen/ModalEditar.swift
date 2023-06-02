@@ -28,6 +28,11 @@ struct ModalView: View{
     
     @Binding var tdsStructs:[baseStructure]
     
+    @Environment (\.managedObjectContext) var managedObjContext
+    @Environment (\.dismiss) var dismiss
+    
+    
+    
     var body: some View{
         ZStack{
             //plano de fundo
@@ -51,6 +56,7 @@ struct ModalView: View{
                         if (tasks[indice].taskDate != data){
                             tasks[indice].taskDate = data
                         }
+                        
                         
                         print(tasks[indice].task[i].title)
                        
