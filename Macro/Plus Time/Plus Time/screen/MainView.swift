@@ -563,6 +563,7 @@ struct MainView: View{
                                 tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
                                 
                                 DataController().addTasks(id: tdsStructs[i].idCD, title: tdsStructs[i].title, body: tdsStructs[i].corpo, data: tdsStructs[i].data, bell: tdsStructs[i].bell, context: managedObjContext)
+                                dismiss()
                                 
                                
                                 if(remover == true){
