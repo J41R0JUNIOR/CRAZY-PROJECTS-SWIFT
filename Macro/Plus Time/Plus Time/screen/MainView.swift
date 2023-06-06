@@ -41,7 +41,7 @@ struct MainView: View{
                         
                         Menu(content: {
                             Button {
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), idCD: UUID()))
                                 
                                 tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
                                 
@@ -494,7 +494,7 @@ struct MainView: View{
                             RoundedRectangle(cornerRadius: 14).frame(width:270 , height: 60).foregroundColor(roxoEscuro)
                             Button {
                                 
-                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date()))
+                                tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), idCD: UUID()))
                                 
                                 
                                 
@@ -561,15 +561,15 @@ struct MainView: View{
                                 tdsStructs.append(baseStructure(title: "", corpo: "", bell: false, data: Date(), idCD: UUID()))
                                 
                                 tasks.append(TaskMetaData(task: [Task(title: tdsStructs[i].title)], taskDate: tdsStructs[i].data))
-                                
+                                /*
                                 DataController().addTasks(id: tdsStructs[i].idCD, title: tdsStructs[i].title, body: tdsStructs[i].corpo, data: tdsStructs[i].data, bell: tdsStructs[i].bell, context: managedObjContext)
                                 dismiss()
-                                
+                                */
                                
                                 if(remover == true){
                                     remover.toggle()
                                 }
-                                j = tdsStructs.count-1
+                                j = tdsStructs.count - 1
                                 i = j
                                 print(j)
                                 estadoModal1.toggle()
@@ -607,7 +607,7 @@ struct MainView: View{
                 //nome Plus Time
                 HStack{
                     
-                    Text("Plus Time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado)
+                    Text("Plus Time").bold().font(.system(size: 30)).foregroundColor(roxoAcentuado).padding(.horizontal)
                     
                     Spacer()
                 }
@@ -925,6 +925,7 @@ struct MainView: View{
                                 Button {
                                     tdsStructs.remove(at: index3)
                                     tasks.remove(at: index3)
+                                    print(index3)
                                 } label: {
                                     Label("Remove", systemImage: "trash")
                                 }
