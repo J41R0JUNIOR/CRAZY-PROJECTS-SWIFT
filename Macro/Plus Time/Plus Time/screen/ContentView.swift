@@ -23,30 +23,6 @@ struct ContentView: View {
     var body: some View {
         
        
-        /*
-        VStack{
-            
-            List(plusTimeCD) { plusTime in
-                Text(plusTime.title ?? "Unknown")
-                
-
-            }
-            Button {
-                let plusTimeCd = PlusTimeCD(context: moc)
-                plusTimeCd.title = "Teste"
-                
-                try? moc.save()
-            } label: {
-                Rectangle()
-            }
-        }.padding()
-        
-        */
-        
-        
-        
-        
-        
                 //tabview
                 
                 TabView{
@@ -79,18 +55,3 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
-
-
-/*
-    .swipeActions{
-        Button {
-            tdsStructs.remove(at: index)
-            tasks.remove(at: index)
-        } label: {
-            Label("Remove", systemImage: "trash")
-        }
-        .tint(.red)
-        ShareLink(item: "\(tdsStructs[index].title) \n \(tdsStructs[index].corpo) \n \(tdsStructs[index].data.formatted()) \n \(tdsStructs[index].secondaryVet)")
-            .tint(.orange)
-    }
-*/

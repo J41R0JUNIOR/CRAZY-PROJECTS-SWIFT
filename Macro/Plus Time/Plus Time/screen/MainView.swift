@@ -600,7 +600,6 @@ struct MainView: View{
                                 .font(.system(size: 20))
                                 .foregroundColor(roxo)
                         }
-
                     }
                 }.padding(.horizontal)
                 
@@ -959,10 +958,6 @@ struct MainView: View{
                                 if(remover == true){
                                     remover.toggle()
                                 }
-                                /*
-                                 print(arrayTasks.tasks.count)
-                                 print(arrayTasks.tasks[i])
-                                 */
                                 estadoModal1.toggle()
                             } label: {
                                 Text("Click here and start to add").foregroundColor(.white).font(.body)
