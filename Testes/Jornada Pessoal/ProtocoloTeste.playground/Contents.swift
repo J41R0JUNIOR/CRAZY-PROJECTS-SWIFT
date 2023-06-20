@@ -78,21 +78,107 @@ var criador = Jason(mascara: false, motosserra: false)
 print(criador.matar())
 */
 
+
+/*
 class bancoJr{
     var conta:UUID
     var saldo:Float
-    var nome:String
     
-    init(conta:UUID, saldo:Float, nome:String){
+    init(conta:UUID, saldo:Float){
         self.conta = conta
         self.saldo = saldo
-        self.nome = nome
+    }
+}
+class tansacao{
+    var idInicial:UUID
+    var idFinal:UUID
+    var transacao:Float
+    
+    init(idInicial:UUID, idFinal:UUID, transacao:Float){
+        self.idInicial = idInicial
+        self.idFinal = idFinal
+        self.transacao = transacao
+    }
+    
+    func passar(user1:UUID, user2:UUID){
+        
     }
 }
 
 class usuario: bancoJr{
-    override init(conta: UUID, saldo: Float, nome: String) {
-        super.init(conta: UUID(), saldo: Float(), nome: String())
+    var nome:String
+    var idUser:UUID
+    init(nome:String, idUser:UUID){
+        self.nome = nome
+        self.idUser = idUser
+        super.init(conta: UUID(), saldo: 0)
+    }
+}
+*/
+
+/*
+protocol acoes1{
+    func turbo()
+}
+protocol acoes2{
+    func som()
+}
+
+class Veiculo{
+    var modelo:String
+    var qtdRodas:Int
+    var combustivel:String
+    
+    init(modelo:String, qtdRodas:Int, combustivel:String){
+        self.modelo = modelo
+        self.qtdRodas = qtdRodas
+        self.combustivel = combustivel
+    }
+    
+     func acelerar() {
+        print("acelerando")
+    }
+    
+     func frear() {
+        print("freando")
     }
 }
 
+class Carga:Veiculo, acoes1{
+    func turbo() {
+        print("Tiuuuuuuu")
+    }
+    
+    override func acelerar() {
+        print("vrummmmmm")
+    }
+    
+    override func frear() {
+        print("uuuuuuuuuts")
+    }
+}
+
+class CarroPasseio:Veiculo, acoes2{
+    func som() {
+        print("Negro Drama, entre o sucesso e a lama...")
+    }
+    override func acelerar() {
+        print("vrum vrum")
+    }
+    
+    override func frear() {
+        print("tshhh")
+    }
+}
+
+
+var onibus = Carga(modelo: "Mercedão", qtdRodas: 6, combustivel: "Diesel")
+print(onibus.acelerar())
+print(onibus.frear())
+print(onibus.turbo())
+
+var fuscaoPreto = CarroPasseio(modelo: "Fusca", qtdRodas: 4, combustivel: "Gasolina")
+print(fuscaoPreto.acelerar())
+print(fuscaoPreto.frear())
+print(fuscaoPreto.som())
+*/
