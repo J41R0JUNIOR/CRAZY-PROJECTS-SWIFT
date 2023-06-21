@@ -41,13 +41,13 @@ struct Caio: jairo{
 */
 
 /*
-class matador{
+class killer{
     func matar(){
         print("Fala do personagem:")
     }
 }
 
-class Jason:matador{
+class Jason:killer{
     var mascara:Bool
     var motosserra:Bool
     
@@ -182,3 +182,40 @@ print(fuscaoPreto.acelerar())
 print(fuscaoPreto.frear())
 print(fuscaoPreto.som())
 */
+
+
+class Estudante{
+    var nome:String
+    var matricula:String{
+        return "(UC)"
+    }
+    
+    init(nome:String, matricula:String){
+        self.nome = nome
+    }
+    
+    func falar(){
+        print("Queria tanto ser do Academy 😢")
+    }
+}
+class Academigo:Estudante{
+    override var matricula: String{
+        return "KIT"
+    }
+    
+    override func falar(){
+        print("Pera, você não é do Academy??? 🤢🤮")
+    }
+}
+
+var alegre = Academigo(nome: "jairo", matricula: "")
+print(alegre.matricula)
+print(alegre.nome)
+print(alegre.falar())
+
+print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-")
+
+var triste = Estudante(nome: "junior", matricula: "")
+print(triste.matricula)
+print(triste.nome)
+print(triste.falar())
