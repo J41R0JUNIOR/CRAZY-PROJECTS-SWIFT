@@ -26,6 +26,11 @@ struct Monkey: Animal{
 */
 
 
+
+
+
+
+
 /*
 print(teste)
 
@@ -39,6 +44,10 @@ struct Caio: jairo{
     var fera: Bool = false
 }
 */
+
+
+
+
 
 /*
 class killer{
@@ -79,6 +88,10 @@ print(criador.matar())
 */
 
 
+
+
+
+
 /*
 class bancoJr{
     var conta:UUID
@@ -115,6 +128,10 @@ class usuario: bancoJr{
     }
 }
 */
+
+
+
+
 
 /*
 protocol acoes1{
@@ -184,6 +201,11 @@ print(fuscaoPreto.som())
 */
 
 
+
+
+
+
+/*
 class Estudante{
     var nome:String
     var matricula:String{
@@ -219,3 +241,128 @@ var triste = Estudante(nome: "junior", matricula: "")
 print(triste.matricula)
 print(triste.nome)
 print(triste.falar())
+*/
+
+
+
+/*
+class Veiculo {
+    
+    func mostrarInfo(){
+        print("Duas ou quatro rodas")
+    }
+}
+
+class carro:Veiculo{
+    override func mostrarInfo(){
+        super.mostrarInfo()
+        print("Quatro rodas")
+    }
+}
+
+var car1 = carro()
+print(car1.mostrarInfo())
+*/
+
+
+
+
+class Mae {
+    var numeroQualquer: Int = 0
+}
+
+class Filha: Mae {
+    var teste:Int = 3
+    override var numeroQualquer: Int {
+        get{
+            return self.teste + 1
+        }
+        set{
+            
+        }
+    }
+}
+
+var teste1 = Filha()
+print(teste1.teste)
+print(teste1.numeroQualquer)
+
+
+
+
+/*
+class Animal{
+    func locomover(){
+        print("")
+    }
+    func alimentar(){
+        print("")
+    }
+}
+class Aereo:Animal{
+    override func locomover(){
+        print("🦅")
+    }
+    override func alimentar(){
+        print("🐛")
+    }
+}
+class Aquatico:Animal{
+    override func locomover(){
+        print("🦈")
+    }
+    override func alimentar(){
+        print("🐠")
+    }
+}
+class Terrestre:Animal{
+    override func locomover(){
+        print("🦁")
+    }
+    override func alimentar(){
+        print("🐂")
+    }
+}
+var aguia = Aereo()
+aguia.locomover()
+aguia.alimentar()
+
+var tubarao = Aquatico()
+tubarao.locomover()
+tubarao.alimentar()
+
+var leao = Terrestre()
+leao.locomover()
+leao.alimentar()
+*/
+
+
+
+
+
+/*
+class Vehicle {
+    var price:Float{
+        return 0
+    }
+    
+    func displayInfo() {
+    print("Vehicle: Four Wheeler or Two Wheeler")
+    }
+}
+
+
+class Car: Vehicle {
+    override var price: Float{
+        return 100.000
+    }
+    override func displayInfo() {
+    print("Car: Four Wheeler")
+    }
+}
+
+
+var car1 =  Car()
+car1.displayInfo()
+print(car1.price)
+*/
