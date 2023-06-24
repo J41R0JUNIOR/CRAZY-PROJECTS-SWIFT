@@ -49,7 +49,7 @@ struct Caio: jairo{
 
 
 
-/*
+
 class killer{
     func matar(){
         print("Fala do personagem:")
@@ -57,19 +57,14 @@ class killer{
 }
 
 class Jason:killer{
-    var mascara:Bool
-    var motosserra:Bool
-    
-    init(mascara:Bool, motosserra:Bool){
-        self.mascara = mascara
-        self.motosserra = motosserra
-    }
+    var mascara:Bool = false
+    var motosserra:Bool = true
     
     override func matar(){
         if(mascara == true){
-            print("E o Jason com sua icônica máscara")
+            print("E Jason com sua icônica máscara")
         }else{
-            print("E o Jason sem sua icônica máscara")
+            print("E Jason sem sua icônica máscara")
         }
         
         if(motosserra == true){
@@ -82,12 +77,13 @@ class Jason:killer{
     }
 }
 
-
-var criador = Jason(mascara: false, motosserra: false)
-print(criador.matar())
-*/
-
-
+var instancia = Jason()
+print(instancia.matar())
+//E Jason sem sua icônica máscara
+//e com sua motosserra
+//Disse:
+//Cuidado com a cabeça!
+//()
 
 
 
@@ -266,7 +262,7 @@ print(car1.mostrarInfo())
 
 
 
-
+/*
 class Mae {
     var numeroQualquer: Int = 0
 }
@@ -286,8 +282,7 @@ class Filha: Mae {
 var teste1 = Filha()
 print(teste1.teste)
 print(teste1.numeroQualquer)
-
-
+*/
 
 
 /*
@@ -366,3 +361,5 @@ var car1 =  Car()
 car1.displayInfo()
 print(car1.price)
 */
+
+
