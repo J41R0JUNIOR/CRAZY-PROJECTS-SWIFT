@@ -25,9 +25,9 @@ struct ContentView: View {
         
         VStack {
             HStack{
-                Rectangle().frame(width: 400, height: 400).foregroundStyle(Color(red:red, green: green, blue:blue))
+                Rectangle().frame(width: 150, height: 150).foregroundStyle(Color(red:red, green: green, blue:blue))
                 
-                Rectangle().frame(width: 400, height: 400).foregroundStyle(Color(red: redSlider, green: greenSlider, blue: blueSlider))
+                Rectangle().frame(width: 150, height: 150).foregroundStyle(Color(red: redSlider, green: greenSlider, blue: blueSlider))
                 
             }.padding()
             
@@ -49,14 +49,47 @@ struct ContentView: View {
                 Text("Randomizar")
             }.buttonStyle(.borderedProminent)
             Button{
-                
-                
-                
+                calcular(red: red, green: green, blue: blue, redSlider:redSlider, greenSlider:greenSlider, blueSlider:blueSlider)
             } label: {
-                Text("Pontuação")
+                Text("Tentativa")
             }.buttonStyle(.borderedProminent)
         }.padding()
     }
+}
+
+func calcular(red:Double, green:Double, blue:Double, redSlider:Double, greenSlider:Double, blueSlider:Double){
+    
+    
+    var teste = 0
+    
+    var h:Double
+    h = red - redSlider
+    print(h)
+    print(red)
+    print(redSlider)
+    
+    
+    if ((red - redSlider) <= 0.0000000000000050 || (red - redSlider) >= -0.0000000000000050){
+        teste += 1
+    }
+    print(teste)
+    if ((red - redSlider) <= 0000000000000050){
+        teste += 1
+    }
+    print(teste)
+    if ((green - greenSlider) <= 0000000000000050){
+        teste += 1
+    }
+    print(teste)
+    
+    if redSlider == red && greenSlider == green && blueSlider == blue{
+        print("Acertou na mosca!!!")
+        return;
+    }
+    if teste == 3 {
+        print("Acertou!!!")
+    }
+    
 }
 
 
@@ -67,6 +100,8 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
+
+/*
 extension UIColor {
     func euclideanDistance(to color: UIColor) -> CGFloat {
         var r1: CGFloat = 0, g1: CGFloat = 0, b1: CGFloat = 0, a1: CGFloat = 0
@@ -82,5 +117,5 @@ extension UIColor {
         return sqrt(rDiff * rDiff + gDiff * gDiff + bDiff * bDiff)
     }
 }
-
+*/
 
