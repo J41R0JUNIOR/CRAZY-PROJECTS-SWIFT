@@ -19,6 +19,8 @@
 		B36C1D1F2A54471800301CFA /* Sliders.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C1D1E2A54471800301CFA /* Sliders.swift */; };
 		B36C1D212A5449DF00301CFA /* Bottons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C1D202A5449DF00301CFA /* Bottons.swift */; };
 		B36C1D232A5453D100301CFA /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C1D222A5453D100301CFA /* Score.swift */; };
+		B37445622A55B4BD00954824 /* Pontos.swift in Sources */ = {isa = PBXBuildFile; fileRef = B37445612A55B4BD00954824 /* Pontos.swift */; };
+		B3E6E8CC2A5632F600A07521 /* TryAgain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8CB2A5632F600A07521 /* TryAgain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,8 @@
 		B36C1D1E2A54471800301CFA /* Sliders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sliders.swift; sourceTree = "<group>"; };
 		B36C1D202A5449DF00301CFA /* Bottons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bottons.swift; sourceTree = "<group>"; };
 		B36C1D222A5453D100301CFA /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		B37445612A55B4BD00954824 /* Pontos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pontos.swift; sourceTree = "<group>"; };
+		B3E6E8CB2A5632F600A07521 /* TryAgain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryAgain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +166,8 @@
 				B36C1D1E2A54471800301CFA /* Sliders.swift */,
 				B36C1D202A5449DF00301CFA /* Bottons.swift */,
 				B36C1D222A5453D100301CFA /* Score.swift */,
+				B37445612A55B4BD00954824 /* Pontos.swift */,
+				B3E6E8CB2A5632F600A07521 /* TryAgain.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -297,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B36C1D232A5453D100301CFA /* Score.swift in Sources */,
+				B3E6E8CC2A5632F600A07521 /* TryAgain.swift in Sources */,
 				B36C1D1F2A54471800301CFA /* Sliders.swift in Sources */,
+				B37445622A55B4BD00954824 /* Pontos.swift in Sources */,
 				B36C1D212A5449DF00301CFA /* Bottons.swift in Sources */,
 				B36C1D182A538F9500301CFA /* Square.swift in Sources */,
 				B36C1CF02A538F6100301CFA /* ContentView.swift in Sources */,

@@ -18,6 +18,9 @@ struct PlayerSquare: View {
     var body: some View {
         
         RoundedRectangle(cornerRadius: 20).foregroundStyle(Color(red: redSlider, green: greenSlider, blue: blueSlider))
+            .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 2))
         
     }
 }

@@ -14,6 +14,7 @@ struct Sliders: View {
     @Binding var blueSlider:Double
     
     var body: some View {
+        
         Slider(value: $redSlider, in: 0...1).tint(.red).padding()
         
         Slider(value: $greenSlider, in: 0...1).tint(.green).padding()

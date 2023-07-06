@@ -16,6 +16,9 @@ struct Square: View {
     var body: some View {
         
         RoundedRectangle(cornerRadius: 20).foregroundStyle(Color(red:red, green: green, blue:blue))
+            .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(Color.white, lineWidth: 2))
     }
 }
 

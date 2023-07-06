@@ -1,0 +1,613 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B3E6E8DA2A563D2200A07521 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8D92A563D2200A07521 /* AppDelegate.swift */; };
+		B3E6E8DC2A563D2200A07521 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3E6E8DB2A563D2200A07521 /* GameScene.sks */; };
+		B3E6E8DE2A563D2200A07521 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3E6E8DD2A563D2200A07521 /* Actions.sks */; };
+		B3E6E8E02A563D2200A07521 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8DF2A563D2200A07521 /* GameScene.swift */; };
+		B3E6E8E22A563D2200A07521 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8E12A563D2200A07521 /* GameViewController.swift */; };
+		B3E6E8E52A563D2200A07521 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E6E8E32A563D2200A07521 /* Main.storyboard */; };
+		B3E6E8E72A563D2300A07521 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3E6E8E62A563D2300A07521 /* Assets.xcassets */; };
+		B3E6E8EA2A563D2300A07521 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3E6E8E82A563D2300A07521 /* LaunchScreen.storyboard */; };
+		B3E6E8F42A563D2300A07521 /* Lonely_JourneyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8F32A563D2300A07521 /* Lonely_JourneyTests.swift */; };
+		B3E6E8FE2A563D2300A07521 /* Lonely_JourneyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8FD2A563D2300A07521 /* Lonely_JourneyUITests.swift */; };
+		B3E6E9002A563D2300A07521 /* Lonely_JourneyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E6E8FF2A563D2300A07521 /* Lonely_JourneyUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3E6E8F02A563D2300A07521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3E6E8CE2A563D2200A07521 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3E6E8D52A563D2200A07521;
+			remoteInfo = "Lonely Journey";
+		};
+		B3E6E8FA2A563D2300A07521 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3E6E8CE2A563D2200A07521 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3E6E8D52A563D2200A07521;
+			remoteInfo = "Lonely Journey";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B3E6E8D62A563D2200A07521 /* Lonely Journey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lonely Journey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E6E8D92A563D2200A07521 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3E6E8DB2A563D2200A07521 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B3E6E8DD2A563D2200A07521 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		B3E6E8DF2A563D2200A07521 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B3E6E8E12A563D2200A07521 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B3E6E8E42A563D2200A07521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B3E6E8E62A563D2300A07521 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3E6E8E92A563D2300A07521 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3E6E8EF2A563D2300A07521 /* Lonely JourneyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lonely JourneyTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E6E8F32A563D2300A07521 /* Lonely_JourneyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lonely_JourneyTests.swift; sourceTree = "<group>"; };
+		B3E6E8F92A563D2300A07521 /* Lonely JourneyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lonely JourneyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3E6E8FD2A563D2300A07521 /* Lonely_JourneyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lonely_JourneyUITests.swift; sourceTree = "<group>"; };
+		B3E6E8FF2A563D2300A07521 /* Lonely_JourneyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lonely_JourneyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3E6E8D32A563D2200A07521 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8EC2A563D2300A07521 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8F62A563D2300A07521 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B3E6E8CD2A563D2200A07521 = {
+			isa = PBXGroup;
+			children = (
+				B3E6E8D82A563D2200A07521 /* Lonely Journey */,
+				B3E6E8F22A563D2300A07521 /* Lonely JourneyTests */,
+				B3E6E8FC2A563D2300A07521 /* Lonely JourneyUITests */,
+				B3E6E8D72A563D2200A07521 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3E6E8D72A563D2200A07521 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6E8D62A563D2200A07521 /* Lonely Journey.app */,
+				B3E6E8EF2A563D2300A07521 /* Lonely JourneyTests.xctest */,
+				B3E6E8F92A563D2300A07521 /* Lonely JourneyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3E6E8D82A563D2200A07521 /* Lonely Journey */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6E8D92A563D2200A07521 /* AppDelegate.swift */,
+				B3E6E8DB2A563D2200A07521 /* GameScene.sks */,
+				B3E6E8DD2A563D2200A07521 /* Actions.sks */,
+				B3E6E8DF2A563D2200A07521 /* GameScene.swift */,
+				B3E6E8E12A563D2200A07521 /* GameViewController.swift */,
+				B3E6E8E32A563D2200A07521 /* Main.storyboard */,
+				B3E6E8E62A563D2300A07521 /* Assets.xcassets */,
+				B3E6E8E82A563D2300A07521 /* LaunchScreen.storyboard */,
+			);
+			path = "Lonely Journey";
+			sourceTree = "<group>";
+		};
+		B3E6E8F22A563D2300A07521 /* Lonely JourneyTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6E8F32A563D2300A07521 /* Lonely_JourneyTests.swift */,
+			);
+			path = "Lonely JourneyTests";
+			sourceTree = "<group>";
+		};
+		B3E6E8FC2A563D2300A07521 /* Lonely JourneyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3E6E8FD2A563D2300A07521 /* Lonely_JourneyUITests.swift */,
+				B3E6E8FF2A563D2300A07521 /* Lonely_JourneyUITestsLaunchTests.swift */,
+			);
+			path = "Lonely JourneyUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3E6E8D52A563D2200A07521 /* Lonely Journey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3E6E9032A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely Journey" */;
+			buildPhases = (
+				B3E6E8D22A563D2200A07521 /* Sources */,
+				B3E6E8D32A563D2200A07521 /* Frameworks */,
+				B3E6E8D42A563D2200A07521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lonely Journey";
+			productName = "Lonely Journey";
+			productReference = B3E6E8D62A563D2200A07521 /* Lonely Journey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3E6E8EE2A563D2300A07521 /* Lonely JourneyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3E6E9062A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely JourneyTests" */;
+			buildPhases = (
+				B3E6E8EB2A563D2300A07521 /* Sources */,
+				B3E6E8EC2A563D2300A07521 /* Frameworks */,
+				B3E6E8ED2A563D2300A07521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3E6E8F12A563D2300A07521 /* PBXTargetDependency */,
+			);
+			name = "Lonely JourneyTests";
+			productName = "Lonely JourneyTests";
+			productReference = B3E6E8EF2A563D2300A07521 /* Lonely JourneyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3E6E8F82A563D2300A07521 /* Lonely JourneyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3E6E9092A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely JourneyUITests" */;
+			buildPhases = (
+				B3E6E8F52A563D2300A07521 /* Sources */,
+				B3E6E8F62A563D2300A07521 /* Frameworks */,
+				B3E6E8F72A563D2300A07521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3E6E8FB2A563D2300A07521 /* PBXTargetDependency */,
+			);
+			name = "Lonely JourneyUITests";
+			productName = "Lonely JourneyUITests";
+			productReference = B3E6E8F92A563D2300A07521 /* Lonely JourneyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3E6E8CE2A563D2200A07521 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B3E6E8D52A563D2200A07521 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					B3E6E8EE2A563D2300A07521 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B3E6E8D52A563D2200A07521;
+					};
+					B3E6E8F82A563D2300A07521 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B3E6E8D52A563D2200A07521;
+					};
+				};
+			};
+			buildConfigurationList = B3E6E8D12A563D2200A07521 /* Build configuration list for PBXProject "Lonely Journey" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3E6E8CD2A563D2200A07521;
+			productRefGroup = B3E6E8D72A563D2200A07521 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3E6E8D52A563D2200A07521 /* Lonely Journey */,
+				B3E6E8EE2A563D2300A07521 /* Lonely JourneyTests */,
+				B3E6E8F82A563D2300A07521 /* Lonely JourneyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3E6E8D42A563D2200A07521 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E6E8E52A563D2200A07521 /* Main.storyboard in Resources */,
+				B3E6E8DC2A563D2200A07521 /* GameScene.sks in Resources */,
+				B3E6E8E72A563D2300A07521 /* Assets.xcassets in Resources */,
+				B3E6E8EA2A563D2300A07521 /* LaunchScreen.storyboard in Resources */,
+				B3E6E8DE2A563D2200A07521 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8ED2A563D2300A07521 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8F72A563D2300A07521 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3E6E8D22A563D2200A07521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E6E8E02A563D2200A07521 /* GameScene.swift in Sources */,
+				B3E6E8E22A563D2200A07521 /* GameViewController.swift in Sources */,
+				B3E6E8DA2A563D2200A07521 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8EB2A563D2300A07521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E6E8F42A563D2300A07521 /* Lonely_JourneyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3E6E8F52A563D2300A07521 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3E6E9002A563D2300A07521 /* Lonely_JourneyUITestsLaunchTests.swift in Sources */,
+				B3E6E8FE2A563D2300A07521 /* Lonely_JourneyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3E6E8F12A563D2300A07521 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3E6E8D52A563D2200A07521 /* Lonely Journey */;
+			targetProxy = B3E6E8F02A563D2300A07521 /* PBXContainerItemProxy */;
+		};
+		B3E6E8FB2A563D2300A07521 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3E6E8D52A563D2200A07521 /* Lonely Journey */;
+			targetProxy = B3E6E8FA2A563D2300A07521 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3E6E8E32A563D2200A07521 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3E6E8E42A563D2200A07521 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B3E6E8E82A563D2300A07521 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3E6E8E92A563D2300A07521 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3E6E9012A563D2300A07521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3E6E9022A563D2300A07521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3E6E9042A563D2300A07521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-Journey";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3E6E9052A563D2300A07521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-Journey";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3E6E9072A563D2300A07521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-JourneyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lonely Journey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lonely Journey";
+			};
+			name = Debug;
+		};
+		B3E6E9082A563D2300A07521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-JourneyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lonely Journey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Lonely Journey";
+			};
+			name = Release;
+		};
+		B3E6E90A2A563D2300A07521 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-JourneyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lonely Journey";
+			};
+			name = Debug;
+		};
+		B3E6E90B2A563D2300A07521 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Jairo.Lonely-JourneyUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Lonely Journey";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3E6E8D12A563D2200A07521 /* Build configuration list for PBXProject "Lonely Journey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E6E9012A563D2300A07521 /* Debug */,
+				B3E6E9022A563D2300A07521 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3E6E9032A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely Journey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E6E9042A563D2300A07521 /* Debug */,
+				B3E6E9052A563D2300A07521 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3E6E9062A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely JourneyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E6E9072A563D2300A07521 /* Debug */,
+				B3E6E9082A563D2300A07521 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3E6E9092A563D2300A07521 /* Build configuration list for PBXNativeTarget "Lonely JourneyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3E6E90A2A563D2300A07521 /* Debug */,
+				B3E6E90B2A563D2300A07521 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3E6E8CE2A563D2200A07521 /* Project object */;
+}

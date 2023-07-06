@@ -8,13 +8,19 @@
 import SwiftUI
 
 struct Score: View {
+    @Binding var score:Int
+    
+    
     var body: some View {
-        Text("1200 pontos")
-    }
-}
+        VStack{
+            Button {
+                score = 0
+                UserDefaults.standard.set(score, forKey: "Data")
+            } label: {
+                Text("Score")
+                Text("\(score)")
+            }
 
-struct Score_Previews: PreviewProvider {
-    static var previews: some View {
-        Score()
+        }
     }
 }
