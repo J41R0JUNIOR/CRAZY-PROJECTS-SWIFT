@@ -29,6 +29,7 @@ class GameScene: SKScene {
 }
 */
 
+/*
 class GameScene: SKScene {
     
     private var player: SKSpriteNode?
@@ -70,6 +71,8 @@ class GameScene: SKScene {
     }
     
 }
+*/
+
 
 
 /*
@@ -154,3 +157,56 @@ class GameScene: SKScene {
     
 }
 */
+
+/*
+class GameScene: SKScene {
+    
+    var character = SKSpriteNode()
+    var touchLocation = CGPoint()
+    var isMoving = false
+    
+    override func didMove(to view: SKView) {
+        character = self.childNode(withName: "player") as! SKSpriteNode
+    }
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        /*
+         for touch in touches {
+         touchLocation = touch.location(in: self)
+         character.position.x = touchLocation.x
+         isMoving = true
+         }
+         */
+        if let location = touches.first?.location(in: self){
+            let direction : CGFloat = location.x < 0 ? -1 : 1
+            character.physicsBody?.applyImpulse(.init(dx: direction * 1000, dy: direction * 2000))
+        }
+    }
+}
+*/
+
+class GameScene: SKScene {
+    
+    var character = SKSpriteNode()
+    var touchLocation = CGPoint()
+    var isMoving = false
+    
+    override func didMove(to view: SKView) {
+        character = self.childNode(withName: "player") as! SKSpriteNode
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        /*
+         for touch in touches {
+         touchLocation = touch.location(in: self)
+         character.position.x = touchLocation.x
+         isMoving = true
+         }
+         */
+        if let location = touches.first?.location(in: self){
+            let direction : CGFloat = location.x < 0 ? -1 : 1
+            character.physicsBody?.applyImpulse(.init(dx: direction * 100, dy:  200))
+        }
+    }
+}
