@@ -1,13 +1,13 @@
 //
-//  Teste01UITestsLaunchTests.swift
-//  Teste01UITests
+//  Teste_PuloUITestsLaunchTests.swift
+//  Teste PuloUITests
 //
-//  Created by Jairo Júnior on 11/07/23.
+//  Created by Jairo Júnior on 09/07/23.
 //
 
 import XCTest
 
-final class Teste01UITestsLaunchTests: XCTestCase {
+final class Teste_PuloUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

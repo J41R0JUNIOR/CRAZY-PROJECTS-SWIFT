@@ -7,7 +7,7 @@
 
 import SpriteKit
 import GameplayKit
-/*
+
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
@@ -86,61 +86,5 @@ class GameScene: SKScene {
         // Called before each frame is rendered
     }
     
-    
-}
-*/
-class GameScene: SKScene {
-    
-    var character = SKSpriteNode()
-    var touchLocation = CGPoint()
-    var isMoving = false
-    
-    override func didMove(to view: SKView) {
-        character = self.childNode(withName: "player") as! SKSpriteNode
-    }
-    
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
-        /*
-        for touch in touches {
-            touchLocation = touch.location(in: self)
-            character.position.x = touchLocation.x
-            isMoving = true
-        }
-         */
-        if let location = touches.first?.location(in: self){
-            let direction : CGFloat = location.x < 0 ? -1 : 1
-            character.physicsBody?.applyImpulse(.init(dx: direction * 1000, dy:  2000))
-        }
-    }
-     
-    /*
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for touch in touches {
-            touchLocation = touch.location(in: self)
-            character.position.x = touchLocation.x
-        }
-    }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        isMoving = false
-    }
-    
-    override func update(_ currentTime: TimeInterval) {
-        if isMoving {
-                    andar()
-                } else {
-                    character.removeAllActions()
-                }
-    }
-    func andar(){
-//        if let walkAnimation = self.childNode(withName: "walkAnimation")?.action(forKey: "walkAnimation") as? SKAction {
-//            let repeatAction = SKAction.repeatForever(walkAnimation)
-//            character.run(repeatAction, withKey: "walking")
-//        } else {
-//            print("Unable to retrieve animation action")
-//        }
-    }
-     */
     
 }

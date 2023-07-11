@@ -8,7 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-
+/*
 class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
@@ -22,26 +22,54 @@ class GameScene: SKScene {
             print("Pressionou o botão")
         }
         self.addChild(button)
-    }
-}
-
-
-/*
-class GameSceneController: SKScene {
-    
-    override func didMove(to view: SKView) {
         
-        let player = PlayerNode(imageNamed: "player")
-        // Configure o jogador conforme necessário
-        
-        self.addChild(player)
     }
     
-    // Restante do código da classe GameSceneController
-    // ...
+    
 }
 */
 
+class GameScene: SKScene {
+    
+    private var player: SKSpriteNode?
+    
+    override func sceneDidLoad() {
+        do {
+            player = SKSpriteNode(imageNamed: "player")
+            
+            let body = SKPhysicsBody(rectangleOf: player?.size ?? .zero)
+            body.affectedByGravity = true
+            body.allowsRotation = false
+            
+            player?.physicsBody = body
+            
+            if let playerNode = player{
+                self.addChild(playerNode)
+            }
+            
+            do {
+                let ground = SKSpriteNode(color: .brown, size: .init(width: 500, height: 100))
+                //ground.position.y -= 200
+                
+                
+                let body = SKPhysicsBody(rectangleOf: ground.size)
+                body.affectedByGravity = true
+                body.allowsRotation = false
+                body.isDynamic = false
+                
+                ground.physicsBody = body
+                
+                self.addChild(ground)
+                
+            }
+        }
+        
+        func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+            player?.physicsBody?.applyImpulse(.init(dx: 30, dy: 30))
+        }
+    }
+    
+}
 
 
 /*
@@ -125,4 +153,4 @@ class GameScene: SKScene {
     
     
 }
- */
+*/

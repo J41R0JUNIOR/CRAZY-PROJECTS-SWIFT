@@ -1,19 +1,19 @@
 //
-//  Player.swift
-//  TestGame01
+//  GameViewController.swift
+//  Teste Pulo
 //
-//  Created by Jairo Júnior on 10/07/23.
+//  Created by Jairo Júnior on 09/07/23.
 //
 
 import UIKit
 import SpriteKit
 import GameplayKit
 
-class PlayerNode:SKSpriteNode{
+class JumpPlayer:GameScene{
     
     private var player: SKSpriteNode?
     
-    func sceneDidLoad() {
+    override func sceneDidLoad() {
         do {
             player = SKSpriteNode(imageNamed: "player")
             
@@ -30,7 +30,6 @@ class PlayerNode:SKSpriteNode{
             do {
                 let ground = SKSpriteNode(color: .brown, size: .init(width: 500, height: 100))
                 ground.position.y -= 200
-                
                 
                 let body = SKPhysicsBody(rectangleOf: ground.size)
                 body.affectedByGravity = true
@@ -49,4 +48,3 @@ class PlayerNode:SKSpriteNode{
         }
     }
 }
-

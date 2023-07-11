@@ -9,11 +9,11 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class PlayerJump:GameScene{
+class JumpPlayer:SKNode{
     
     private var player: SKSpriteNode?
     
-    override func sceneDidLoad() {
+    func sceneDidLoad() {
         do {
             player = SKSpriteNode(imageNamed: "player")
             
@@ -29,7 +29,7 @@ class PlayerJump:GameScene{
             
             do {
                 let ground = SKSpriteNode(color: .brown, size: .init(width: 500, height: 100))
-                ground.position.y -= 200
+                //ground.position.y -= 200
                 
                 
                 let body = SKPhysicsBody(rectangleOf: ground.size)

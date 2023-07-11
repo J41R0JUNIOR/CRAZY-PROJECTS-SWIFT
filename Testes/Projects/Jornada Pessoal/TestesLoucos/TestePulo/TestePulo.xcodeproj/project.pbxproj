@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		B32095EA2A5DCD7B007C0DB3 /* Jogador.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32095E92A5DCD7B007C0DB3 /* Jogador.swift */; };
 		B320962C2A5DDB63007C0DB3 /* a1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320962B2A5DDB63007C0DB3 /* a1.swift */; };
 		B320962E2A5DEF39007C0DB3 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32095A82A5D8CF9007C0DB3 /* Preview.swift */; };
+=======
+>>>>>>> parent of 44681c6 (pulo feito)
 		B3ED9E9E2A5C383000825C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED9E9D2A5C383000825C65 /* AppDelegate.swift */; };
 		B3ED9EA02A5C383000825C65 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3ED9E9F2A5C383000825C65 /* GameScene.sks */; };
 		B3ED9EA22A5C383000825C65 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3ED9EA12A5C383000825C65 /* Actions.sks */; };
@@ -41,9 +44,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B32095A82A5D8CF9007C0DB3 /* Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preview.swift; sourceTree = "<group>"; wrapsLines = 1; };
-		B32095E92A5DCD7B007C0DB3 /* Jogador.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jogador.swift; sourceTree = "<group>"; };
-		B320962B2A5DDB63007C0DB3 /* a1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = a1.swift; sourceTree = "<group>"; };
 		B3ED9E9A2A5C383000825C65 /* TestePulo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestePulo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3ED9E9D2A5C383000825C65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B3ED9E9F2A5C383000825C65 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -112,10 +112,7 @@
 				B3ED9E9F2A5C383000825C65 /* GameScene.sks */,
 				B3ED9EA12A5C383000825C65 /* Actions.sks */,
 				B3ED9EA32A5C383000825C65 /* GameScene.swift */,
-				B32095A82A5D8CF9007C0DB3 /* Preview.swift */,
 				B3ED9EA52A5C383000825C65 /* GameViewController.swift */,
-				B320962B2A5DDB63007C0DB3 /* a1.swift */,
-				B32095E92A5DCD7B007C0DB3 /* Jogador.swift */,
 				B3ED9EA72A5C383000825C65 /* Main.storyboard */,
 				B3ED9EAA2A5C383100825C65 /* Assets.xcassets */,
 				B3ED9EAC2A5C383100825C65 /* LaunchScreen.storyboard */,
@@ -274,10 +271,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3ED9EA42A5C383000825C65 /* GameScene.swift in Sources */,
-				B320962C2A5DDB63007C0DB3 /* a1.swift in Sources */,
 				B3ED9EA62A5C383000825C65 /* GameViewController.swift in Sources */,
+<<<<<<< HEAD
 				B32095EA2A5DCD7B007C0DB3 /* Jogador.swift in Sources */,
 				B320962E2A5DEF39007C0DB3 /* Preview.swift in Sources */,
+=======
+>>>>>>> parent of 44681c6 (pulo feito)
 				B3ED9E9E2A5C383000825C65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
