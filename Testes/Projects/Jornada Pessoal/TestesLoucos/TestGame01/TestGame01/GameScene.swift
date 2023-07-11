@@ -201,6 +201,7 @@ class GameScene: SKScene {
         if let location = touches.first?.location(in: self){
             let direction : CGFloat = location.x < 0 ? -1 : 1
             character.physicsBody?.applyImpulse(.init(dx: direction * 100, dy:  200))
+            character.xScale = direction
         }
     }
 }
