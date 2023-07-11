@@ -9,11 +9,11 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class PlayerJump:GameScene{
+class PlayerNode:SKSpriteNode{
     
     private var player: SKSpriteNode?
     
-    override func sceneDidLoad() {
+    func sceneDidLoad() {
         do {
             player = SKSpriteNode(imageNamed: "player")
             
@@ -49,3 +49,4 @@ class PlayerJump:GameScene{
         }
     }
 }
+

@@ -1,50 +1,13 @@
 //
 //  GameScene.swift
-//  TestGame01
+//  Teste01
 //
-//  Created by Jairo Júnior on 06/07/23.
+//  Created by Jairo Júnior on 11/07/23.
 //
 
 import SpriteKit
 import GameplayKit
 
-
-class GameScene: SKScene {
-    
-    override func didMove(to view: SKView) {
-        super.sceneDidLoad()
-        
-        let image = SKSpriteNode(imageNamed: "Image 1")
-        let label = SKLabelNode()
-        
-        
-        let button = SkButtonNode(image: image, label: label) {
-            print("Pressionou o botão")
-        }
-        self.addChild(button)
-    }
-}
-
-
-/*
-class GameSceneController: SKScene {
-    
-    override func didMove(to view: SKView) {
-        
-        let player = PlayerNode(imageNamed: "player")
-        // Configure o jogador conforme necessário
-        
-        self.addChild(player)
-    }
-    
-    // Restante do código da classe GameSceneController
-    // ...
-}
-*/
-
-
-
-/*
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
@@ -122,7 +85,4 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
-    
-    
 }
- */
