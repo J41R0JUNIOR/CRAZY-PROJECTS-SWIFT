@@ -29,7 +29,6 @@ class GameScene: SKScene {
 }
 */
 
-/*
 class GameScene: SKScene {
     
     private var player: SKSpriteNode?
@@ -71,8 +70,6 @@ class GameScene: SKScene {
     }
     
 }
-*/
-
 
 
 /*
