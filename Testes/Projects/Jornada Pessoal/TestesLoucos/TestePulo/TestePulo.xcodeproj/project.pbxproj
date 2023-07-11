@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B32095A92A5D8CF9007C0DB3 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32095A82A5D8CF9007C0DB3 /* Preview.swift */; };
 		B32095EA2A5DCD7B007C0DB3 /* Jogador.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32095E92A5DCD7B007C0DB3 /* Jogador.swift */; };
 		B320962C2A5DDB63007C0DB3 /* a1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B320962B2A5DDB63007C0DB3 /* a1.swift */; };
+		B320962E2A5DEF39007C0DB3 /* Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32095A82A5D8CF9007C0DB3 /* Preview.swift */; };
 		B3ED9E9E2A5C383000825C65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ED9E9D2A5C383000825C65 /* AppDelegate.swift */; };
 		B3ED9EA02A5C383000825C65 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3ED9E9F2A5C383000825C65 /* GameScene.sks */; };
 		B3ED9EA22A5C383000825C65 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B3ED9EA12A5C383000825C65 /* Actions.sks */; };
@@ -277,7 +277,7 @@
 				B320962C2A5DDB63007C0DB3 /* a1.swift in Sources */,
 				B3ED9EA62A5C383000825C65 /* GameViewController.swift in Sources */,
 				B32095EA2A5DCD7B007C0DB3 /* Jogador.swift in Sources */,
-				B32095A92A5D8CF9007C0DB3 /* Preview.swift in Sources */,
+				B320962E2A5DEF39007C0DB3 /* Preview.swift in Sources */,
 				B3ED9E9E2A5C383000825C65 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
