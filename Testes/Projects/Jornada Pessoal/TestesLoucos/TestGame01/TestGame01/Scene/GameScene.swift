@@ -9,8 +9,8 @@ import SpriteKit
 import GameplayKit
 
 
-
-/*class GameScene: SKScene {
+/*
+class GameScene: SKScene {
     var character: SKSpriteNode!
     var moveLeftButton: SKSpriteNode!
     var moveRightButton: SKSpriteNode!
@@ -131,6 +131,7 @@ import GameplayKit
 }
 */
 
+
 class GameScene: SKScene {
     var character: SKSpriteNode!
     var moveLeftButton: SKSpriteNode!
@@ -139,20 +140,16 @@ class GameScene: SKScene {
     var doubleJumpButton: SKSpriteNode!
     var isMovingLeft = false
     var isMovingRight = false
-    
-    private var hudScene:HUDScene?
+    var cameraNode: SKCameraNode!
     
     
     override func didMove(to view: SKView) {
-        hudScene = HUDScene(size: size)
-        hudScene?.scaleMode = .resizeFill
-        hudScene?.zPosition = 100
-        addChild(hudScene!)
-        
         createMoveButtons()
         
         character = childNode(withName: "player") as? SKSpriteNode
-        
+        cameraNode = SKCameraNode()
+        self.camera = cameraNode
+        addChild(cameraNode)
     }
     
     func createMoveButtons() {
@@ -242,6 +239,18 @@ class GameScene: SKScene {
         } else if isMovingRight {
             character.position.x += characterSpeed
         }
+        if let camera = cameraNode {
+                camera.position = character.position
+            }
+                
+        // Atualize a posição dos botões de movimento para seguir o personagem
+        moveLeftButton.position.x = character.position.x - 900
+        moveRightButton.position.x = character.position.x - 700
+        jumpButton.position.x = character.position.x  + 900
+        moveLeftButton.position.y = character.position.y - 300
+        moveRightButton.position.y = character.position.y - 300
+        jumpButton.position.y = character.position.y - 300
+        
     }
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
@@ -258,3 +267,4 @@ class GameScene: SKScene {
     }
 
 }
+
