@@ -19,9 +19,18 @@ class GameScene: SKScene {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        guard let touch = touches.first else { return }
+        
+        let touchLocation = touch.location(in: self)
+        
+        if touchLocation.x < character.position.x {
+            character.physicsBody?.applyImpulse(.init(dx: -100, dy:  300))
+        }
+        if touchLocation.x > character.position.x {
+            character.physicsBody?.applyImpulse(.init(dx: 100, dy:  300))
+        }
         
         
-        character.physicsBody?.applyImpulse(.init(dx: 0, dy:  500))
         
     }
 }
