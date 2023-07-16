@@ -185,12 +185,11 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         createMoveButtons()
-        
-        character = childNode(withName: "player") as? SKSpriteNode
         cameraNode = SKCameraNode()
         self.camera = cameraNode
         addChild(cameraNode)
         
+        character = childNode(withName: "player") as? SKSpriteNode
         for i in 0..<textureAtlaas.textureNames.count {
             let textureNames = "hero" + String(i)
             heroFrames.append(textureAtlaas.textureNamed(textureNames))
@@ -203,15 +202,11 @@ class GameScene: SKScene {
         jumpButton = SkButtonNode(image: .init(color: .blue, size: CGSize(width: 100, height: 100)), label: .init(text: "UP"))
         addChild(jumpButton)
         
-        ///
-        ///
         moveLeftButton = SkButtonNode(image: .init(color: .blue, size: CGSize(width: 100, height: 100)), label: .init(text: "Left"))
         addChild(moveLeftButton)
-        ///
-        ///
+        
         moveRightButton = SkButtonNode(image: .init(color: .blue, size: CGSize(width: 100, height: 100)), label: .init(text: "Right"))
         addChild(moveRightButton)
-        
     }
     
     
