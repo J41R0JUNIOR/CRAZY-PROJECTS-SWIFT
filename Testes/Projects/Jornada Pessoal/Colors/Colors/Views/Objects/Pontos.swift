@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Pontos: View {
     
-    @Binding var pontos:Int
+    
     @Binding var inicio:Int
     @Binding var tentativas:Int
     
