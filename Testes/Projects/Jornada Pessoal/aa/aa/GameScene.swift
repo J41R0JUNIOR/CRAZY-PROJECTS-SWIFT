@@ -172,18 +172,47 @@ import GameplayKit
 //}
 
 
+
+
+
 class GameScene:SKScene{
+    let velocityMultiplier: CGFloat = 0.12
     
+    enum NodesZPosition: CGFloat {
+      case background, player, joystick
+    }
+
 //    player
     var player = SKSpriteNode(texture: SKTexture(imageNamed: "player"))
     var currentPlayer = 1
+
+
     
-//        joystick boddy
-    let joystickBack = SKSpriteNode(imageNamed: "JoyBack")
-    let joystickButton = SKSpriteNode(imageNamed: "JoyButton")
-    let usingJoistick = false
+    var cameraNode : SKCameraNode?
+    
+    var valorX:CGFloat = 0
+    var valorY:CGFloat = 0
+    
+    
+      lazy var analogJoystick: AnalogJoystick = {
+        let js = AnalogJoystick(diameter: 200, colors: nil, images: (substrate: #imageLiteral(resourceName: "jSubstrate"), stick: #imageLiteral(resourceName: "jStick")))
+          js.position.x = valorX
+          js.position.y = valorY
+          
+//          js.position = CGPoint(x: self.frame.width * -0.33 + js.radius + 45, y: self.frame.height * -0.5 + js.radius + 45)
+        js.zPosition = NodesZPosition.joystick.rawValue
+        return js
+      }()
 
     override func didMove(to view: SKView) {
+        
+        cameraNode = SKCameraNode()
+        
+        if let camera = cameraNode{
+            camera.name = "cameraNode"
+            self.addChild(camera) // adding camera to scene
+        }
+        self.camera = cameraNode // defining custom camera as level camera
         
         //background
         self.backgroundColor = SKColor.white
@@ -193,10 +222,43 @@ class GameScene:SKScene{
         self.addChild(player)
 
         //joystick
-        self.joystickBack.position = CGPoint.zero
-        self.joystickBack.position.y -= 400
-        self.joystickButton.position = self.joystickBack.position
+        setupJoystick()
+      
 
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let touchLocation = touch.location(in: self)
+        
+        if ((touchLocation.x) <= (self.frame.midX)){
+            print("opa triscou ")
+            
+            
+            print(valorX)
+            print(valorY)
+            
+            
+            
+        }
+        
+    }
+    
+    
+    override func update(_ currentTime: TimeInterval) {
+        cameraNode?.position = player.position
+    }
+    
+    func setupJoystick() {
+      
+        cameraNode?.addChild(analogJoystick)
+      
+          analogJoystick.trackingHandler = { [unowned self] data in
+            self.player.position = CGPoint(x: self.player.position.x + (data.velocity.x * self.velocityMultiplier),
+                                         y: self.player.position.y + (data.velocity.y * self.velocityMultiplier))
+            self.player.zRotation = data.angular
+          }
+      
+    }
+
 }

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "66D903D0-DD72-43B8-B691-AC0D3CEFB41D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81DD519A-F6FE-4C1C-818A-FC585C98764F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/CloudDataModel/CloudDataItens.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "RecordKeys"
+            landmarkType = "13">
+            <Locations>
+               <Location
+                  uuid = "81DD519A-F6FE-4C1C-818A-FC585C98764F - 21be0e82f2089328"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.RecordKeys.init(rawValue: Swift.String) -&gt; Swift.Optional&lt;TestCD001.RecordKeys&gt;"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/TestCD001/CloudDataModel/CloudDataItens.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "112">
+               </Location>
+               <Location
+                  uuid = "81DD519A-F6FE-4C1C-818A-FC585C98764F - acdb94935743ee01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.RecordKeys.rawValue.getter : Swift.String"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/TestCD001/CloudDataModel/CloudDataItens.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "84">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D537932-88DF-45F0-AF28-F0261DC003BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/CloudDataModel/CloudDataItens.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "record"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9EEDC7FA-61F0-4E6D-80D9-8CA7538E83BD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/CloudDataModel/CloudDataItens.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "record"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F0D64AB-B0E6-497F-8BC3-653383D13693"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/CloudDataModel/CloudDataItens.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "record"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CBE6235-2E5E-4EDB-8039-EAD05C1CDC90"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CloudDataModel/CloudModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5"
+            endingLineNumber = "5"
+            landmarkName = "Model"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "2CBE6235-2E5E-4EDB-8039-EAD05C1CDC90 - 5c719c3413be251c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.Model.deinit"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/CloudDataModel/CloudModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5"
+                  endingLineNumber = "5"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2CBE6235-2E5E-4EDB-8039-EAD05C1CDC90 - 2a134c0ecfbbda6a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.Model.__deallocating_deinit"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/CloudDataModel/CloudModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "2CBE6235-2E5E-4EDB-8039-EAD05C1CDC90 - aa1ad031fe4f3b9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.Model.__allocating_init() -&gt; TestCD001.Model"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/CloudDataModel/CloudModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "2CBE6235-2E5E-4EDB-8039-EAD05C1CDC90 - c472d7cf9846b912"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestCD001.Model.init() -&gt; TestCD001.Model"
+                  moduleName = "TestCD001"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/TestCD001/CloudDataModel/CloudModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "6"
+                  endingLineNumber = "6"
+                  offsetFromSymbolStart = "28">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0168041A-E2C8-45AF-AD8A-17E9C00B49CA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/DataModel/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "saveData(context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46C7015A-4243-482B-AE36-BE8B9CAE994B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestCD001/DataModel/DataController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "addPersonagem(nome:peso:idade:dataAdd:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

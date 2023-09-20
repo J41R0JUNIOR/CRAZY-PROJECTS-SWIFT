@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "PlayerWalk 48x48 5a4.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "PlayerWalk 48x48 5a4 2.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "PlayerWalk 48x48 5a4 1.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -18,6 +18,7 @@
 		B334A1962A699BC6002F99A2 /* aaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A1952A699BC6002F99A2 /* aaTests.swift */; };
 		B334A1A02A699BC6002F99A2 /* aaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A19F2A699BC6002F99A2 /* aaUITests.swift */; };
 		B334A1A22A699BC6002F99A2 /* aaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B334A1A12A699BC6002F99A2 /* aaUITestsLaunchTests.swift */; };
+		B356E7892A8D0E5E00985C36 /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = B356E7882A8D0E5E00985C36 /* AnalogJoystick.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		B334A19B2A699BC6002F99A2 /* aaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = aaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B334A19F2A699BC6002F99A2 /* aaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaUITests.swift; sourceTree = "<group>"; };
 		B334A1A12A699BC6002F99A2 /* aaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B356E7882A8D0E5E00985C36 /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B334A17D2A699BC5002F99A2 /* GameScene.sks */,
 				B334A17F2A699BC5002F99A2 /* Actions.sks */,
 				B334A1812A699BC5002F99A2 /* GameScene.swift */,
+				B356E7882A8D0E5E00985C36 /* AnalogJoystick.swift */,
 				B334A1832A699BC5002F99A2 /* GameViewController.swift */,
 				B334A1852A699BC5002F99A2 /* Main.storyboard */,
 				B334A1882A699BC6002F99A2 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B334A1822A699BC5002F99A2 /* GameScene.swift in Sources */,
+				B356E7892A8D0E5E00985C36 /* AnalogJoystick.swift in Sources */,
 				B334A1842A699BC5002F99A2 /* GameViewController.swift in Sources */,
 				B334A17C2A699BC5002F99A2 /* AppDelegate.swift in Sources */,
 			);
