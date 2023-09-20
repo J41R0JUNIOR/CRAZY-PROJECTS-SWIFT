@@ -16,7 +16,6 @@ class DataController:ObservableObject{
     init(){
         persistentCloudKitContainer = NSPersistentCloudKitContainer(name: "DataModel")
         
-        
         persistentCloudKitContainer.loadPersistentStores{ desc, error in
             if let error = error{
                 print("Failed to load the data \(error.localizedDescription)")
@@ -48,6 +47,7 @@ class DataController:ObservableObject{
     func addPerson(name: String, context: NSManagedObjectContext){
         let person = Person(context: context)
         person.name = name
+        person.date = Date()
         
         saveData(context: context)
     }

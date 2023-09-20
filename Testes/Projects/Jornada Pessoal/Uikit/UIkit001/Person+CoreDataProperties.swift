@@ -2,7 +2,7 @@
 //  Person+CoreDataProperties.swift
 //  UIkit001
 //
-//  Created by Jairo Júnior on 19/09/23.
+//  Created by Jairo Júnior on 20/09/23.
 //
 //
 
@@ -16,9 +16,26 @@ extension Person {
         return NSFetchRequest<Person>(entityName: "Person")
     }
 
-    @NSManaged public var date: Date?
     @NSManaged public var name: String?
-    @NSManaged public var qtd: Int64
+    @NSManaged public var date: Date?
+    @NSManaged public var tasks: NSSet?
+
+}
+
+// MARK: G/Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada Pessoal/Uikit/UIkit001/UIkit001/UIkit001.entitlementsenerated accessors for tasks
+extension Person {
+
+    @objc(addTasksObject:)
+    @NSManaged public func addToTasks(_ value: Task)
+
+    @objc(removeTasksObject:)
+    @NSManaged public func removeFromTasks(_ value: Task)
+
+    @objc(addTasks:)
+    @NSManaged public func addToTasks(_ values: NSSet)
+
+    @objc(removeTasks:)
+    @NSManaged public func removeFromTasks(_ values: NSSet)
 
 }
 

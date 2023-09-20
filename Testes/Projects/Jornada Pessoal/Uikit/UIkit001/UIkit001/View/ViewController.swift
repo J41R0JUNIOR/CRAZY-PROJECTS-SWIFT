@@ -325,14 +325,46 @@ class ViewController: UIViewController {
         fetchPeople()
     }
     
+    
+    
     func fetchPeople() {
+        
+        
         do {
-            items = try context.fetch(Person.fetchRequest())
-            tableView.reloadData()
+            let request = Person.fetchRequest() as NSFetchRequest<Person>
+            
+//            let pred = NSPredicate(format: "name CONTAINS %@", "Slim Shady")
+//            request.predicate = pred
+            
+            let sortDescriptior = NSSortDescriptor(key: "date", ascending: true)
+            request.sortDescriptors = [sortDescriptior]
+            
+            self.items = try context.fetch(request)
+            
+            DispatchQueue.main.async{
+                self.tableView.reloadData()
+            }
         } catch {
             print("Erro ao buscar pessoas: \(error)")
         }
     }
+    
+    
+    
+    func relashionshio(name:String, nameTask:String){
+        let person = Person(context: context)
+        person.name = name
+        
+        let task = Task(context: context)
+        task.nomeTask = nameTask
+        task.dataTask = Date()
+        
+        //task.person 
+        
+        DataController().saveData(context: context)
+    }
+    
+    
     
     @objc func addTapped() {
         let alert = UIAlertController(title: "Adicionar Pessoa", message: "Digite o nome da pessoa", preferredStyle: .alert)
@@ -394,6 +426,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let person = self.items[indexPath.row]
         
+        
         //create alert
         let alert = UIAlertController(title: "Edit Person", message: "Edit name:", preferredStyle: .alert)
         
@@ -414,8 +447,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         alert.addAction(saveButton)
         self.present(alert, animated: true, completion: nil)
-        
     }
+    
 }
 
 
