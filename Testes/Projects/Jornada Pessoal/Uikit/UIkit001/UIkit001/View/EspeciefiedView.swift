@@ -1,26 +1,129 @@
-//
-//  EspeciefiedView.swift
-//  UIkit001
-//
-//  Created by Jairo Júnior on 20/09/23.
-//
+import UIKit
+import CoreData
 
-import SwiftUI
+class EspeciefiedView: UIViewController {
+    let name: String?
+    let context: NSManagedObjectContext
+    let person: Person?
+    var items: [Person] = []
+    var tasks: [Task] = []
 
-class EspeciefiedView: UIViewController{
-    let name: String
     
-    init(name: String) {
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(PersonTableViewCell.self, forCellReuseIdentifier: "PersonCell")
+        return tableView
+    }()
+
+    init(name: String?, person:Person, context: NSManagedObjectContext) {
         self.name = name
-        super.init()
+        self.context = context
+        self.person = person
+        super.init(nibName: nil, bundle: nil) // Call the designated initializer of UIViewController
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = name
+        
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+        
+        
+        view.addSubview(tableView)
+        
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+        
+        fetchTasks()
     }
+    
+    
+    func fetchTasks() {
+        guard let person = self.person,
+              let personTasks = person.tasks?.allObjects as? [Task] else {
+            return
+        }
+
+        self.tasks = personTasks
+
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
+    
+    func relashionshion(name:String, nameTask:String){
+        let person = Person(context: context)
+        person.name = name
+        
+        let task = Task(context: context)
+        task.nomeTask = nameTask
+        task.dataTask = Date()
+        
+        //task.person
+        
+        DataController().saveData(context: context)
+    }
+    
+    
+    
+    @objc func addTapped() {
+        let alert = UIAlertController(title: "Adicionar Task", message: "Digite o nome da task", preferredStyle: .alert)
+        alert.addTextField()
+        
+        let addAction = UIAlertAction(title: "Adicionar", style: .default) { [weak self] _ in
+            if let textField = alert.textFields?.first, let name = textField.text, let context = self?.context, let person = self?.person {
+                // Crie uma nova tarefa associada à pessoa
+                let task = Task(context: context)
+                task.nomeTask = name
+                task.dataTask = Date()
+                task.person = person
+                
+                // Salve a tarefa no contexto
+                DataController().saveData(context: context)
+                
+                // Recarregue as tarefas
+                self?.fetchTasks()
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        
+        alert.addAction(addAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
+
+    
+}
+
+
+
+extension EspeciefiedView: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PersonCell", for: indexPath) as! PersonTableViewCell
+
+        let task = tasks[indexPath.row]
+        cell.configure(withName: task.nomeTask ?? "")
+
+        return cell
+    }
+
 }

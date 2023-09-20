@@ -16,10 +16,21 @@ extension Task {
         return NSFetchRequest<Task>(entityName: "Task")
     }
 
-    @NSManaged public var nomeTask: String?
     @NSManaged public var dataTask: Date?
-    @NSManaged public var id: UUID?
+    @NSManaged public var idTask: UUID?
+    @NSManaged public var nomeTask: String?
     @NSManaged public var person: Person?
+    
+    public var wrappedNameTask:String{
+        nomeTask ?? "Unknown Task"
+    }
+    public var wrappedIdTask:UUID{
+        idTask ?? UUID()
+    }
+    public var wrappedDataTask:Date{
+        dataTask ?? Date()
+    }
+    
 
 }
 
