@@ -52,4 +52,15 @@ class DataController:ObservableObject{
         saveData(context: context)
     }
     
+    func addTask(nameTask:String, contextTask:NSManagedObjectContext, personTask:Person){
+        // Crie uma nova tarefa associada à pessoa
+        let task = Task(context: contextTask)
+        task.nomeTask = nameTask
+        task.dataTask = Date()
+        task.person = personTask
+        
+        // Salve a tarefa no contexto
+        DataController().saveData(context: contextTask)
+    }
+    
 }

@@ -63,19 +63,7 @@ class EspeciefiedView: UIViewController {
         }
     }
     
-    func addTask(nameTask:String, contextTask:NSManagedObjectContext, personTask:Person){
-        // Crie uma nova tarefa associada à pessoa
-        let task = Task(context: contextTask)
-        task.nomeTask = nameTask
-        task.dataTask = Date()
-        task.person = personTask
-        
-        // Salve a tarefa no contexto
-        DataController().saveData(context: contextTask)
-        
-        // Recarregue as tarefas
-        self.fetchTasks()
-    }
+    
     
     
     
@@ -86,10 +74,10 @@ class EspeciefiedView: UIViewController {
         let addAction = UIAlertAction(title: "Adicionar", style: .default) { [weak self] _ in
             if let textField = alert.textFields?.first, let nameTask = textField.text, let contextTask = self?.context, let personTask = self?.person {
                 
+                DataController().addTask(nameTask: nameTask, contextTask: contextTask, personTask: personTask)
                 
-                self?.addTask(nameTask: nameTask, contextTask: contextTask, personTask: personTask)
+                self?.fetchTasks()
                 
-//                // Crie uma nova tarefa associada à pessoa
 //                let task = Task(context: contextTask)
 //                task.nomeTask = nameTask
 //                task.dataTask = Date()
