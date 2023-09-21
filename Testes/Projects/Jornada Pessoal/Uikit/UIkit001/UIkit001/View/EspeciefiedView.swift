@@ -5,7 +5,7 @@ class EspeciefiedView: UIViewController {
     let name: String?
     let context: NSManagedObjectContext
     let person: Person?
-    var items: [Person] = []
+    //var items: [Person] = []
     var tasks: [Task] = []
 
     
@@ -63,18 +63,18 @@ class EspeciefiedView: UIViewController {
         }
     }
     
-    
-    func relashionshion(name:String, nameTask:String){
-        let person = Person(context: context)
-        person.name = name
-        
-        let task = Task(context: context)
+    func addTask(nameTask:String, contextTask:NSManagedObjectContext, personTask:Person){
+        // Crie uma nova tarefa associada à pessoa
+        let task = Task(context: contextTask)
         task.nomeTask = nameTask
         task.dataTask = Date()
+        task.person = personTask
         
-        //task.person
+        // Salve a tarefa no contexto
+        DataController().saveData(context: contextTask)
         
-        DataController().saveData(context: context)
+        // Recarregue as tarefas
+        self.fetchTasks()
     }
     
     
@@ -84,18 +84,22 @@ class EspeciefiedView: UIViewController {
         alert.addTextField()
         
         let addAction = UIAlertAction(title: "Adicionar", style: .default) { [weak self] _ in
-            if let textField = alert.textFields?.first, let name = textField.text, let context = self?.context, let person = self?.person {
-                // Crie uma nova tarefa associada à pessoa
-                let task = Task(context: context)
-                task.nomeTask = name
-                task.dataTask = Date()
-                task.person = person
+            if let textField = alert.textFields?.first, let nameTask = textField.text, let contextTask = self?.context, let personTask = self?.person {
                 
-                // Salve a tarefa no contexto
-                DataController().saveData(context: context)
                 
-                // Recarregue as tarefas
-                self?.fetchTasks()
+                self?.addTask(nameTask: nameTask, contextTask: contextTask, personTask: personTask)
+                
+//                // Crie uma nova tarefa associada à pessoa
+//                let task = Task(context: contextTask)
+//                task.nomeTask = nameTask
+//                task.dataTask = Date()
+//                task.person = personTask
+//                
+//                // Salve a tarefa no contexto
+//                DataController().saveData(context: contextTask)
+//                
+//                // Recarregue as tarefas
+//                self?.fetchTasks()
             }
         }
         
