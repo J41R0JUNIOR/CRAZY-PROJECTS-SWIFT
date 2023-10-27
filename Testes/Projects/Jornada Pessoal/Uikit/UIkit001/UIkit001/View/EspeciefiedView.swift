@@ -5,7 +5,6 @@ class EspeciefiedView: UIViewController {
     let name: String?
     let context: NSManagedObjectContext
     let person: Person?
-    //var items: [Person] = []
     var tasks: [Task] = []
 
     
@@ -76,18 +75,15 @@ class EspeciefiedView: UIViewController {
                 
                 DataController().addTask(nameTask: nameTask, contextTask: contextTask, personTask: personTask)
                 
-                self?.fetchTasks()
+                if let person = self?.person{
+                    let tasks = person.tasksArray
+                    for n in tasks{
+                        print(n.nomeTask)
+                    }
+                }
                 
-//                let task = Task(context: contextTask)
-//                task.nomeTask = nameTask
-//                task.dataTask = Date()
-//                task.person = personTask
-//                
-//                // Salve a tarefa no contexto
-//                DataController().saveData(context: contextTask)
-//                
-//                // Recarregue as tarefas
-//                self?.fetchTasks()
+                self?.fetchTasks()
+
             }
         }
         

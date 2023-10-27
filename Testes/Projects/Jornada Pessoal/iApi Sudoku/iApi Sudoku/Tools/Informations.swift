@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BringInfo: Codable {
+class BringInfo: Codable , ObservableObject{
     let newboard: NewBoard
 }
 
@@ -28,30 +28,4 @@ enum ApiError: Error{
     case invalidUrl
     case invalidResponse
     case invalidData
-}
-
-extension ContentView {
-    func newBoard() async throws -> BringInfo {
-        let endpoint = "https://sudoku-api.vercel.app/api/dosuku"
-
-        guard let url = URL(string: endpoint) else {
-            throw ApiError.invalidUrl
-        }
-
-        let (data, response) = try await URLSession.shared.data(from: url)
-
-        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-            throw ApiError.invalidResponse
-        }
-
-        do {
-            let decoder = JSONDecoder()
-            decoder.keyDecodingStrategy = .convertFromSnakeCase
-            let bringInfo = try decoder.decode(BringInfo.self, from: data)
-            return bringInfo
-        } catch {
-            print("Error decoding: \(error)")
-            throw ApiError.invalidData
-        }
-    }
 }

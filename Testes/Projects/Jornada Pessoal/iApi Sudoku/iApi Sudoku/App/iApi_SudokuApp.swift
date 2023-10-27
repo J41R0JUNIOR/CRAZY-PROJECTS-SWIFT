@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct iApi_SudokuApp: App {
+
+    @Environment(\.managedObjectContext) var managedObjContext
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainScreen()/*.modelContainer(for: DataItem.self)*/
         }
     }
 }

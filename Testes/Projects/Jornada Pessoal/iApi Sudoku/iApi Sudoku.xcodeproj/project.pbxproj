@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B328A7BB2AE30EE7002A7FF3 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B328A7BA2AE30EE7002A7FF3 /* MainScreen.swift */; };
+		B328A7BD2AE312BF002A7FF3 /* MainSudokuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B328A7BC2AE312BF002A7FF3 /* MainSudokuView.swift */; };
+		B35EE1562AEA029100F516B2 /* MainSudokuM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE1552AEA029100F516B2 /* MainSudokuM.swift */; };
+		B35EE1582AEA029B00F516B2 /* MainSudokuMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE1572AEA029B00F516B2 /* MainSudokuMV.swift */; };
+		B35EE15A2AEACF1100F516B2 /* HomeScreenMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE1592AEACF1100F516B2 /* HomeScreenMV.swift */; };
+		B35EE15C2AEAD99200F516B2 /* HomeScreenM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35EE15B2AEAD99200F516B2 /* HomeScreenM.swift */; };
 		B3F81E792A8FED9700AFCAA8 /* iApi_SudokuApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F81E782A8FED9700AFCAA8 /* iApi_SudokuApp.swift */; };
-		B3F81E7B2A8FED9700AFCAA8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F81E7A2A8FED9700AFCAA8 /* ContentView.swift */; };
+		B3F81E7B2A8FED9700AFCAA8 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F81E7A2A8FED9700AFCAA8 /* HomeScreen.swift */; };
 		B3F81E7D2A8FED9800AFCAA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F81E7C2A8FED9800AFCAA8 /* Assets.xcassets */; };
 		B3F81E802A8FED9800AFCAA8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3F81E7F2A8FED9800AFCAA8 /* Preview Assets.xcassets */; };
 		B3F81E8A2A8FED9800AFCAA8 /* iApi_SudokuTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F81E892A8FED9800AFCAA8 /* iApi_SudokuTests.swift */; };
@@ -35,9 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B328A7BA2AE30EE7002A7FF3 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		B328A7BC2AE312BF002A7FF3 /* MainSudokuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSudokuView.swift; sourceTree = "<group>"; };
+		B35EE1552AEA029100F516B2 /* MainSudokuM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSudokuM.swift; sourceTree = "<group>"; };
+		B35EE1572AEA029B00F516B2 /* MainSudokuMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSudokuMV.swift; sourceTree = "<group>"; };
+		B35EE1592AEACF1100F516B2 /* HomeScreenMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenMV.swift; sourceTree = "<group>"; };
+		B35EE15B2AEAD99200F516B2 /* HomeScreenM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenM.swift; sourceTree = "<group>"; };
 		B3F81E752A8FED9700AFCAA8 /* iApi Sudoku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iApi Sudoku.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3F81E782A8FED9700AFCAA8 /* iApi_SudokuApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iApi_SudokuApp.swift; sourceTree = "<group>"; };
-		B3F81E7A2A8FED9700AFCAA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B3F81E7A2A8FED9700AFCAA8 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		B3F81E7C2A8FED9800AFCAA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3F81E7F2A8FED9800AFCAA8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B3F81E852A8FED9800AFCAA8 /* iApi SudokuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iApi SudokuTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +85,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B328A7C12AE31A78002A7FF3 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		B343BBD12AE70705005A7C45 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B3F81E7A2A8FED9700AFCAA8 /* HomeScreen.swift */,
+				B35EE15B2AEAD99200F516B2 /* HomeScreenM.swift */,
+				B35EE1592AEACF1100F516B2 /* HomeScreenMV.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
+		B343BBD22AE7071E005A7C45 /* MainSudokuView */ = {
+			isa = PBXGroup;
+			children = (
+				B328A7BC2AE312BF002A7FF3 /* MainSudokuView.swift */,
+				B35EE1552AEA029100F516B2 /* MainSudokuM.swift */,
+				B35EE1572AEA029B00F516B2 /* MainSudokuMV.swift */,
+			);
+			path = MainSudokuView;
+			sourceTree = "<group>";
+		};
+		B343BBD32AE70743005A7C45 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B343BBD22AE7071E005A7C45 /* MainSudokuView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B343BBD42AE7076A005A7C45 /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B328A7BA2AE30EE7002A7FF3 /* MainScreen.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		B3F81E6C2A8FED9700AFCAA8 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +151,9 @@
 		B3F81E772A8FED9700AFCAA8 /* iApi Sudoku */ = {
 			isa = PBXGroup;
 			children = (
+				B328A7C12AE31A78002A7FF3 /* DataModel */,
 				B3F81EA72A8FEE4B00AFCAA8 /* App */,
+				B343BBD32AE70743005A7C45 /* View */,
 				B3F81EA62A8FEE3000AFCAA8 /* Screens */,
 				B3F81EA22A8FEE0100AFCAA8 /* Tools */,
 				B3F81E7C2A8FED9800AFCAA8 /* Assets.xcassets */,
@@ -141,7 +198,8 @@
 		B3F81EA62A8FEE3000AFCAA8 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				B3F81E7A2A8FED9700AFCAA8 /* ContentView.swift */,
+				B343BBD12AE70705005A7C45 /* HomeScreen */,
+				B343BBD42AE7076A005A7C45 /* MainScreen */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -218,7 +276,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					B3F81E742A8FED9700AFCAA8 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -284,8 +342,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3F81E7B2A8FED9700AFCAA8 /* ContentView.swift in Sources */,
+				B35EE1582AEA029B00F516B2 /* MainSudokuMV.swift in Sources */,
+				B328A7BB2AE30EE7002A7FF3 /* MainScreen.swift in Sources */,
+				B35EE15A2AEACF1100F516B2 /* HomeScreenMV.swift in Sources */,
+				B35EE15C2AEAD99200F516B2 /* HomeScreenM.swift in Sources */,
+				B35EE1562AEA029100F516B2 /* MainSudokuM.swift in Sources */,
+				B3F81E7B2A8FED9700AFCAA8 /* HomeScreen.swift in Sources */,
 				B3F81EA52A8FEE2900AFCAA8 /* Informations.swift in Sources */,
+				B328A7BD2AE312BF002A7FF3 /* MainSudokuView.swift in Sources */,
 				B3F81E792A8FED9700AFCAA8 /* iApi_SudokuApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -359,6 +424,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -387,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -419,6 +486,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
