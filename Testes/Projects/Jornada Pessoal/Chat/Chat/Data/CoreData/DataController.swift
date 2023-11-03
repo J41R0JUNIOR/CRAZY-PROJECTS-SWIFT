@@ -12,10 +12,8 @@ import CloudKit
 
 class DataController:ObservableObject{
     let persistentCloudKitContainer : NSPersistentCloudKitContainer
-
     init(){
         persistentCloudKitContainer = NSPersistentCloudKitContainer(name: "DataModel")
-        
         
         persistentCloudKitContainer.loadPersistentStores{ desc, error in
             if let error = error{
@@ -26,15 +24,12 @@ class DataController:ObservableObject{
             fatalError("Failed to initialize persistant container")
         }
         
+        description.cloudKitContainerOptions?.databaseScope = .public
         description.setOption(true as NSNumber, forKey: NSPersistentStoreRemoteChangeNotificationPostOptionKey)
         description.setOption(true as NSNumber, forKey: NSPersistentHistoryTrackingKey)
-        description.cloudKitContainerOptions?.databaseScope = .public
         
         persistentCloudKitContainer.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
         persistentCloudKitContainer.viewContext.automaticallyMergesChangesFromParent = true
-        
-        description.cloudKitContainerOptions?.databaseScope = .public
-
     }
     
     
@@ -47,9 +42,10 @@ class DataController:ObservableObject{
         }
     }
     
-    func addMensagem(mensagem: String, context: NSManagedObjectContext){
+    func addMensagem(mensagem: String, user:String, context: NSManagedObjectContext){
         let ChatMensagem = Msg(context: context)
         ChatMensagem.mensagem = mensagem
+        ChatMensagem.user = user
         ChatMensagem.date = Date()
         ChatMensagem.id = UUID()
         

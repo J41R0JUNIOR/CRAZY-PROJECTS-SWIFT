@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B3261EBC2AF2E4B8005638F0 /* ContentViewM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */; };
+		B3261EBE2AF2E4D3005638F0 /* ContentViewMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */; };
 		B33A728B2A9930F200B98373 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A728A2A9930F200B98373 /* ChatApp.swift */; };
 		B33A728D2A9930F200B98373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A728C2A9930F200B98373 /* ContentView.swift */; };
 		B33A728F2A9930F300B98373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33A728E2A9930F300B98373 /* Assets.xcassets */; };
@@ -18,6 +20,9 @@
 		B3853A942AAD374700049783 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA34E2AA14C10009FAEAC /* DataModel.xcdatamodeld */; };
 		B3ADA34D2AA149BB009FAEAC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA34C2AA149BB009FAEAC /* DataController.swift */; };
 		B3ADA3572AA14FB4009FAEAC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA3562AA14FB4009FAEAC /* ListView.swift */; };
+		B3AF98322AF41A7400E6937C /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98312AF41A7400E6937C /* DataContainer.swift */; };
+		B3AF98342AF53EEF00E6937C /* ListViewM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98332AF53EEF00E6937C /* ListViewM.swift */; };
+		B3AF98362AF53EF600E6937C /* ListViewMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98352AF53EF600E6937C /* ListViewMV.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewM.swift; sourceTree = "<group>"; };
+		B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewMV.swift; sourceTree = "<group>"; };
 		B33A72872A9930F200B98373 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33A728A2A9930F200B98373 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		B33A728C2A9930F200B98373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -53,7 +60,10 @@
 		B3ADA34C2AA149BB009FAEAC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B3ADA34F2AA14C10009FAEAC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		B3ADA3562AA14FB4009FAEAC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		B3ADA3582AA1587C009FAEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3ADA3582AA1587C009FAEAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3AF98312AF41A7400E6937C /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		B3AF98332AF53EEF00E6937C /* ListViewM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewM.swift; sourceTree = "<group>"; };
+		B3AF98352AF53EF600E6937C /* ListViewMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewMV.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B3261EB72AF2D537005638F0 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				B33A728C2A9930F200B98373 /* ContentView.swift */,
+				B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */,
+				B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		B3261EB82AF2D54F005638F0 /* ChatApp */ = {
+			isa = PBXGroup;
+			children = (
+				B33A728A2A9930F200B98373 /* ChatApp.swift */,
+			);
+			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		B3261EB92AF2D55E005638F0 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADA3562AA14FB4009FAEAC /* ListView.swift */,
+				B3AF98332AF53EEF00E6937C /* ListViewM.swift */,
+				B3AF98352AF53EF600E6937C /* ListViewMV.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		B3261EBA2AF2D58A005638F0 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				B3261EB72AF2D537005638F0 /* ContentView */,
+				B3261EB82AF2D54F005638F0 /* ChatApp */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
 		B33A727E2A9930F200B98373 = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +152,10 @@
 			isa = PBXGroup;
 			children = (
 				B3ADA3582AA1587C009FAEAC /* Info.plist */,
+				B3261EBA2AF2D58A005638F0 /* Screen */,
 				B3ADA3522AA14F72009FAEAC /* View */,
-				B3ADA34B2AA1499F009FAEAC /* Core Data */,
+				B3ADA34B2AA1499F009FAEAC /* Data */,
 				B33A72B72A99318B00B98373 /* Chat.entitlements */,
-				B33A72B42A99311D00B98373 /* CloudKit */,
 				B33A728E2A9930F300B98373 /* Assets.xcassets */,
 				B33A72902A9930F300B98373 /* Preview Content */,
 			);
@@ -148,23 +195,39 @@
 			path = CloudKit;
 			sourceTree = "<group>";
 		};
-		B3ADA34B2AA1499F009FAEAC /* Core Data */ = {
+		B3ADA34B2AA1499F009FAEAC /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B3ADA34C2AA149BB009FAEAC /* DataController.swift */,
-				B3ADA34E2AA14C10009FAEAC /* DataModel.xcdatamodeld */,
+				B3AF982E2AF41A2600E6937C /* SwiftData */,
+				B3AF982D2AF41A1F00E6937C /* CoreData */,
+				B33A72B42A99311D00B98373 /* CloudKit */,
 			);
-			path = "Core Data";
+			path = Data;
 			sourceTree = "<group>";
 		};
 		B3ADA3522AA14F72009FAEAC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B33A728A2A9930F200B98373 /* ChatApp.swift */,
-				B33A728C2A9930F200B98373 /* ContentView.swift */,
-				B3ADA3562AA14FB4009FAEAC /* ListView.swift */,
+				B3261EB92AF2D55E005638F0 /* ListView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B3AF982D2AF41A1F00E6937C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B3ADA34C2AA149BB009FAEAC /* DataController.swift */,
+				B3ADA34E2AA14C10009FAEAC /* DataModel.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B3AF982E2AF41A2600E6937C /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				B3AF98312AF41A7400E6937C /* DataContainer.swift */,
+			);
+			path = SwiftData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,10 +362,15 @@
 			files = (
 				B33A728D2A9930F200B98373 /* ContentView.swift in Sources */,
 				B3ADA3572AA14FB4009FAEAC /* ListView.swift in Sources */,
+				B3261EBC2AF2E4B8005638F0 /* ContentViewM.swift in Sources */,
 				B3ADA34D2AA149BB009FAEAC /* DataController.swift in Sources */,
+				B3AF98362AF53EF600E6937C /* ListViewMV.swift in Sources */,
 				B3853A942AAD374700049783 /* DataModel.xcdatamodeld in Sources */,
+				B3AF98322AF41A7400E6937C /* DataContainer.swift in Sources */,
 				B33A728B2A9930F200B98373 /* ChatApp.swift in Sources */,
 				B33A72B62A99314D00B98373 /* CloudKitUserBootcamp.swift in Sources */,
+				B3AF98342AF53EEF00E6937C /* ListViewM.swift in Sources */,
+				B3261EBE2AF2E4D3005638F0 /* ContentViewMV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +539,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -502,6 +571,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

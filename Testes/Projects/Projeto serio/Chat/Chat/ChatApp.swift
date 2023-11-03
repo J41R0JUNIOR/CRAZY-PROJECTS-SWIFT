@@ -2,7 +2,7 @@
 //  ChatApp.swift
 //  Chat
 //
-//  Created by Jairo Júnior on 25/08/23.
+//  Created by Jairo Júnior on 03/11/23.
 //
 
 import SwiftUI
@@ -11,8 +11,8 @@ import SwiftUI
 struct ChatApp: App {
     var body: some Scene {
         WindowGroup {
-            //CloudKitUserBootcamp()
             ContentView()
+            
         }
     }
 }

@@ -97,10 +97,10 @@ class CloudKitUserBootcampViewModel: ObservableObject{
 struct CloudKitUserBootcamp: View {
     @StateObject private var vm = CloudKitUserBootcampViewModel()
     var body: some View {
-        Text("Is signed in: \(vm.isSignedToiCloud.description)")
-        Text(vm.error)
-        Text("Permission: \(vm.permissionStatus.description)")
-        Text("Name: \(vm.userName)")
+//        Text("Is signed in: \(vm.isSignedToiCloud.description)")
+//        Text(vm.error)
+//        Text("Permission: \(vm.permissionStatus.description)")
+        Text("Olá \(vm.userName)!")
     }
 }
 
