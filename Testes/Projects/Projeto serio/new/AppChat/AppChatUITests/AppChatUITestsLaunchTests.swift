@@ -1,13 +1,13 @@
 //
-//  ChatUITestsLaunchTests.swift
-//  ChatUITests
+//  AppChatUITestsLaunchTests.swift
+//  AppChatUITests
 //
-//  Created by Jairo Júnior on 25/08/23.
+//  Created by Jairo Júnior on 05/11/23.
 //
 
 import XCTest
 
-final class ChatUITestsLaunchTests: XCTestCase {
+final class AppChatUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

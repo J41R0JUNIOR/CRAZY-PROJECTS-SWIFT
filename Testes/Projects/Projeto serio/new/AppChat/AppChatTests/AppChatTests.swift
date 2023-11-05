@@ -1,14 +1,14 @@
 //
-//  ChatTests.swift
-//  ChatTests
+//  AppChatTests.swift
+//  AppChatTests
 //
-//  Created by Jairo Júnior on 25/08/23.
+//  Created by Jairo Júnior on 05/11/23.
 //
 
 import XCTest
-@testable import Chat
+@testable import AppChat
 
-final class ChatTests: XCTestCase {
+final class AppChatTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

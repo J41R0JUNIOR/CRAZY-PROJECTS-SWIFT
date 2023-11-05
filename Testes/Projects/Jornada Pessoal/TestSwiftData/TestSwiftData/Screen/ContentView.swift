@@ -21,9 +21,11 @@ struct ContentView: View {
             Text("Tap this button")
             Button("Add item"){
                 addItem()
-            }
+            }.navigationTitle("testando")
+            
             
             ListView()
+            
         }
     }
     
