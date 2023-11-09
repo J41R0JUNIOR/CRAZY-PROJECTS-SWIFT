@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B323907F2AFC07A900120C42 /* CloudKitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B323907E2AFC07A900120C42 /* CloudKitController.swift */; };
 		B39CEEFE2AF7E6B800BAB825 /* AppChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39CEEFD2AF7E6B800BAB825 /* AppChatApp.swift */; };
 		B39CEF002AF7E6B800BAB825 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39CEEFF2AF7E6B800BAB825 /* ContentView.swift */; };
 		B39CEF022AF7E6B900BAB825 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39CEF012AF7E6B900BAB825 /* Assets.xcassets */; };
@@ -16,6 +17,9 @@
 		B39CEF1B2AF7E6BA00BAB825 /* AppChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39CEF1A2AF7E6BA00BAB825 /* AppChatUITestsLaunchTests.swift */; };
 		B39CEF282AF7E6CC00BAB825 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39CEF272AF7E6CC00BAB825 /* DataContainer.swift */; };
 		B39CEF2A2AF7E7C400BAB825 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39CEF292AF7E7C400BAB825 /* ListView.swift */; };
+		B3C56DFB2AF965860013265D /* NotificationCodeSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C56DFA2AF965860013265D /* NotificationCodeSpace.swift */; };
+		B3C56E002AFAAB700013265D /* PushNotificationCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C56DFF2AFAAB700013265D /* PushNotificationCloudKit.swift */; };
+		B3C56E022AFACDEB0013265D /* TesteApn.apns in Resources */ = {isa = PBXBuildFile; fileRef = B3C56E012AFACDEB0013265D /* TesteApn.apns */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B323907E2AFC07A900120C42 /* CloudKitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitController.swift; sourceTree = "<group>"; };
 		B39CEEFA2AF7E6B800BAB825 /* AppChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39CEEFD2AF7E6B800BAB825 /* AppChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChatApp.swift; sourceTree = "<group>"; };
 		B39CEEFF2AF7E6B800BAB825 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +53,11 @@
 		B39CEF1A2AF7E6BA00BAB825 /* AppChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B39CEF272AF7E6CC00BAB825 /* DataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		B39CEF292AF7E7C400BAB825 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B3C56DFA2AF965860013265D /* NotificationCodeSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCodeSpace.swift; sourceTree = "<group>"; };
+		B3C56DFC2AFA8F780013265D /* AppChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AppChat.entitlements; sourceTree = "<group>"; };
+		B3C56DFD2AFA92EC0013265D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B3C56DFF2AFAAB700013265D /* PushNotificationCloudKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationCloudKit.swift; sourceTree = "<group>"; };
+		B3C56E012AFACDEB0013265D /* TesteApn.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = TesteApn.apns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B323907D2AFC079200120C42 /* CloudKit */ = {
+			isa = PBXGroup;
+			children = (
+				B323907E2AFC07A900120C42 /* CloudKitController.swift */,
+			);
+			path = CloudKit;
+			sourceTree = "<group>";
+		};
 		B39CEEF12AF7E6B800BAB825 = {
 			isa = PBXGroup;
 			children = (
@@ -98,10 +116,12 @@
 		B39CEEFC2AF7E6B800BAB825 /* AppChat */ = {
 			isa = PBXGroup;
 			children = (
+				B3C56DFD2AFA92EC0013265D /* Info.plist */,
+				B3C56DFC2AFA8F780013265D /* AppChat.entitlements */,
+				B3C56DF92AF965680013265D /* Notifications */,
+				B39CEF2E2AF93C6000BAB825 /* Data */,
+				B39CEF2B2AF93C3500BAB825 /* Main */,
 				B39CEEFD2AF7E6B800BAB825 /* AppChatApp.swift */,
-				B39CEEFF2AF7E6B800BAB825 /* ContentView.swift */,
-				B39CEF292AF7E7C400BAB825 /* ListView.swift */,
-				B39CEF272AF7E6CC00BAB825 /* DataContainer.swift */,
 				B39CEF012AF7E6B900BAB825 /* Assets.xcassets */,
 				B39CEF032AF7E6B900BAB825 /* Preview Content */,
 			);
@@ -131,6 +151,50 @@
 				B39CEF1A2AF7E6BA00BAB825 /* AppChatUITestsLaunchTests.swift */,
 			);
 			path = AppChatUITests;
+			sourceTree = "<group>";
+		};
+		B39CEF2B2AF93C3500BAB825 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B39CEF2D2AF93C4B00BAB825 /* ListView */,
+				B39CEF2C2AF93C4200BAB825 /* ContentView */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B39CEF2C2AF93C4200BAB825 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				B39CEEFF2AF7E6B800BAB825 /* ContentView.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		B39CEF2D2AF93C4B00BAB825 /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				B39CEF292AF7E7C400BAB825 /* ListView.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		B39CEF2E2AF93C6000BAB825 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B39CEF272AF7E6CC00BAB825 /* DataContainer.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B3C56DF92AF965680013265D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				B323907D2AFC079200120C42 /* CloudKit */,
+				B3C56DFF2AFAAB700013265D /* PushNotificationCloudKit.swift */,
+				B3C56DFA2AF965860013265D /* NotificationCodeSpace.swift */,
+				B3C56E012AFACDEB0013265D /* TesteApn.apns */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +301,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C56E022AFACDEB0013265D /* TesteApn.apns in Resources */,
 				B39CEF052AF7E6B900BAB825 /* Preview Assets.xcassets in Resources */,
 				B39CEF022AF7E6B900BAB825 /* Assets.xcassets in Resources */,
 			);
@@ -263,10 +328,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C56DFB2AF965860013265D /* NotificationCodeSpace.swift in Sources */,
 				B39CEF2A2AF7E7C400BAB825 /* ListView.swift in Sources */,
 				B39CEF002AF7E6B800BAB825 /* ContentView.swift in Sources */,
 				B39CEEFE2AF7E6B800BAB825 /* AppChatApp.swift in Sources */,
+				B323907F2AFC07A900120C42 /* CloudKitController.swift in Sources */,
 				B39CEF282AF7E6CC00BAB825 /* DataContainer.swift in Sources */,
+				B3C56E002AFAAB700013265D /* PushNotificationCloudKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,12 +495,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppChat/AppChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppChat/Preview Content\"";
 				DEVELOPMENT_TEAM = KV78S9S54R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -456,12 +526,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AppChat/AppChat.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AppChat/Preview Content\"";
 				DEVELOPMENT_TEAM = KV78S9S54R;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AppChat/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

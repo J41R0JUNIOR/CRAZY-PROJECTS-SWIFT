@@ -10,11 +10,11 @@ import SwiftData
 
 @Model
 class Message{
-    @Attribute(.unique) var id: String
-    var text: String
+//    @Attribute(.unique) var id: String = ""
+    var text: String = ""
     
     init(text: String) {
-        self.id = UUID().uuidString
+//        self.id = UUID().uuidString
         self.text = text
     }
 }

@@ -68,5 +68,225 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "discoveriCloudUser(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "848">
+               </Location>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "300">
+               </Location>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "904">
+               </Location>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "5D6ACDA0-64E2-4303-9DA9-1A7AB6A95CB2 - 66498d4c193bfed9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 @Sendable (Swift.Optional&lt;__C.CKUserIdentity&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.CloudKitUserBootcampViewModel.discoveriCloudUser(id: __C.CKRecordID) -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/CloudKit/CloudKitUserBootcamp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "736">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CD99A14D-C991-4ECC-AB45-71EC28B6F970"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat/Data/Notification/Notification.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "requestNotificationPermission()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CD99A14D-C991-4ECC-AB45-71EC28B6F970 - 9eabab5e1f997724"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.PushNotificationCloudKitViewModel.requestNotificationPermission() -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/Notification/Notification.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "600">
+               </Location>
+               <Location
+                  uuid = "CD99A14D-C991-4ECC-AB45-71EC28B6F970 - 9eabab5e1f997724"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.PushNotificationCloudKitViewModel.requestNotificationPermission() -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/Notification/Notification.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "660">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76DD2FBC-98DB-432F-A134-67D721B165BE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat/Data/Notification/Notification.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "requestNotificationPermission()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "76DD2FBC-98DB-432F-A134-67D721B165BE - 9eabab5e1f9908fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.PushNotificationCloudKitViewModel.requestNotificationPermission() -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/Notification/Notification.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  uuid = "76DD2FBC-98DB-432F-A134-67D721B165BE - 9eabab5e1f9908fe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Chat.PushNotificationCloudKitViewModel.requestNotificationPermission() -&gt; ()"
+                  moduleName = "Chat"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Jornada%20Pessoal/Chat/Chat/Data/Notification/Notification.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37D182CF-8197-4598-A2B8-0D85213D1FCE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Chat/Data/Notification/Notification.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "subscribeToNotifications()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

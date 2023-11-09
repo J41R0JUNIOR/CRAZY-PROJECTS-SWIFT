@@ -1,14 +1,15 @@
 //
-//  CloudKitUserBootcamp.swift
-//  Chat
+//  CloudKitSetting.swift
+//  PushNotification
 //
-//  Created by Jairo Júnior on 25/08/23.
+//  Created by Jairo Júnior on 08/11/23.
 //
 
+import Foundation
 import SwiftUI
 import CloudKit
 
-class CloudKitUserBootcampViewModel: ObservableObject{
+class CloudKitSetting: ObservableObject{
     @Published var permissionStatus: Bool = false
     @Published var isSignedToiCloud: Bool = false
     @Published var error: String = ""
@@ -41,6 +42,10 @@ class CloudKitUserBootcampViewModel: ObservableObject{
                     self.error = CloudKitError.iCloudAccountUnknown.rawValue
                     break
                 }
+                if let error = returnedError {
+                    // Trate o erro de maneira apropriada, talvez atribuindo à propriedade de erro ou registrando em algum lugar.
+                    self.error = "Erro ao verificar o status do iCloud: \(error.localizedDescription)"
+                }
             }
         }
     }
@@ -61,7 +66,11 @@ class CloudKitUserBootcampViewModel: ObservableObject{
                     self?.permissionStatus = true
                 }
                 else {
-                    print("Permission not granted.")
+                    print("Permission not granted. \n error \(String(describing: returnedError))")
+                }
+                if let error = returnedError {
+                    // Trate o erro de maneira apropriada, talvez atribuindo à propriedade de erro ou registrando em algum lugar.
+                    print("Erro ao solicitar permissão: \(error.localizedDescription)")
                 }
             }
         }
@@ -87,26 +96,10 @@ class CloudKitUserBootcampViewModel: ObservableObject{
 }
 
 
-
-
-
-
-
-
-
-
-struct CloudKitUserBootcamp: View {
-    @StateObject private var vm = CloudKitUserBootcampViewModel()
-    var body: some View {
-//        Text("Is signed in: \(vm.isSignedToiCloud.description)")
-//        Text(vm.error)
-//        Text("Permission: \(vm.permissionStatus.description)")
-        Text("Olá \(vm.userName)!")
-    }
-}
-
-struct CloudKitUserBootcamp_Previews: PreviewProvider {
-    static var previews: some View {
-        CloudKitUserBootcamp()
-    }
+enum CloudKitError: String, Error{
+    case iCloudAccountNotFound
+    case iCloudAccountNotDetermined
+    case iCloudAccountRestricted
+    case iCloudAccountUnknown
+    case nameNotFound
 }
