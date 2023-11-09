@@ -75,6 +75,10 @@ class CloudKitUserBootcampViewModel: ObservableObject{
         }
     }
     
+//    func discoreyICloudEmail(id: CKRecord.ID){
+//        CKUserIdentity
+//    }
+    
     func discoveriCloudUser(id: CKRecord.ID){
         CKContainer.default().discoverUserIdentity(withUserRecordID: id) {[weak self] returnedIdentity, returnedError in
             DispatchQueue.main.async {

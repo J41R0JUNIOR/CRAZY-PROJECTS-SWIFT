@@ -8,7 +8,7 @@
 import SwiftUI
 import CloudKit
 
-class PushNotificationCloudKitViewModel: ObservableObject{
+class PushNotificationCloudKit: ObservableObject{
     
     func requestNotificationPermission(){
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]

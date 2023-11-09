@@ -1,13 +1,14 @@
 //
-//  ContentView2.swift
+//  CloudKitSettings.swift
 //  Chat
 //
 //  Created by Jairo Júnior on 09/11/23.
 //
 
-import SwiftUI
+import Foundation
 import CloudKit
 
+@MainActor
 class viewModel: ObservableObject{
     @Published var text: String = ""
     @Published var messages: [String] = []
@@ -65,47 +66,4 @@ class viewModel: ObservableObject{
         CKContainer.default().publicCloudDatabase.add(operation)
 
     }
-}
-
-struct ContentView2: View {
-    @StateObject var vm = viewModel()
-    @StateObject var not = PushNotificationCloudKitViewModel()
-    
-    var body: some View {
-        VStack{
-            HStack{
-                HStack{
-                    Button("Request"){
-                        not.requestNotificationPermission()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    Button("Subscribe"){
-                        not.subscribeToNotifications()
-                    }
-                    .buttonStyle(.borderedProminent)
-                    Button("Ubsubscribe"){
-                        not.unSubscribeToNotifications()
-                    }
-                    .buttonStyle(.borderedProminent)
-                }
-            }
-            Spacer()
-            TextField("Add message", text: $vm.text)
-                .textFieldStyle(.roundedBorder)
-                .onSubmit {
-                    vm.addItem()
-                    vm.text = ""
-                }
-            List{
-                ForEach(vm.messages, id: \.self){
-                    Text($0)
-                }
-            }.listStyle(.automatic)
-        }
-        
-    }
-}
-
-#Preview {
-    ContentView2()
 }
