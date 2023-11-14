@@ -20,6 +20,7 @@
 		B33A72A82A9930F300B98373 /* ChatUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A72A72A9930F300B98373 /* ChatUITestsLaunchTests.swift */; };
 		B33A72B62A99314D00B98373 /* CloudKitUserBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A72B52A99314D00B98373 /* CloudKitUserBootcamp.swift */; };
 		B3853A942AAD374700049783 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA34E2AA14C10009FAEAC /* DataModel.xcdatamodeld */; };
+		B398255D2AFD7AA80044FF28 /* jadjon.apns in Resources */ = {isa = PBXBuildFile; fileRef = B398255C2AFD7AA80044FF28 /* jadjon.apns */; };
 		B3ADA34D2AA149BB009FAEAC /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA34C2AA149BB009FAEAC /* DataController.swift */; };
 		B3ADA3572AA14FB4009FAEAC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3ADA3562AA14FB4009FAEAC /* ListView.swift */; };
 		B3AF98322AF41A7400E6937C /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3AF98312AF41A7400E6937C /* DataContainer.swift */; };
@@ -63,6 +64,7 @@
 		B33A72A72A9930F300B98373 /* ChatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B33A72B52A99314D00B98373 /* CloudKitUserBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitUserBootcamp.swift; sourceTree = "<group>"; };
 		B33A72B72A99318B00B98373 /* Chat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Chat.entitlements; sourceTree = "<group>"; };
+		B398255C2AFD7AA80044FF28 /* jadjon.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = jadjon.apns; sourceTree = "<group>"; };
 		B3ADA34C2AA149BB009FAEAC /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		B3ADA34F2AA14C10009FAEAC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		B3ADA3562AA14FB4009FAEAC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -131,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				B3261EB72AF2D537005638F0 /* ContentView */,
-				B3261EB82AF2D54F005638F0 /* ChatApp */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -162,6 +163,7 @@
 				B3E0A6B42AFD5DFB008D7344 /* AppWithCloudKit */,
 				B3E0A6B32AFD5DED008D7344 /* AppWithSwiftDataAndCloudKit */,
 				B3ADA3582AA1587C009FAEAC /* Info.plist */,
+				B3261EB82AF2D54F005638F0 /* ChatApp */,
 				B33A72B72A99318B00B98373 /* Chat.entitlements */,
 				B33A728E2A9930F300B98373 /* Assets.xcassets */,
 				B33A72902A9930F300B98373 /* Preview Content */,
@@ -286,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				B3E0A6BB2AFD5FE0008D7344 /* Notification.swift */,
+				B398255C2AFD7AA80044FF28 /* jadjon.apns */,
 			);
 			path = Notification;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				B33A72922A9930F300B98373 /* Preview Assets.xcassets in Resources */,
 				B33A728F2A9930F300B98373 /* Assets.xcassets in Resources */,
+				B398255D2AFD7AA80044FF28 /* jadjon.apns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
