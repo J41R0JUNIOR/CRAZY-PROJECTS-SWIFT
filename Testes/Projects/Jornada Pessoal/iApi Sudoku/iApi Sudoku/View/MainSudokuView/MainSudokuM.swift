@@ -8,6 +8,6 @@
 import SwiftUI
 
 struct MainSudokuM{
-    @Binding var gameGrid: [[Int]]
+    @State var gameGrid: [[Int]] = [[]]
     @Binding var solutionGrid: [[Int]]
 }

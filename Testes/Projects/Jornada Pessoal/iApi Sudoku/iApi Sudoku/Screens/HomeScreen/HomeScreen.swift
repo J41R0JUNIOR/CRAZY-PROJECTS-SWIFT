@@ -26,7 +26,7 @@ struct HomeScreen: View {
                 Text("Results: \(viewModel.sudoku?.newboard.results ?? 0)")
                 Text("Dificuldade: \(viewModel.sudoku?.newboard.grids[0].difficulty ?? "nothing")")
 
-                MainSudokuView(sudoku: MainSudokuMV(model: MainSudokuM(gameGrid: $viewModel.gameGrid, solutionGrid: $viewModel.solutionGrid)))
+                MainSudokuView(sudoku: MainSudokuMV(model: MainSudokuM(gameGrid: viewModel.gameGrid, solutionGrid: $viewModel.solutionGrid)))
             }
         }
         .task {

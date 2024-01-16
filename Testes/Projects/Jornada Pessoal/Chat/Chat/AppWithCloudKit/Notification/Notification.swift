@@ -18,11 +18,11 @@ class PushNotificationCloudKit: ObservableObject{
     
     func requestNotificationPermission(){
         let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        UNUserNotificationCenter.current().requestAuthorization(options: options) { sucess, error in
+        UNUserNotificationCenter.current().requestAuthorization(options: options) { success, error in
             
             if let error = error{
                 print(error)
-            }else if sucess{
+            }else if success{
                 print("Notifications permissions success")
                 
                 DispatchQueue.main.async {
@@ -56,6 +56,7 @@ class PushNotificationCloudKit: ObservableObject{
             }
         }
     }
+    
     func unSubscribeToNotifications(){
         CKContainer.default().publicCloudDatabase.delete(withSubscriptionID: "message_added_to_database") { id, error in
             if let error = error{
