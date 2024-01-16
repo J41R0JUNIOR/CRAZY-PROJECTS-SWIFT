@@ -16,6 +16,8 @@
 		B30381642B4E3255008B951D /* BudgetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30381632B4E3255008B951D /* BudgetUITestsLaunchTests.swift */; };
 		B387E1972B57158400FA067B /* CustomRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E1962B57158400FA067B /* CustomRectangle.swift */; };
 		B387E19A2B571DD500FA067B /* CustomCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E1992B571DD500FA067B /* CustomCircle.swift */; };
+		B387E1A02B5728AA00FA067B /* ContentViewVm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E19F2B5728AA00FA067B /* ContentViewVm.swift */; };
+		B387E1A22B57406500FA067B /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E1A12B57406500FA067B /* Budget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,8 @@
 		B30381632B4E3255008B951D /* BudgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B387E1962B57158400FA067B /* CustomRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangle.swift; sourceTree = "<group>"; };
 		B387E1992B571DD500FA067B /* CustomCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircle.swift; sourceTree = "<group>"; };
+		B387E19F2B5728AA00FA067B /* ContentViewVm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewVm.swift; sourceTree = "<group>"; };
+		B387E1A12B57406500FA067B /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +102,10 @@
 		B30381452B4E3253008B951D /* Budget */ = {
 			isa = PBXGroup;
 			children = (
-				B30381462B4E3253008B951D /* BudgetApp.swift */,
-				B30381482B4E3253008B951D /* ContentView.swift */,
-				B303814A2B4E3255008B951D /* Assets.xcassets */,
+				B387E1A42B5749AC00FA067B /* App */,
+				B387E19C2B57286400FA067B /* Views */,
+				B387E19B2B57283600FA067B /* Components */,
 				B303814C2B4E3255008B951D /* Preview Content */,
-				B387E1982B571DB000FA067B /* Custom */,
 			);
 			path = Budget;
 			sourceTree = "<group>";
@@ -132,13 +135,40 @@
 			path = BudgetUITests;
 			sourceTree = "<group>";
 		};
-		B387E1982B571DB000FA067B /* Custom */ = {
+		B387E19B2B57283600FA067B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B387E1A12B57406500FA067B /* Budget.swift */,
 				B387E1962B57158400FA067B /* CustomRectangle.swift */,
 				B387E1992B571DD500FA067B /* CustomCircle.swift */,
 			);
-			path = Custom;
+			path = Components;
+			sourceTree = "<group>";
+		};
+		B387E19C2B57286400FA067B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B387E1A32B57499900FA067B /* ContentView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B387E1A32B57499900FA067B /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+				B30381482B4E3253008B951D /* ContentView.swift */,
+				B387E19F2B5728AA00FA067B /* ContentViewVm.swift */,
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		B387E1A42B5749AC00FA067B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B303814A2B4E3255008B951D /* Assets.xcassets */,
+				B30381462B4E3253008B951D /* BudgetApp.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +305,8 @@
 				B30381492B4E3253008B951D /* ContentView.swift in Sources */,
 				B387E19A2B571DD500FA067B /* CustomCircle.swift in Sources */,
 				B30381472B4E3253008B951D /* BudgetApp.swift in Sources */,
+				B387E1A02B5728AA00FA067B /* ContentViewVm.swift in Sources */,
+				B387E1A22B57406500FA067B /* Budget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

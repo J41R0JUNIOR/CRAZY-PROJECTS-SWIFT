@@ -106,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				B328A7BC2AE312BF002A7FF3 /* MainSudokuView.swift */,
-				B35EE1552AEA029100F516B2 /* MainSudokuM.swift */,
 				B35EE1572AEA029B00F516B2 /* MainSudokuMV.swift */,
+				B35EE1552AEA029100F516B2 /* MainSudokuM.swift */,
 			);
 			path = MainSudokuView;
 			sourceTree = "<group>";
