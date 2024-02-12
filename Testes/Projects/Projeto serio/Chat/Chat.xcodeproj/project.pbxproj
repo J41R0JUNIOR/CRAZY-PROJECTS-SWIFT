@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B3261EBC2AF2E4B8005638F0 /* ContentViewM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */; };
-		B3261EBE2AF2E4D3005638F0 /* ContentViewMV.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */; };
 		B33A728B2A9930F200B98373 /* ChatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A728A2A9930F200B98373 /* ChatApp.swift */; };
 		B33A728D2A9930F200B98373 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B33A728C2A9930F200B98373 /* ContentView.swift */; };
 		B33A728F2A9930F300B98373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B33A728E2A9930F300B98373 /* Assets.xcassets */; };
@@ -42,7 +41,6 @@
 
 /* Begin PBXFileReference section */
 		B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewM.swift; sourceTree = "<group>"; };
-		B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewMV.swift; sourceTree = "<group>"; };
 		B33A72872A9930F200B98373 /* Chat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33A728A2A9930F200B98373 /* ChatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatApp.swift; sourceTree = "<group>"; };
 		B33A728C2A9930F200B98373 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -92,7 +90,6 @@
 			children = (
 				B33A728C2A9930F200B98373 /* ContentView.swift */,
 				B3261EBB2AF2E4B8005638F0 /* ContentViewM.swift */,
-				B3261EBD2AF2E4D3005638F0 /* ContentViewMV.swift */,
 			);
 			path = ContentView;
 			sourceTree = "<group>";
@@ -354,7 +351,6 @@
 				B33A728B2A9930F200B98373 /* ChatApp.swift in Sources */,
 				B33A72B62A99314D00B98373 /* CloudKitUserBootcamp.swift in Sources */,
 				B3AF98342AF53EEF00E6937C /* ListViewM.swift in Sources */,
-				B3261EBE2AF2E4D3005638F0 /* ContentViewMV.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

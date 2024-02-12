@@ -3,4 +3,54 @@
    uuid = "8A155F32-6031-4082-AF91-41DBF0125D24"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68E006EB-E821-404C-9AAE-E944911F5D05"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TestPhysics/GameScene.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "applyPhysics(object:n:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "68E006EB-E821-404C-9AAE-E944911F5D05 - c8851389e0b2cb00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPhysics.GameScene.applyPhysics(object: TestPhysics.Object, n: Swift.Int) -&gt; ()"
+                  moduleName = "TestPhysics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Projeto%20serio/TestPhysics/TestPhysics/GameScene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "744">
+               </Location>
+               <Location
+                  uuid = "68E006EB-E821-404C-9AAE-E944911F5D05 - c8851389e0b2cb00"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "TestPhysics.GameScene.applyPhysics(object: TestPhysics.Object, n: Swift.Int) -&gt; ()"
+                  moduleName = "TestPhysics"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jairojunior/Documents/GitHub/CRAZY-PROJECTS-SWIFT/Testes/Projects/Projeto%20serio/TestPhysics/TestPhysics/GameScene.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "312">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
