@@ -44,6 +44,7 @@ struct CheckeredMesh: Shape{
 }
 
 struct GraphicInMesh: Shape{
+    let divider = 1000.0
     
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
@@ -58,13 +59,22 @@ struct GraphicInMesh: Shape{
         let maxHeight = rect.height
         
 
-        for x in stride(from: minWidth, to: maxWidth , by: 0.1){
-            
-            
-            let y = -(fX(x: x - midWidth, funcX: {return (pow(x - midWidth,2.0))/100.0}) - midHeight)
+        for x in stride(from: minWidth, to: maxWidth , by: 0.01){
             
             let formattedX = (x - midWidth) + midWidth
-            var point = CGPoint(x: formattedX, y: y)
+           
+            
+            let y = -(fX(x: x - midWidth, funcX: {x1 in 
+                return
+                /*(formattedX - midWidth) * sin(formattedX - midWidth)*/
+                (pow(x1, 3) - x1 + 2)/divider
+                
+            }) /*- midHeight*/)
+            
+            let formattedY = midHeight + y
+            
+           
+            var point = CGPoint(x: formattedX, y: formattedY)
             
             if point.x >= minWidth && point.y >= minHeight && point.x <= maxWidth && point.y <= maxHeight{
                 path.move(to: point)
@@ -79,9 +89,9 @@ struct GraphicInMesh: Shape{
         return Path(path.cgPath)
     }
     
-    func fX(x: Double, funcX: ()->Double) -> Double{
-        return funcX()
-//        return (x * x)/10.0
+    func fX(x: Double, funcX: (_ x1:Double)->Double) -> Double{
+        return funcX(x)
+//        return ((x * x) - x + 2)/divider
     }
 }
 
