@@ -14,6 +14,8 @@
 		B30381582B4E3255008B951D /* BudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30381572B4E3255008B951D /* BudgetTests.swift */; };
 		B30381622B4E3255008B951D /* BudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30381612B4E3255008B951D /* BudgetUITests.swift */; };
 		B30381642B4E3255008B951D /* BudgetUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30381632B4E3255008B951D /* BudgetUITestsLaunchTests.swift */; };
+		B382C3482B7B16AA00495148 /* CheckeredMesh.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382C3472B7B16AA00495148 /* CheckeredMesh.swift */; };
+		B382C34A2B7B200D00495148 /* MeshComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B382C3492B7B200D00495148 /* MeshComponent.swift */; };
 		B3877ACB2B79A47E009EAE94 /* WaveComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3877ACA2B79A47E009EAE94 /* WaveComponent.swift */; };
 		B387E1972B57158400FA067B /* CustomRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E1962B57158400FA067B /* CustomRectangle.swift */; };
 		B387E19A2B571DD500FA067B /* CustomCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B387E1992B571DD500FA067B /* CustomCircle.swift */; };
@@ -50,6 +52,8 @@
 		B303815D2B4E3255008B951D /* BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30381612B4E3255008B951D /* BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITests.swift; sourceTree = "<group>"; };
 		B30381632B4E3255008B951D /* BudgetUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B382C3472B7B16AA00495148 /* CheckeredMesh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckeredMesh.swift; sourceTree = "<group>"; };
+		B382C3492B7B200D00495148 /* MeshComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshComponent.swift; sourceTree = "<group>"; };
 		B3877ACA2B79A47E009EAE94 /* WaveComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveComponent.swift; sourceTree = "<group>"; };
 		B387E1962B57158400FA067B /* CustomRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangle.swift; sourceTree = "<group>"; };
 		B387E1992B571DD500FA067B /* CustomCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCircle.swift; sourceTree = "<group>"; };
@@ -142,11 +146,13 @@
 		B387E19B2B57283600FA067B /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				B382C3472B7B16AA00495148 /* CheckeredMesh.swift */,
+				B382C3492B7B200D00495148 /* MeshComponent.swift */,
 				B387E1A12B57406500FA067B /* GraphicalComponent.swift */,
-				B3D45E3A2B717FA400D0CCDD /* Wave.swift */,
 				B387E1962B57158400FA067B /* CustomRectangle.swift */,
 				B387E1992B571DD500FA067B /* CustomCircle.swift */,
 				B3877ACA2B79A47E009EAE94 /* WaveComponent.swift */,
+				B3D45E3A2B717FA400D0CCDD /* Wave.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -307,7 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B382C3482B7B16AA00495148 /* CheckeredMesh.swift in Sources */,
 				B387E1972B57158400FA067B /* CustomRectangle.swift in Sources */,
+				B382C34A2B7B200D00495148 /* MeshComponent.swift in Sources */,
 				B30381492B4E3253008B951D /* ContentView.swift in Sources */,
 				B3D45E3B2B717FA400D0CCDD /* Wave.swift in Sources */,
 				B387E19A2B571DD500FA067B /* CustomCircle.swift in Sources */,
