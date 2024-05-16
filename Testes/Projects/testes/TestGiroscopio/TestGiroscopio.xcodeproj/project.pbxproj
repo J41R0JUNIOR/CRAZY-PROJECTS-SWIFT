@@ -1,0 +1,688 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B32413542BE578BF00FCF10F /* TestGiroscopioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32413532BE578BF00FCF10F /* TestGiroscopioApp.swift */; };
+		B32413562BE578BF00FCF10F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32413552BE578BF00FCF10F /* ContentView.swift */; };
+		B32413582BE578C100FCF10F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B32413572BE578C100FCF10F /* Assets.xcassets */; };
+		B324135C2BE578C100FCF10F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B324135B2BE578C100FCF10F /* Preview Assets.xcassets */; };
+		B32413662BE578C100FCF10F /* TestGiroscopioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32413652BE578C100FCF10F /* TestGiroscopioTests.swift */; };
+		B32413702BE578C100FCF10F /* TestGiroscopioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B324136F2BE578C100FCF10F /* TestGiroscopioUITests.swift */; };
+		B32413722BE578C100FCF10F /* TestGiroscopioUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32413712BE578C100FCF10F /* TestGiroscopioUITestsLaunchTests.swift */; };
+		B3BA1A712BED3A7500AD0BC1 /* Triangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3BA1A702BED3A7500AD0BC1 /* Triangle.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B32413622BE578C100FCF10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32413482BE578BF00FCF10F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B324134F2BE578BF00FCF10F;
+			remoteInfo = TestGiroscopio;
+		};
+		B324136C2BE578C100FCF10F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B32413482BE578BF00FCF10F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B324134F2BE578BF00FCF10F;
+			remoteInfo = TestGiroscopio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B347D92D2BEEA1D800D33893 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B32413502BE578BF00FCF10F /* TestGiroscopio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestGiroscopio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32413532BE578BF00FCF10F /* TestGiroscopioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGiroscopioApp.swift; sourceTree = "<group>"; };
+		B32413552BE578BF00FCF10F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B32413572BE578C100FCF10F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B32413592BE578C100FCF10F /* TestGiroscopio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TestGiroscopio.entitlements; sourceTree = "<group>"; };
+		B324135B2BE578C100FCF10F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B32413612BE578C100FCF10F /* TestGiroscopioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGiroscopioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B32413652BE578C100FCF10F /* TestGiroscopioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGiroscopioTests.swift; sourceTree = "<group>"; };
+		B324136B2BE578C100FCF10F /* TestGiroscopioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestGiroscopioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B324136F2BE578C100FCF10F /* TestGiroscopioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGiroscopioUITests.swift; sourceTree = "<group>"; };
+		B32413712BE578C100FCF10F /* TestGiroscopioUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestGiroscopioUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B347D90B2BEEA1D600D33893 /* AppleWatchGyroscopeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchGyroscopeApp.swift; sourceTree = "<group>"; };
+		B347D90D2BEEA1D600D33893 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B347D90F2BEEA1D800D33893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B347D9122BEEA1D800D33893 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B347D91C2BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchGyroscope_Watch_AppTests.swift; sourceTree = "<group>"; };
+		B347D9262BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchGyroscope_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		B347D9282BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleWatchGyroscope_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B3BA1A702BED3A7500AD0BC1 /* Triangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Triangle.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B324134D2BE578BF00FCF10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324135E2BE578C100FCF10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32413682BE578C100FCF10F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B32413472BE578BF00FCF10F = {
+			isa = PBXGroup;
+			children = (
+				B32413522BE578BF00FCF10F /* TestGiroscopio */,
+				B32413642BE578C100FCF10F /* TestGiroscopioTests */,
+				B324136E2BE578C100FCF10F /* TestGiroscopioUITests */,
+				B347D90A2BEEA1D600D33893 /* AppleWatchGyroscope Watch App */,
+				B347D91B2BEEA1D800D33893 /* AppleWatchGyroscope Watch AppTests */,
+				B347D9252BEEA1D800D33893 /* AppleWatchGyroscope Watch AppUITests */,
+				B32413512BE578BF00FCF10F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B32413512BE578BF00FCF10F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B32413502BE578BF00FCF10F /* TestGiroscopio.app */,
+				B32413612BE578C100FCF10F /* TestGiroscopioTests.xctest */,
+				B324136B2BE578C100FCF10F /* TestGiroscopioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B32413522BE578BF00FCF10F /* TestGiroscopio */ = {
+			isa = PBXGroup;
+			children = (
+				B32413532BE578BF00FCF10F /* TestGiroscopioApp.swift */,
+				B3BA1A702BED3A7500AD0BC1 /* Triangle.swift */,
+				B32413552BE578BF00FCF10F /* ContentView.swift */,
+				B32413572BE578C100FCF10F /* Assets.xcassets */,
+				B32413592BE578C100FCF10F /* TestGiroscopio.entitlements */,
+				B324135A2BE578C100FCF10F /* Preview Content */,
+			);
+			path = TestGiroscopio;
+			sourceTree = "<group>";
+		};
+		B324135A2BE578C100FCF10F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B324135B2BE578C100FCF10F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B32413642BE578C100FCF10F /* TestGiroscopioTests */ = {
+			isa = PBXGroup;
+			children = (
+				B32413652BE578C100FCF10F /* TestGiroscopioTests.swift */,
+			);
+			path = TestGiroscopioTests;
+			sourceTree = "<group>";
+		};
+		B324136E2BE578C100FCF10F /* TestGiroscopioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B324136F2BE578C100FCF10F /* TestGiroscopioUITests.swift */,
+				B32413712BE578C100FCF10F /* TestGiroscopioUITestsLaunchTests.swift */,
+			);
+			path = TestGiroscopioUITests;
+			sourceTree = "<group>";
+		};
+		B347D90A2BEEA1D600D33893 /* AppleWatchGyroscope Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				B347D90B2BEEA1D600D33893 /* AppleWatchGyroscopeApp.swift */,
+				B347D90D2BEEA1D600D33893 /* ContentView.swift */,
+				B347D90F2BEEA1D800D33893 /* Assets.xcassets */,
+				B347D9112BEEA1D800D33893 /* Preview Content */,
+			);
+			path = "AppleWatchGyroscope Watch App";
+			sourceTree = "<group>";
+		};
+		B347D9112BEEA1D800D33893 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B347D9122BEEA1D800D33893 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B347D91B2BEEA1D800D33893 /* AppleWatchGyroscope Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B347D91C2BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppTests.swift */,
+			);
+			path = "AppleWatchGyroscope Watch AppTests";
+			sourceTree = "<group>";
+		};
+		B347D9252BEEA1D800D33893 /* AppleWatchGyroscope Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B347D9262BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppUITests.swift */,
+				B347D9282BEEA1D800D33893 /* AppleWatchGyroscope_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "AppleWatchGyroscope Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B324134F2BE578BF00FCF10F /* TestGiroscopio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32413752BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopio" */;
+			buildPhases = (
+				B324134C2BE578BF00FCF10F /* Sources */,
+				B324134D2BE578BF00FCF10F /* Frameworks */,
+				B324134E2BE578BF00FCF10F /* Resources */,
+				B347D92D2BEEA1D800D33893 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestGiroscopio;
+			productName = TestGiroscopio;
+			productReference = B32413502BE578BF00FCF10F /* TestGiroscopio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B32413602BE578C100FCF10F /* TestGiroscopioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B32413782BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopioTests" */;
+			buildPhases = (
+				B324135D2BE578C100FCF10F /* Sources */,
+				B324135E2BE578C100FCF10F /* Frameworks */,
+				B324135F2BE578C100FCF10F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B32413632BE578C100FCF10F /* PBXTargetDependency */,
+			);
+			name = TestGiroscopioTests;
+			productName = TestGiroscopioTests;
+			productReference = B32413612BE578C100FCF10F /* TestGiroscopioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B324136A2BE578C100FCF10F /* TestGiroscopioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B324137B2BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopioUITests" */;
+			buildPhases = (
+				B32413672BE578C100FCF10F /* Sources */,
+				B32413682BE578C100FCF10F /* Frameworks */,
+				B32413692BE578C100FCF10F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B324136D2BE578C100FCF10F /* PBXTargetDependency */,
+			);
+			name = TestGiroscopioUITests;
+			productName = TestGiroscopioUITests;
+			productReference = B324136B2BE578C100FCF10F /* TestGiroscopioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B32413482BE578BF00FCF10F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					B324134F2BE578BF00FCF10F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					B32413602BE578C100FCF10F = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B324134F2BE578BF00FCF10F;
+					};
+					B324136A2BE578C100FCF10F = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = B324134F2BE578BF00FCF10F;
+					};
+				};
+			};
+			buildConfigurationList = B324134B2BE578BF00FCF10F /* Build configuration list for PBXProject "TestGiroscopio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B32413472BE578BF00FCF10F;
+			productRefGroup = B32413512BE578BF00FCF10F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B324134F2BE578BF00FCF10F /* TestGiroscopio */,
+				B32413602BE578C100FCF10F /* TestGiroscopioTests */,
+				B324136A2BE578C100FCF10F /* TestGiroscopioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B324134E2BE578BF00FCF10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B324135C2BE578C100FCF10F /* Preview Assets.xcassets in Resources */,
+				B32413582BE578C100FCF10F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324135F2BE578C100FCF10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32413692BE578C100FCF10F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B324134C2BE578BF00FCF10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3BA1A712BED3A7500AD0BC1 /* Triangle.swift in Sources */,
+				B32413562BE578BF00FCF10F /* ContentView.swift in Sources */,
+				B32413542BE578BF00FCF10F /* TestGiroscopioApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B324135D2BE578C100FCF10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32413662BE578C100FCF10F /* TestGiroscopioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B32413672BE578C100FCF10F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B32413722BE578C100FCF10F /* TestGiroscopioUITestsLaunchTests.swift in Sources */,
+				B32413702BE578C100FCF10F /* TestGiroscopioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B32413632BE578C100FCF10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B324134F2BE578BF00FCF10F /* TestGiroscopio */;
+			targetProxy = B32413622BE578C100FCF10F /* PBXContainerItemProxy */;
+		};
+		B324136D2BE578C100FCF10F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B324134F2BE578BF00FCF10F /* TestGiroscopio */;
+			targetProxy = B324136C2BE578C100FCF10F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B32413732BE578C100FCF10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B32413742BE578C100FCF10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		B32413762BE578C100FCF10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestGiroscopio/TestGiroscopio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TestGiroscopio/Preview Content\"";
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B32413772BE578C100FCF10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TestGiroscopio/TestGiroscopio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TestGiroscopio/Preview Content\"";
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B32413792BE578C100FCF10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGiroscopio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestGiroscopio";
+			};
+			name = Debug;
+		};
+		B324137A2BE578C100FCF10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestGiroscopio.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TestGiroscopio";
+			};
+			name = Release;
+		};
+		B324137C2BE578C100FCF10F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestGiroscopio;
+			};
+			name = Debug;
+		};
+		B324137D2BE578C100FCF10F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KV78S9S54R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = jairo.TestGiroscopioUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TestGiroscopio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B324134B2BE578BF00FCF10F /* Build configuration list for PBXProject "TestGiroscopio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32413732BE578C100FCF10F /* Debug */,
+				B32413742BE578C100FCF10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32413752BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32413762BE578C100FCF10F /* Debug */,
+				B32413772BE578C100FCF10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B32413782BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B32413792BE578C100FCF10F /* Debug */,
+				B324137A2BE578C100FCF10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B324137B2BE578C100FCF10F /* Build configuration list for PBXNativeTarget "TestGiroscopioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B324137C2BE578C100FCF10F /* Debug */,
+				B324137D2BE578C100FCF10F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B32413482BE578BF00FCF10F /* Project object */;
+}
